@@ -22,6 +22,7 @@ class MainTabBarController: UITabBarController, UITabBarControllerDelegate {
         addChildVC()
     }
     
+    //MARK: Setup UI
     func initSelf() {
         // Setup TabBar Item Appearance
         let attr: [NSAttributedStringKey : Any]  = [NSAttributedStringKey.font : UIFont.systemFont(ofSize: 12),
@@ -74,6 +75,7 @@ class MainTabBarController: UITabBarController, UITabBarControllerDelegate {
         self.setValue(tabBar, forKey: "tabBar")
     }
     
+    //MARK: Action
     @objc dynamic func centerClick(sender: UIButton) {
         print("Center Button Click!")
         self.selectedIndex = 2;//关联中间按钮
