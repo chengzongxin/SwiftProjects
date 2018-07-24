@@ -8,8 +8,10 @@
 
 import UIKit
 
-class MainTabBarController: UITabBarController {
+class MainTabBarController: UITabBarController, UITabBarControllerDelegate {
 
+    var selectItem = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -30,6 +32,7 @@ class MainTabBarController: UITabBarController {
         let item = UITabBarItem.appearance()
         item.setTitleTextAttributes(attr, for: .normal)
         item.setTitleTextAttributes(selectedAttr, for: .selected)
+        self.delegate = self
     }
     
     // Add Child VC
@@ -74,18 +77,34 @@ class MainTabBarController: UITabBarController {
     @objc dynamic func centerClick(sender: UIButton) {
         print("Center Button Click!")
         self.selectedIndex = 2;//关联中间按钮
-        if self.selectedIndex != 2 {
+        
+        if self.selectItem != 2{
             rotationAnimation(button: sender)
         }
-        self.selectedIndex = 2
+        self.selectItem = 2;
     }
     
-    func rotationAnimation(button: UIButton) {
+    private func rotationAnimation(button: UIButton) {
         let rotationAnimation = CABasicAnimation.init(keyPath: "transform.rotation.z")
         rotationAnimation.toValue = .pi*2.0
         rotationAnimation.duration = 3.0
         rotationAnimation.repeatCount = HUGE
         button.layer.add(rotationAnimation, forKey: "key")
+    }
+    
+    func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
+        let tab = self.tabBar as! TabBar
+        let centerBtn = tab.centerButton
+        
+        if (tabBarController.selectedIndex == 2){//选中中间的按钮
+            if (self.selectItem != 2){
+                
+                rotationAnimation(button: centerBtn)
+            }
+        }else {
+            centerBtn.layer.removeAllAnimations()
+        }
+        self.selectItem = tabBarController.selectedIndex;
     }
 }
 
