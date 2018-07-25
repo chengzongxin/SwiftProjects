@@ -7,6 +7,9 @@ target 'SwiftProjects' do
 
   # Pods for SwiftProjects
     pod 'ChameleonFramework/Swift', :git => 'https://github.com/ViccAlexander/Chameleon.git'
+    pod 'AFNetworking'
+    pod 'Toast'
+    pod 'SVProgressHUD'
 
   target 'SwiftProjectsTests' do
     inherit! :search_paths

@@ -27,6 +27,7 @@
 		9605C60E2101F67C004BD566 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9605C60D2101F67C004BD566 /* TabBar.swift */; };
 		96BE4A132106FD6C001AED2C /* Center.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96BE4A122106FD6C001AED2C /* Center.storyboard */; };
 		96BE4A152106FD7C001AED2C /* CenterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BE4A142106FD7C001AED2C /* CenterViewController.swift */; };
+		96BE4A1821073C91001AED2C /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BE4A1721073C91001AED2C /* NetworkManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 		9605C60D2101F67C004BD566 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 		96BE4A122106FD6C001AED2C /* Center.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Center.storyboard; sourceTree = "<group>"; };
 		96BE4A142106FD7C001AED2C /* CenterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterViewController.swift; sourceTree = "<group>"; };
+		96BE4A1721073C91001AED2C /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		A477FA7791C6D9A6002D9438 /* Pods-SwiftProjectsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftProjectsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftProjectsTests/Pods-SwiftProjectsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C8FC9E3CD86C4B3747AA6BF5 /* Pods_SwiftProjects.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftProjects.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1F39029FE479AF53D9FD2BD /* Pods-SwiftProjects.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftProjects.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftProjects/Pods-SwiftProjects.release.xcconfig"; sourceTree = "<group>"; };
@@ -142,6 +144,7 @@
 				96BE4A112106FD5E001AED2C /* Center */,
 				9605C5F52101E171004BD566 /* Third */,
 				9605C5F22101E171004BD566 /* Four */,
+				96BE4A1621073C4C001AED2C /* Manager */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -198,6 +201,14 @@
 				96BE4A142106FD7C001AED2C /* CenterViewController.swift */,
 			);
 			path = Center;
+			sourceTree = "<group>";
+		};
+		96BE4A1621073C4C001AED2C /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				96BE4A1721073C91001AED2C /* NetworkManager.swift */,
+			);
+			path = Manager;
 			sourceTree = "<group>";
 		};
 		9847DC7A848A35868BD57663 /* Pods */ = {
@@ -350,11 +361,17 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-SwiftProjects/Pods-SwiftProjects-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
 				"${BUILT_PRODUCTS_DIR}/ChameleonFramework/ChameleonFramework.framework",
+				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/Toast/Toast.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ChameleonFramework.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Toast.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -388,6 +405,7 @@
 			files = (
 				9605C5F92101E18F004BD566 /* SecondViewController.swift in Sources */,
 				9605C5F02101C69B004BD566 /* PrefixHeader.swift in Sources */,
+				96BE4A1821073C91001AED2C /* NetworkManager.swift in Sources */,
 				9605C5FD2101E19D004BD566 /* FourViewController.swift in Sources */,
 				96BE4A152106FD7C001AED2C /* CenterViewController.swift in Sources */,
 				9605C60E2101F67C004BD566 /* TabBar.swift in Sources */,

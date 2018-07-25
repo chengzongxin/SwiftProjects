@@ -53,9 +53,13 @@ class MainTabBarController: UITabBarController, UITabBarControllerDelegate {
     
     func setupChildVC(vc:UIViewController, title: String, image: String) {
         vc.title = title
-        vc.tabBarItem.image = UIImage(named: image)?.withRenderingMode(.alwaysOriginal)
-        let selectedImage = image + "_selected"
-        vc.tabBarItem.selectedImage = UIImage(named: selectedImage)?.withRenderingMode(.alwaysOriginal)
+        
+        if !image.isEmpty {
+            vc.tabBarItem.image = UIImage(named: image)?.withRenderingMode(.alwaysOriginal)
+            let selectedImage = image + "_selected"
+            vc.tabBarItem.selectedImage = UIImage(named: selectedImage)?.withRenderingMode(.alwaysOriginal)
+        }
+        
         if title == "" {
             vc.tabBarItem.tag = 1000
         }
