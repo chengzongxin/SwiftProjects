@@ -17,18 +17,27 @@ PODS:
   - ChameleonFramework/Default (2.1.0)
   - ChameleonFramework/Swift (2.1.0):
     - ChameleonFramework/Default
+  - HandyJSON (4.1.1)
+  - Kingfisher (4.8.0)
+  - SCLAlertView (0.8)
   - SVProgressHUD (2.2.5)
   - Toast (4.0.0)
 
 DEPENDENCIES:
   - AFNetworking
   - ChameleonFramework/Swift (from `https://github.com/ViccAlexander/Chameleon.git`)
+  - HandyJSON (~> 4.1.1)
+  - Kingfisher (~> 4.0)
+  - SCLAlertView
   - SVProgressHUD
   - Toast
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - AFNetworking
+    - HandyJSON
+    - Kingfisher
+    - SCLAlertView
     - SVProgressHUD
     - Toast
 
@@ -44,9 +53,12 @@ CHECKOUT OPTIONS:
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
   ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
+  HandyJSON: 3a3de917c4118767ffe41c29b5acba23409649f4
+  Kingfisher: 976d828df2b24834c6a3f2fc4d82cdbd26552be1
+  SCLAlertView: 6a77bb2edfc65e04dbe57725546cb4107a506b85
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
   Toast: 91b396c56ee72a5790816f40d3a94dd357abc196
 
-PODFILE CHECKSUM: 0693174e30ab161b7484adfb1c5789be82ec95f7
+PODFILE CHECKSUM: dec2bd989a4eab00379c5e4e7bf08aba76717950
 
 COCOAPODS: 1.5.3

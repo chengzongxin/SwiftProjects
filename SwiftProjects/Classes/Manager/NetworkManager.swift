@@ -15,7 +15,7 @@ struct NetworkManager {
     
     static let errorMessage = "网络异常,请检查网络"
     
-    static func GET(URLString: String, parameters: [String:Any]?, showHUD: Bool = true, success:((NSObject?) -> Void)?, failure: ((NSError) -> Void)?) {
+    static func GET(URLString: String, parameters: [String:Any]?, showHUD: Bool = true, success:((AnyObject?) -> Void)?, failure: ((NSError) -> Void)?) {
         let manager = AFHTTPSessionManager()
         manager.requestSerializer.timeoutInterval = 10
         
@@ -28,7 +28,8 @@ struct NetworkManager {
             print(progress)
         }, success: { (task, responseObject) in
             SVProgressHUD.dismiss()
-            print(responseObject ?? "")
+//            Logger.info(responseObject)
+//            print(responseObject ?? "")
             success?(responseObject as? NSObject)
         }) { (task, error) in
             SVProgressHUD.dismiss()

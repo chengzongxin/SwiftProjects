@@ -10,7 +10,10 @@ target 'SwiftProjects' do
     pod 'AFNetworking'
     pod 'Toast'
     pod 'SVProgressHUD'
-
+    pod 'HandyJSON', '~> 4.1.1'
+    pod 'Kingfisher', '~> 4.0'
+    pod 'SCLAlertView'
+    
   target 'SwiftProjectsTests' do
     inherit! :search_paths
     # Pods for testing

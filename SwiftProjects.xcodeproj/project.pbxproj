@@ -25,6 +25,12 @@
 		9605C60A2101F055004BD566 /* Four.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9605C6092101F055004BD566 /* Four.storyboard */; };
 		9605C60C2101F381004BD566 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9605C60B2101F381004BD566 /* Home.storyboard */; };
 		9605C60E2101F67C004BD566 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9605C60D2101F67C004BD566 /* TabBar.swift */; };
+		96A5B8FF210868010039E81B /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A5B8FE210868010039E81B /* Book.swift */; };
+		96A5B908210870120039E81B /* LogCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 96A5B907210870120039E81B /* LogCategory.m */; };
+		96A5B90A210870250039E81B /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A5B909210870250039E81B /* Logger.swift */; };
+		96A5B90C21087B230039E81B /* BookTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A5B90B21087B230039E81B /* BookTableViewController.swift */; };
+		96A5B90F21087D2A0039E81B /* BookCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A5B90D21087D2A0039E81B /* BookCell.swift */; };
+		96A5B91021087D2A0039E81B /* BookCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96A5B90E21087D2A0039E81B /* BookCell.xib */; };
 		96BE4A132106FD6C001AED2C /* Center.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96BE4A122106FD6C001AED2C /* Center.storyboard */; };
 		96BE4A152106FD7C001AED2C /* CenterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BE4A142106FD7C001AED2C /* CenterViewController.swift */; };
 		96BE4A1821073C91001AED2C /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BE4A1721073C91001AED2C /* NetworkManager.swift */; };
@@ -64,6 +70,15 @@
 		9605C6092101F055004BD566 /* Four.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Four.storyboard; sourceTree = "<group>"; };
 		9605C60B2101F381004BD566 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		9605C60D2101F67C004BD566 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
+		96A5B8FE210868010039E81B /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
+		96A5B904210870110039E81B /* SwiftProjects-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SwiftProjects-Bridging-Header.h"; sourceTree = "<group>"; };
+		96A5B905210870120039E81B /* LogCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogCategory.h; sourceTree = "<group>"; };
+		96A5B906210870120039E81B /* LogChinese_Swift-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "LogChinese_Swift-Bridging-Header.h"; sourceTree = "<group>"; };
+		96A5B907210870120039E81B /* LogCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogCategory.m; sourceTree = "<group>"; };
+		96A5B909210870250039E81B /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		96A5B90B21087B230039E81B /* BookTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookTableViewController.swift; sourceTree = "<group>"; };
+		96A5B90D21087D2A0039E81B /* BookCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCell.swift; sourceTree = "<group>"; };
+		96A5B90E21087D2A0039E81B /* BookCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookCell.xib; sourceTree = "<group>"; };
 		96BE4A122106FD6C001AED2C /* Center.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Center.storyboard; sourceTree = "<group>"; };
 		96BE4A142106FD7C001AED2C /* CenterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterViewController.swift; sourceTree = "<group>"; };
 		96BE4A1721073C91001AED2C /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
@@ -115,6 +130,7 @@
 		9605C5BF2101BF67004BD566 /* SwiftProjects */ = {
 			isa = PBXGroup;
 			children = (
+				96A5B900210869FE0039E81B /* Untils */,
 				9605C5F12101E171004BD566 /* Classes */,
 				9605C5C02101BF67004BD566 /* AppDelegate.swift */,
 				9605C5EF2101C69B004BD566 /* PrefixHeader.swift */,
@@ -163,6 +179,7 @@
 			children = (
 				9605C60B2101F381004BD566 /* Home.storyboard */,
 				9605C5F62101E189004BD566 /* HomeViewController.swift */,
+				96A5B8FD210867F10039E81B /* DouBanBook */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -192,6 +209,37 @@
 				9605C60D2101F67C004BD566 /* TabBar.swift */,
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		96A5B8FD210867F10039E81B /* DouBanBook */ = {
+			isa = PBXGroup;
+			children = (
+				96A5B90B21087B230039E81B /* BookTableViewController.swift */,
+				96A5B8FE210868010039E81B /* Book.swift */,
+				96A5B90D21087D2A0039E81B /* BookCell.swift */,
+				96A5B90E21087D2A0039E81B /* BookCell.xib */,
+			);
+			path = DouBanBook;
+			sourceTree = "<group>";
+		};
+		96A5B900210869FE0039E81B /* Untils */ = {
+			isa = PBXGroup;
+			children = (
+				96A5B903210870000039E81B /* LogChinease */,
+			);
+			path = Untils;
+			sourceTree = "<group>";
+		};
+		96A5B903210870000039E81B /* LogChinease */ = {
+			isa = PBXGroup;
+			children = (
+				96A5B909210870250039E81B /* Logger.swift */,
+				96A5B905210870120039E81B /* LogCategory.h */,
+				96A5B907210870120039E81B /* LogCategory.m */,
+				96A5B906210870120039E81B /* LogChinese_Swift-Bridging-Header.h */,
+				96A5B904210870110039E81B /* SwiftProjects-Bridging-Header.h */,
+			);
+			path = LogChinease;
 			sourceTree = "<group>";
 		};
 		96BE4A112106FD5E001AED2C /* Center */ = {
@@ -284,6 +332,7 @@
 				TargetAttributes = {
 					9605C5BC2101BF67004BD566 = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 0940;
 					};
 					9605C5D02101BF68004BD566 = {
 						CreatedOnToolsVersion = 9.4.1;
@@ -317,6 +366,7 @@
 			files = (
 				9605C5CB2101BF68004BD566 /* LaunchScreen.storyboard in Resources */,
 				96BE4A132106FD6C001AED2C /* Center.storyboard in Resources */,
+				96A5B91021087D2A0039E81B /* BookCell.xib in Resources */,
 				9605C5C82101BF68004BD566 /* Assets.xcassets in Resources */,
 				9605C5C62101BF67004BD566 /* Main.storyboard in Resources */,
 				9605C6062101F01C004BD566 /* Second.storyboard in Resources */,
@@ -363,6 +413,9 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-SwiftProjects/Pods-SwiftProjects-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
 				"${BUILT_PRODUCTS_DIR}/ChameleonFramework/ChameleonFramework.framework",
+				"${BUILT_PRODUCTS_DIR}/HandyJSON/HandyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/SCLAlertView/SCLAlertView.framework",
 				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/Toast/Toast.framework",
 			);
@@ -370,6 +423,9 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ChameleonFramework.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HandyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SCLAlertView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Toast.framework",
 			);
@@ -405,13 +461,18 @@
 			files = (
 				9605C5F92101E18F004BD566 /* SecondViewController.swift in Sources */,
 				9605C5F02101C69B004BD566 /* PrefixHeader.swift in Sources */,
+				96A5B908210870120039E81B /* LogCategory.m in Sources */,
 				96BE4A1821073C91001AED2C /* NetworkManager.swift in Sources */,
+				96A5B8FF210868010039E81B /* Book.swift in Sources */,
 				9605C5FD2101E19D004BD566 /* FourViewController.swift in Sources */,
+				96A5B90C21087B230039E81B /* BookTableViewController.swift in Sources */,
 				96BE4A152106FD7C001AED2C /* CenterViewController.swift in Sources */,
 				9605C60E2101F67C004BD566 /* TabBar.swift in Sources */,
+				96A5B90F21087D2A0039E81B /* BookCell.swift in Sources */,
 				9605C6022101E373004BD566 /* MainTabBarController.swift in Sources */,
 				9605C5FB2101E196004BD566 /* ThirdViewController.swift in Sources */,
 				9605C5C12101BF67004BD566 /* AppDelegate.swift in Sources */,
+				96A5B90A210870250039E81B /* Logger.swift in Sources */,
 				9605C5F72101E189004BD566 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -573,6 +634,7 @@
 			baseConfigurationReference = 38002E07F99AAC7494340B6A /* Pods-SwiftProjects.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = SwiftProjects/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -581,6 +643,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.silknets.SwiftProjects;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SwiftProjects/Untils/LogChinease/SwiftProjects-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -591,6 +655,7 @@
 			baseConfigurationReference = D1F39029FE479AF53D9FD2BD /* Pods-SwiftProjects.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = SwiftProjects/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -599,6 +664,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.silknets.SwiftProjects;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SwiftProjects/Untils/LogChinease/SwiftProjects-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
