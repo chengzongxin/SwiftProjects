@@ -12,6 +12,8 @@ let secondCellID = "seconCellID"
 
 class SecondViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
+    var snapView: UIView? = UIView()
+    
     lazy var dataSouces: [String] = {
         var dataSouces: [String] = []
         
@@ -42,6 +44,8 @@ class SecondViewController: UIViewController, UICollectionViewDelegate, UICollec
         collectionView.backgroundColor = UIColor.randomFlat
         
         collectionView.register(UINib.init(nibName: "SecondCell", bundle: nil), forCellWithReuseIdentifier: secondCellID)
+        
+        collectionView.delaysContentTouches = false
         
         collectionView.delegate = self
         
@@ -75,6 +79,12 @@ class SecondViewController: UIViewController, UICollectionViewDelegate, UICollec
             // ***GestureRecognizer的location方法返回在所处view的一个CGPoint属性
             guard let selectedIndexPath = self.collectionView.indexPathForItem(at: gesture.location(in: collectionView)) else { return }
             collectionView.beginInteractiveMovementForItem(at: selectedIndexPath)
+            
+            // 放大效果
+            let targetCell = collectionView.cellForItem(at: selectedIndexPath)
+            UIView.animate(withDuration: 0.2) {
+                targetCell?.transform = CGAffineTransform(scaleX: 1.2, y: 1.2);
+            }
         case .changed:
             // 移动了
             collectionView.updateInteractiveMovementTargetPosition(gesture.location(in: collectionView))
