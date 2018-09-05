@@ -25,6 +25,8 @@
 		9605C60A2101F055004BD566 /* Four.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9605C6092101F055004BD566 /* Four.storyboard */; };
 		9605C60C2101F381004BD566 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9605C60B2101F381004BD566 /* Home.storyboard */; };
 		9605C60E2101F67C004BD566 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9605C60D2101F67C004BD566 /* TabBar.swift */; };
+		966628F0213FD34100820701 /* SecondCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966628EE213FD34100820701 /* SecondCell.swift */; };
+		966628F1213FD34100820701 /* SecondCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 966628EF213FD34100820701 /* SecondCell.xib */; };
 		96A5B8FF210868010039E81B /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A5B8FE210868010039E81B /* Book.swift */; };
 		96A5B908210870120039E81B /* LogCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 96A5B907210870120039E81B /* LogCategory.m */; };
 		96A5B90A210870250039E81B /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A5B909210870250039E81B /* Logger.swift */; };
@@ -70,6 +72,8 @@
 		9605C6092101F055004BD566 /* Four.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Four.storyboard; sourceTree = "<group>"; };
 		9605C60B2101F381004BD566 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		9605C60D2101F67C004BD566 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
+		966628EE213FD34100820701 /* SecondCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondCell.swift; sourceTree = "<group>"; };
+		966628EF213FD34100820701 /* SecondCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SecondCell.xib; sourceTree = "<group>"; };
 		96A5B8FE210868010039E81B /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 		96A5B904210870110039E81B /* SwiftProjects-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SwiftProjects-Bridging-Header.h"; sourceTree = "<group>"; };
 		96A5B905210870120039E81B /* LogCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogCategory.h; sourceTree = "<group>"; };
@@ -189,6 +193,8 @@
 			children = (
 				9605C6052101F01C004BD566 /* Second.storyboard */,
 				9605C5F82101E18F004BD566 /* SecondViewController.swift */,
+				966628EE213FD34100820701 /* SecondCell.swift */,
+				966628EF213FD34100820701 /* SecondCell.xib */,
 			);
 			path = Second;
 			sourceTree = "<group>";
@@ -369,6 +375,7 @@
 				96A5B91021087D2A0039E81B /* BookCell.xib in Resources */,
 				9605C5C82101BF68004BD566 /* Assets.xcassets in Resources */,
 				9605C5C62101BF67004BD566 /* Main.storyboard in Resources */,
+				966628F1213FD34100820701 /* SecondCell.xib in Resources */,
 				9605C6062101F01C004BD566 /* Second.storyboard in Resources */,
 				9605C60A2101F055004BD566 /* Four.storyboard in Resources */,
 				9605C6082101F042004BD566 /* Third.storyboard in Resources */,
@@ -466,6 +473,7 @@
 				96A5B8FF210868010039E81B /* Book.swift in Sources */,
 				9605C5FD2101E19D004BD566 /* FourViewController.swift in Sources */,
 				96A5B90C21087B230039E81B /* BookTableViewController.swift in Sources */,
+				966628F0213FD34100820701 /* SecondCell.swift in Sources */,
 				96BE4A152106FD7C001AED2C /* CenterViewController.swift in Sources */,
 				9605C60E2101F67C004BD566 /* TabBar.swift in Sources */,
 				96A5B90F21087D2A0039E81B /* BookCell.swift in Sources */,
