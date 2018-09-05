@@ -12,8 +12,6 @@ let secondCellID = "seconCellID"
 
 class SecondViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
-    var snapView: UIView? = UIView()
-    
     lazy var dataSouces: [String] = {
         var dataSouces: [String] = []
         
