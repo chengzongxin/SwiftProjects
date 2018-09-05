@@ -27,6 +27,11 @@
 		9605C60E2101F67C004BD566 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9605C60D2101F67C004BD566 /* TabBar.swift */; };
 		966628F0213FD34100820701 /* SecondCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966628EE213FD34100820701 /* SecondCell.swift */; };
 		966628F1213FD34100820701 /* SecondCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 966628EF213FD34100820701 /* SecondCell.xib */; };
+		966628F4213FEA9200820701 /* Animation1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966628F3213FEA9200820701 /* Animation1ViewController.swift */; };
+		966628F6213FEB2C00820701 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966628F5213FEB2C00820701 /* BaseViewController.swift */; };
+		966628F8213FECA700820701 /* Define.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966628F7213FECA700820701 /* Define.swift */; };
+		966628FD213FF00400820701 /* Position.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966628FC213FF00400820701 /* Position.swift */; };
+		966628FF213FF03200820701 /* RandomColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966628FE213FF03200820701 /* RandomColor.swift */; };
 		96A5B8FF210868010039E81B /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A5B8FE210868010039E81B /* Book.swift */; };
 		96A5B908210870120039E81B /* LogCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 96A5B907210870120039E81B /* LogCategory.m */; };
 		96A5B90A210870250039E81B /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A5B909210870250039E81B /* Logger.swift */; };
@@ -74,6 +79,11 @@
 		9605C60D2101F67C004BD566 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 		966628EE213FD34100820701 /* SecondCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondCell.swift; sourceTree = "<group>"; };
 		966628EF213FD34100820701 /* SecondCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SecondCell.xib; sourceTree = "<group>"; };
+		966628F3213FEA9200820701 /* Animation1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animation1ViewController.swift; sourceTree = "<group>"; };
+		966628F5213FEB2C00820701 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		966628F7213FECA700820701 /* Define.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Define.swift; sourceTree = "<group>"; };
+		966628FC213FF00400820701 /* Position.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Position.swift; sourceTree = "<group>"; };
+		966628FE213FF03200820701 /* RandomColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomColor.swift; sourceTree = "<group>"; };
 		96A5B8FE210868010039E81B /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 		96A5B904210870110039E81B /* SwiftProjects-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SwiftProjects-Bridging-Header.h"; sourceTree = "<group>"; };
 		96A5B905210870120039E81B /* LogCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogCategory.h; sourceTree = "<group>"; };
@@ -195,6 +205,7 @@
 				9605C5F82101E18F004BD566 /* SecondViewController.swift */,
 				966628EE213FD34100820701 /* SecondCell.swift */,
 				966628EF213FD34100820701 /* SecondCell.xib */,
+				966628F2213FEA7B00820701 /* ChildVC */,
 			);
 			path = Second;
 			sourceTree = "<group>";
@@ -213,8 +224,27 @@
 			children = (
 				9605C6012101E373004BD566 /* MainTabBarController.swift */,
 				9605C60D2101F67C004BD566 /* TabBar.swift */,
+				966628F7213FECA700820701 /* Define.swift */,
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		966628F2213FEA7B00820701 /* ChildVC */ = {
+			isa = PBXGroup;
+			children = (
+				966628F5213FEB2C00820701 /* BaseViewController.swift */,
+				966628F3213FEA9200820701 /* Animation1ViewController.swift */,
+			);
+			path = ChildVC;
+			sourceTree = "<group>";
+		};
+		966628F9213FEF5E00820701 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				966628FC213FF00400820701 /* Position.swift */,
+				966628FE213FF03200820701 /* RandomColor.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		96A5B8FD210867F10039E81B /* DouBanBook */ = {
@@ -231,6 +261,7 @@
 		96A5B900210869FE0039E81B /* Untils */ = {
 			isa = PBXGroup;
 			children = (
+				966628F9213FEF5E00820701 /* Extensions */,
 				96A5B903210870000039E81B /* LogChinease */,
 			);
 			path = Untils;
@@ -471,6 +502,7 @@
 				96A5B908210870120039E81B /* LogCategory.m in Sources */,
 				96BE4A1821073C91001AED2C /* NetworkManager.swift in Sources */,
 				96A5B8FF210868010039E81B /* Book.swift in Sources */,
+				966628F6213FEB2C00820701 /* BaseViewController.swift in Sources */,
 				9605C5FD2101E19D004BD566 /* FourViewController.swift in Sources */,
 				96A5B90C21087B230039E81B /* BookTableViewController.swift in Sources */,
 				966628F0213FD34100820701 /* SecondCell.swift in Sources */,
@@ -478,9 +510,13 @@
 				9605C60E2101F67C004BD566 /* TabBar.swift in Sources */,
 				96A5B90F21087D2A0039E81B /* BookCell.swift in Sources */,
 				9605C6022101E373004BD566 /* MainTabBarController.swift in Sources */,
+				966628FF213FF03200820701 /* RandomColor.swift in Sources */,
 				9605C5FB2101E196004BD566 /* ThirdViewController.swift in Sources */,
 				9605C5C12101BF67004BD566 /* AppDelegate.swift in Sources */,
+				966628F4213FEA9200820701 /* Animation1ViewController.swift in Sources */,
 				96A5B90A210870250039E81B /* Logger.swift in Sources */,
+				966628F8213FECA700820701 /* Define.swift in Sources */,
+				966628FD213FF00400820701 /* Position.swift in Sources */,
 				9605C5F72101E189004BD566 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

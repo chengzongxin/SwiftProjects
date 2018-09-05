@@ -10,6 +10,7 @@ import UIKit
 
 let secondCellID = "seconCellID"
 
+
 class SecondViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
     lazy var dataSouces: [String] = {
@@ -56,12 +57,11 @@ class SecondViewController: UIViewController, UICollectionViewDelegate, UICollec
         
         return collectionView
     }()
-    
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = UIColor(gradientStyle: .topToBottom, withFrame: view.bounds, andColors: [UIColor.randomFlat,UIColor.randomFlat])
+        view.backgroundColor = UIColor.randomGradientColor(bounds: view.bounds)
         
         view.addSubview(collectionView)
     }
@@ -102,7 +102,7 @@ extension SecondViewController {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: secondCellID, for: indexPath) as! SecondCell
         
-        cell.backgroundColor = UIColor(gradientStyle: .topToBottom, withFrame: cell.frame, andColors: [UIColor.randomFlat,UIColor.randomFlat])
+        cell.backgroundColor = UIColor.randomGradientColor(bounds: cell.bounds)
         
         cell.titleLabel.text = dataSouces[indexPath.item]
         
@@ -113,6 +113,24 @@ extension SecondViewController {
     func collectionView(_ collectionView: UICollectionView, moveItemAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
         let tmpCell = dataSouces.remove(at: sourceIndexPath.item)
         dataSouces.insert(tmpCell, at: destinationIndexPath.item)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print(indexPath.item)
+        
+        let vc: UIViewController
+        
+        switch indexPath.item {
+        case 0:
+            vc = BaseViewController()
+        case 1:
+            vc = Animation1ViewController()
+        default:
+            vc = UIViewController()
+        }
+        
+        vc.hidesBottomBarWhenPushed = true
+        navigationController?.pushViewController(vc, animated: true)
     }
 }
 
