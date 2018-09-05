@@ -60,8 +60,7 @@ class SecondViewController: UIViewController, UICollectionViewDelegate, UICollec
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
         view.backgroundColor = UIColor(gradientStyle: .topToBottom, withFrame: view.bounds, andColors: [UIColor.randomFlat,UIColor.randomFlat])
         
         view.addSubview(collectionView)
@@ -103,7 +102,7 @@ extension SecondViewController {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: secondCellID, for: indexPath) as! SecondCell
         
-        cell.backgroundColor = UIColor.randomFlat
+        cell.backgroundColor = UIColor(gradientStyle: .topToBottom, withFrame: cell.frame, andColors: [UIColor.randomFlat,UIColor.randomFlat])
         
         cell.titleLabel.text = dataSouces[indexPath.item]
         
