@@ -21,7 +21,7 @@ class BaseViewController: UIViewController {
         button.setTitle("Start Animation", for: .normal)
         button.frame = CGRect(x: 0, y: 0, width: 300, height: 50)
         button.shadowBackgoundColor = UIColor.randomGradientColor(bounds: button.bounds)
-        button.center = CGPoint(x: self.view.center.x, y: self.view.frame.size.height - 100)
+        button.center = CGPoint(x: self.view.center.x, y: self.view.frame.size.height - 200)
         button.addTarget(self, action: #selector(buttonClick), for: .touchUpInside)
         return button
     }()
