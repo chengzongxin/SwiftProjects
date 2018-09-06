@@ -20,6 +20,9 @@ class SecondViewController: UIViewController, UICollectionViewDelegate, UICollec
             dataSouces.append("\(i)")
         }
         
+        dataSouces[0] = "BaseViewController"
+        dataSouces[1] = "Animation1ViewController"
+        
         return dataSouces
     }()
     
@@ -40,7 +43,7 @@ class SecondViewController: UIViewController, UICollectionViewDelegate, UICollec
         // CollectionView
         let collectionView = UICollectionView(frame: self.view.frame, collectionViewLayout: layout)
         
-        collectionView.backgroundColor = UIColor.randomFlat
+        collectionView.backgroundColor = UIColor.flatWhite
         
         collectionView.register(UINib.init(nibName: "SecondCell", bundle: nil), forCellWithReuseIdentifier: secondCellID)
         
@@ -60,6 +63,8 @@ class SecondViewController: UIViewController, UICollectionViewDelegate, UICollec
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        navigationItem.title = "Reorder CollectionView"
         
         view.backgroundColor = UIColor.randomGradientColor(bounds: view.bounds)
         
@@ -102,8 +107,6 @@ extension SecondViewController {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: secondCellID, for: indexPath) as! SecondCell
         
-        cell.backgroundColor = UIColor.randomGradientColor(bounds: cell.bounds)
-        
         cell.titleLabel.text = dataSouces[indexPath.item]
         
         return cell;
@@ -118,17 +121,16 @@ extension SecondViewController {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print(indexPath.item)
         
-        let vc: UIViewController
-        
-        switch indexPath.item {
-        case 0:
-            vc = BaseViewController()
-        case 1:
-            vc = Animation1ViewController()
-        default:
-            vc = UIViewController()
+        // get namespace
+        let namespace = Bundle.main.infoDictionary!["CFBundleExecutable"] as! String
+        // get 'anyClass' with classname and namespace
+        guard let className = NSClassFromString("\(namespace).\(dataSouces[indexPath.item])") as? UIViewController.Type else {
+            print("It's not a view controller!")
+            return
         }
         
+        // Instance a ViewController
+        let vc = className.init()
         vc.hidesBottomBarWhenPushed = true
         navigationController?.pushViewController(vc, animated: true)
     }
