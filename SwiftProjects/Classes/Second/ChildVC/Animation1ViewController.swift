@@ -21,7 +21,7 @@ class Animation1ViewController: BaseViewController {
         super.buttonClick()
         
         
-        UIView.animate(withDuration: 3.0, animations: {
+        UIView.animate(withDuration: 1.0, animations: {
             // Change the opacity imlicitly
             self.myView.layer.opacity = 0.0
             

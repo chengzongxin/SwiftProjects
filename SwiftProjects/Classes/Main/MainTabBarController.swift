@@ -20,6 +20,9 @@ class MainTabBarController: UITabBarController, UITabBarControllerDelegate {
         addCenterButton()
         
         addChildVC()
+        
+        // Select Second ViewController
+        self.selectedIndex = 1
     }
     
     //MARK: Setup UI
