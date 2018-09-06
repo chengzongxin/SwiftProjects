@@ -17,12 +17,13 @@ extension CALayer {
 
 extension CALayer {
     func addShadow() {
-        self.shadowOpacity = 0.2
-        self.shadowRadius = 3
+        self.shadowOpacity = 0.5
+        self.shadowRadius = 10
         self.shadowColor = UIColor.black.cgColor
-        self.shadowOffset = CGSize(width: 10, height: 10)
+        self.shadowOffset = CGSize(width: 5, height: 5)
         self.masksToBounds = false
-        self.shadowPath = UIBezierPath(roundedRect: bounds, cornerRadius: cornerRadius).cgPath
+        let rect = self.bounds.insetBy(dx: -5, dy: -5)
+        self.shadowPath = UIBezierPath(rect: rect).cgPath
     }
     
     func addShadowLayer() {

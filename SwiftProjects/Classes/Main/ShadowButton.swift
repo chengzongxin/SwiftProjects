@@ -1,5 +1,5 @@
 //
-//  ShadowView.swift
+//  ShadowButton.swift
 //  SwiftProjects
 //
 //  Created by Jason on 2018/9/6.
@@ -8,24 +8,24 @@
 
 import UIKit
 
-class ShadowView: UIView {
+class ShadowButton: UIButton {
 
     var shadowLayer: CAShapeLayer?
     
     var shadowBackgoundColor: UIColor! = UIColor.darkGray {
         didSet {
             shadowLayer?.removeFromSuperlayer()
-
+            
             shadowLayer = CAShapeLayer()
             shadowLayer?.path = UIBezierPath(roundedRect: bounds, cornerRadius: 12).cgPath
             shadowLayer?.fillColor = shadowBackgoundColor.cgColor
-
+            
             shadowLayer?.shadowColor = UIColor.darkGray.cgColor
             shadowLayer?.shadowPath = shadowLayer?.path
             shadowLayer?.shadowOffset = CGSize(width: 5.0, height: 5.0)
             shadowLayer?.shadowOpacity = 0.8
             shadowLayer?.shadowRadius = 2
-
+            
             layer.insertSublayer(shadowLayer!, at: 0)
         }
     }
@@ -49,7 +49,5 @@ class ShadowView: UIView {
             //layer.insertSublayer(shadowLayer, below: nil) // also works
         }
     }
-    
-    
 
 }

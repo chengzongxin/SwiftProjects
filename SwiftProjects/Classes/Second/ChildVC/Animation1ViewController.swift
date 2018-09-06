@@ -15,6 +15,21 @@ class Animation1ViewController: BaseViewController {
 
         self.title = "Animation 1"
         
+        let view1 = ShadowView(frame: CGRect(x: 0, y: 20, width: 100, height: 100))
+        view1.shadowBackgoundColor = UIColor.flatGreen
+        view.addSubview(view1)
+        
+        let view2 = UIView(frame: CGRect(x: 130, y: 20, width: 100, height: 100))
+        view2.backgroundColor = UIColor.randomGradientColor(bounds: view2.bounds)
+        view2.layer.roundCorners(radius: 12)
+        view2.layer.addShadow()
+        view.addSubview(view2)
+        
+        let view3 = UIView(frame: CGRect(x: 260, y: 20, width: 100, height: 100))
+        view3.layer.roundCorners(radius: 12)
+        view3.layer.addShadowLayer()
+        view.addSubview(view3)
+        
     }
     
     override public func buttonClick() {

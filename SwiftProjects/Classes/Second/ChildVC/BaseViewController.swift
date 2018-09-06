@@ -17,14 +17,12 @@ class BaseViewController: UIViewController {
     }()
     
     lazy var startButton: UIButton = {
-        let button = UIButton(type: .system)
+        let button = ShadowButton(type: .system)
         button.setTitle("Start Animation", for: .normal)
         button.frame = CGRect(x: 0, y: 0, width: 300, height: 50)
-        button.backgroundColor = UIColor.randomGradientColor(bounds: button.bounds)
+        button.shadowBackgoundColor = UIColor.randomGradientColor(bounds: button.bounds)
         button.center = CGPoint(x: self.view.center.x, y: self.view.frame.size.height - 100)
         button.addTarget(self, action: #selector(buttonClick), for: .touchUpInside)
-        button.layer.roundCorners(radius: 10)
-        button.layer.addShadowLayer()
         return button
     }()
 
@@ -32,6 +30,8 @@ class BaseViewController: UIViewController {
         super.viewDidLoad()
         
         self.title = "Animation Base ViewController"
+        
+        edgesForExtendedLayout = .init(rawValue: 0) // Set content view following the navbar
         
         view.backgroundColor = UIColor.white
 

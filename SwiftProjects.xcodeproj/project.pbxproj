@@ -27,6 +27,7 @@
 		9605C60E2101F67C004BD566 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9605C60D2101F67C004BD566 /* TabBar.swift */; };
 		9617D76D2140D7B000FD1060 /* Shadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9617D76C2140D7B000FD1060 /* Shadow.swift */; };
 		9617D76F2140E5FE00FD1060 /* ShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9617D76E2140E5FE00FD1060 /* ShadowView.swift */; };
+		9617D771214119E300FD1060 /* ShadowButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9617D770214119E300FD1060 /* ShadowButton.swift */; };
 		966628F0213FD34100820701 /* SecondCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966628EE213FD34100820701 /* SecondCell.swift */; };
 		966628F1213FD34100820701 /* SecondCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 966628EF213FD34100820701 /* SecondCell.xib */; };
 		966628F4213FEA9200820701 /* Animation1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966628F3213FEA9200820701 /* Animation1ViewController.swift */; };
@@ -81,6 +82,7 @@
 		9605C60D2101F67C004BD566 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 		9617D76C2140D7B000FD1060 /* Shadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shadow.swift; sourceTree = "<group>"; };
 		9617D76E2140E5FE00FD1060 /* ShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowView.swift; sourceTree = "<group>"; };
+		9617D770214119E300FD1060 /* ShadowButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowButton.swift; sourceTree = "<group>"; };
 		966628EE213FD34100820701 /* SecondCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondCell.swift; sourceTree = "<group>"; };
 		966628EF213FD34100820701 /* SecondCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SecondCell.xib; sourceTree = "<group>"; };
 		966628F3213FEA9200820701 /* Animation1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animation1ViewController.swift; sourceTree = "<group>"; };
@@ -230,6 +232,7 @@
 				9605C60D2101F67C004BD566 /* TabBar.swift */,
 				966628F7213FECA700820701 /* Define.swift */,
 				9617D76E2140E5FE00FD1060 /* ShadowView.swift */,
+				9617D770214119E300FD1060 /* ShadowButton.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -510,6 +513,7 @@
 				96A5B8FF210868010039E81B /* Book.swift in Sources */,
 				966628F6213FEB2C00820701 /* BaseViewController.swift in Sources */,
 				9605C5FD2101E19D004BD566 /* FourViewController.swift in Sources */,
+				9617D771214119E300FD1060 /* ShadowButton.swift in Sources */,
 				96A5B90C21087B230039E81B /* BookTableViewController.swift in Sources */,
 				966628F0213FD34100820701 /* SecondCell.swift in Sources */,
 				9617D76D2140D7B000FD1060 /* Shadow.swift in Sources */,
@@ -688,7 +692,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ARGK844GXV;
 				INFOPLIST_FILE = SwiftProjects/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -709,7 +715,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ARGK844GXV;
 				INFOPLIST_FILE = SwiftProjects/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
