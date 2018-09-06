@@ -26,6 +26,7 @@
 		9605C60C2101F381004BD566 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9605C60B2101F381004BD566 /* Home.storyboard */; };
 		9605C60E2101F67C004BD566 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9605C60D2101F67C004BD566 /* TabBar.swift */; };
 		9617D76D2140D7B000FD1060 /* Shadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9617D76C2140D7B000FD1060 /* Shadow.swift */; };
+		9617D76F2140E5FE00FD1060 /* ShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9617D76E2140E5FE00FD1060 /* ShadowView.swift */; };
 		966628F0213FD34100820701 /* SecondCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966628EE213FD34100820701 /* SecondCell.swift */; };
 		966628F1213FD34100820701 /* SecondCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 966628EF213FD34100820701 /* SecondCell.xib */; };
 		966628F4213FEA9200820701 /* Animation1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966628F3213FEA9200820701 /* Animation1ViewController.swift */; };
@@ -79,6 +80,7 @@
 		9605C60B2101F381004BD566 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		9605C60D2101F67C004BD566 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 		9617D76C2140D7B000FD1060 /* Shadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shadow.swift; sourceTree = "<group>"; };
+		9617D76E2140E5FE00FD1060 /* ShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowView.swift; sourceTree = "<group>"; };
 		966628EE213FD34100820701 /* SecondCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondCell.swift; sourceTree = "<group>"; };
 		966628EF213FD34100820701 /* SecondCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SecondCell.xib; sourceTree = "<group>"; };
 		966628F3213FEA9200820701 /* Animation1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animation1ViewController.swift; sourceTree = "<group>"; };
@@ -227,6 +229,7 @@
 				9605C6012101E373004BD566 /* MainTabBarController.swift */,
 				9605C60D2101F67C004BD566 /* TabBar.swift */,
 				966628F7213FECA700820701 /* Define.swift */,
+				9617D76E2140E5FE00FD1060 /* ShadowView.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -513,6 +516,7 @@
 				96BE4A152106FD7C001AED2C /* CenterViewController.swift in Sources */,
 				9605C60E2101F67C004BD566 /* TabBar.swift in Sources */,
 				96A5B90F21087D2A0039E81B /* BookCell.swift in Sources */,
+				9617D76F2140E5FE00FD1060 /* ShadowView.swift in Sources */,
 				9605C6022101E373004BD566 /* MainTabBarController.swift in Sources */,
 				966628FF213FF03200820701 /* RandomColor.swift in Sources */,
 				9605C5FB2101E196004BD566 /* ThirdViewController.swift in Sources */,

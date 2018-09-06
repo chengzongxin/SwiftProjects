@@ -11,11 +11,8 @@ import UIKit
 class BaseViewController: UIViewController {
     
     lazy var myView: UIView = {
-        let view = UIView(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
-        view.backgroundColor = UIColor.randomGradientColor(bounds: view.bounds)
+        let view = ShadowView(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
         view.center = self.view.center
-        view.layer.roundCorners(radius: 10)
-        view.layer.addShadow()
         return view
     }()
     
@@ -27,7 +24,7 @@ class BaseViewController: UIViewController {
         button.center = CGPoint(x: self.view.center.x, y: self.view.frame.size.height - 100)
         button.addTarget(self, action: #selector(buttonClick), for: .touchUpInside)
         button.layer.roundCorners(radius: 10)
-        button.layer.addShadow()
+        button.layer.addShadowLayer()
         return button
     }()
 
