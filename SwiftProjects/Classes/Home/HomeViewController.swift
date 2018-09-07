@@ -20,6 +20,7 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         
         dataSource.append("图书展示")
+        dataSource.append("自定义View")
         
         view.backgroundColor = UIColor(gradientStyle: .topToBottom, withFrame: view.bounds, andColors: [UIColor.randomFlat,UIColor.randomFlat])
         
@@ -56,7 +57,16 @@ extension HomeViewController: UITableViewDelegate,UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         
-        self.performSegue(withIdentifier: "BookTableViewController", sender: nil)
+        
+        switch indexPath.item {
+        case 0:
+            self.performSegue(withIdentifier: "BookTableViewController", sender: nil)
+        case 1:
+            self.performSegue(withIdentifier: "CustomViewController", sender: nil)
+            
+        default: break
+            
+        }
     }
 }
 

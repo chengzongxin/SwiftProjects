@@ -45,6 +45,7 @@
 		96BE4A132106FD6C001AED2C /* Center.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96BE4A122106FD6C001AED2C /* Center.storyboard */; };
 		96BE4A152106FD7C001AED2C /* CenterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BE4A142106FD7C001AED2C /* CenterViewController.swift */; };
 		96BE4A1821073C91001AED2C /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BE4A1721073C91001AED2C /* NetworkManager.swift */; };
+		96C3F3C521421BF500F5212B /* CustomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C3F3C421421BF500F5212B /* CustomViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,6 +105,7 @@
 		96BE4A122106FD6C001AED2C /* Center.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Center.storyboard; sourceTree = "<group>"; };
 		96BE4A142106FD7C001AED2C /* CenterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterViewController.swift; sourceTree = "<group>"; };
 		96BE4A1721073C91001AED2C /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		96C3F3C421421BF500F5212B /* CustomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomViewController.swift; sourceTree = "<group>"; };
 		A477FA7791C6D9A6002D9438 /* Pods-SwiftProjectsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftProjectsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftProjectsTests/Pods-SwiftProjectsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C8FC9E3CD86C4B3747AA6BF5 /* Pods_SwiftProjects.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftProjects.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1F39029FE479AF53D9FD2BD /* Pods-SwiftProjects.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftProjects.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftProjects/Pods-SwiftProjects.release.xcconfig"; sourceTree = "<group>"; };
@@ -202,6 +204,7 @@
 				9605C60B2101F381004BD566 /* Home.storyboard */,
 				9605C5F62101E189004BD566 /* HomeViewController.swift */,
 				96A5B8FD210867F10039E81B /* DouBanBook */,
+				96C3F3C321421BD500F5212B /* CustomView */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -306,6 +309,14 @@
 				96BE4A1721073C91001AED2C /* NetworkManager.swift */,
 			);
 			path = Manager;
+			sourceTree = "<group>";
+		};
+		96C3F3C321421BD500F5212B /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				96C3F3C421421BF500F5212B /* CustomViewController.swift */,
+			);
+			path = CustomView;
 			sourceTree = "<group>";
 		};
 		9847DC7A848A35868BD57663 /* Pods */ = {
@@ -534,6 +545,7 @@
 				9605C6022101E373004BD566 /* MainTabBarController.swift in Sources */,
 				966628FF213FF03200820701 /* RandomColor.swift in Sources */,
 				9605C5FB2101E196004BD566 /* ThirdViewController.swift in Sources */,
+				96C3F3C521421BF500F5212B /* CustomViewController.swift in Sources */,
 				9605C5C12101BF67004BD566 /* AppDelegate.swift in Sources */,
 				966628F4213FEA9200820701 /* Animation1ViewController.swift in Sources */,
 				96A5B90A210870250039E81B /* Logger.swift in Sources */,

@@ -13,6 +13,26 @@ class ShadowView: UIView {
 
     var shadowLayer: CAShapeLayer?
     
+    @IBInspectable
+    var shadowBackgoundColor: UIColor? {
+        didSet {
+            shadowLayer?.removeFromSuperlayer()
+            
+            shadowLayer = CAShapeLayer()
+            shadowLayer?.path = UIBezierPath(roundedRect: bounds, cornerRadius: 12).cgPath
+            shadowLayer?.fillColor = shadowBackgoundColor?.cgColor
+            
+            shadowLayer?.shadowColor = UIColor.darkGray.cgColor
+            shadowLayer?.shadowPath = shadowLayer?.path
+            shadowLayer?.shadowOffset = CGSize(width: 5.0, height: 5.0)
+            shadowLayer?.shadowOpacity = 0.8
+            shadowLayer?.shadowRadius = 2
+            
+            layer.insertSublayer(shadowLayer!, at: 0)
+        }
+    }
+    
+    
     override func layoutSubviews() {
         super.layoutSubviews()
         
@@ -33,27 +53,3 @@ class ShadowView: UIView {
     }
 }
 
-extension ShadowView {
-    
-    @IBInspectable
-    var shadowBackgoundColor: UIColor {
-        set {
-            shadowLayer?.removeFromSuperlayer()
-            
-            shadowLayer = CAShapeLayer()
-            shadowLayer?.path = UIBezierPath(roundedRect: bounds, cornerRadius: 12).cgPath
-            shadowLayer?.fillColor = shadowBackgoundColor.cgColor
-
-            shadowLayer?.shadowColor = UIColor.darkGray.cgColor
-            shadowLayer?.shadowPath = shadowLayer?.path
-            shadowLayer?.shadowOffset = CGSize(width: 5.0, height: 5.0)
-            shadowLayer?.shadowOpacity = 0.8
-            shadowLayer?.shadowRadius = 2
-
-            layer.insertSublayer(shadowLayer!, at: 0)
-        }
-        get {
-            return UIColor.red
-        }
-    }
-}
