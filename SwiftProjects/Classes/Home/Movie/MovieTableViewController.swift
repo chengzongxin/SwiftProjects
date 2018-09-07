@@ -16,7 +16,7 @@ class MovieTableViewController: UITableViewController {
     
     var start = 0
     
-    var count = 50
+    var count = 20
     
     
     var movies: Movie?
