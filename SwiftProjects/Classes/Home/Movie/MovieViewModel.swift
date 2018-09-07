@@ -10,8 +10,8 @@ import UIKit
 
 class MovieViewModel: NSObject {
     // load movie
-    static func getMovies(success:((AnyObject?) -> Void)?, failure: ((NSError) -> Void)?) {
-        let url = "http://api.douban.com/v2/movie/top250?start=0&count=25"
+    static func getMovies(start:(Int), count:(Int), success:((AnyObject?) -> Void)?, failure: ((NSError) -> Void)?) {
+        let url = "http://api.douban.com/v2/movie/top250?start=\(start)&count=\(count)"
         NetworkManager.GET(URLString: url, parameters: nil, success: { (responseObject) in
             let movie = Movie.deserialize(from: responseObject as? [String : Any])
             success?(movie)

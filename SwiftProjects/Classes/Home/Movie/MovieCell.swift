@@ -9,6 +9,8 @@
 import UIKit
 
 class MovieCell: UITableViewCell {
+    // 排行
+    @IBOutlet weak var rankLabel: UILabel!
     // 海报
     @IBOutlet weak var picImageView: UIImageView!
     // 标题

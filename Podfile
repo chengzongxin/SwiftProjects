@@ -13,11 +13,16 @@ target 'SwiftProjects' do
     pod 'HandyJSON', '~> 4.1.1'
     pod 'Kingfisher', '~> 4.0'
     pod 'SCLAlertView'
+    
     # Layout == Masonry
     pod 'SnapKit', '~> 4.0.0'
+    
     # Bind Events == Reactive
     pod 'RxSwift',    '~> 4.0'
     pod 'RxCocoa',    '~> 4.0'
+    
+    # Refresh
+    pod 'ESPullToRefresh'
     
   target 'SwiftProjectsTests' do
     inherit! :search_paths
