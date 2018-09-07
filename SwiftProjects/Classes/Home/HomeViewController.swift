@@ -11,16 +11,16 @@ import UIKit
 let cellIdentifier = "UITableViewCell"
 
 class HomeViewController: UIViewController {
-    
-    var dataSource = [String]()
+    // 元组数组->(Title,ViewController)
+    var dataSource = [(title:String ,viewController:String)]()
     
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        dataSource.append("图书展示")
-        dataSource.append("自定义View")
+        dataSource.append((title:"图书展示" , viewController:"BookTableViewController"))
+        dataSource.append((title:"自定义View", viewController: "CustomViewController"))
         
         view.backgroundColor = UIColor(gradientStyle: .topToBottom, withFrame: view.bounds, andColors: [UIColor.randomFlat,UIColor.randomFlat])
         
@@ -48,7 +48,7 @@ extension HomeViewController: UITableViewDelegate,UITableViewDataSource {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath)
         
-        cell.textLabel?.text = dataSource[indexPath.row]
+        cell.textLabel?.text = dataSource[indexPath.row].title
         
         return cell
         
@@ -57,16 +57,9 @@ extension HomeViewController: UITableViewDelegate,UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         
+        // 直接取出identifier perform
+        self.performSegue(withIdentifier: dataSource[indexPath.row].viewController, sender: nil)
         
-        switch indexPath.item {
-        case 0:
-            self.performSegue(withIdentifier: "BookTableViewController", sender: nil)
-        case 1:
-            self.performSegue(withIdentifier: "CustomViewController", sender: nil)
-            
-        default: break
-            
-        }
     }
 }
 
