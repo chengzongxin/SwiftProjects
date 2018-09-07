@@ -110,7 +110,7 @@
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XJE-Cg-Ktt" customClass="DesignableView" customModule="SwiftProjects" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="40.5" width="335" height="110"/>
-                                        <color key="backgroundColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="0.38526773452758789" green="0.13679999113082886" blue="0.1175478994846344" alpha="1" colorSpace="calibratedRGB"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                 <real key="value" value="10"/>
@@ -137,7 +137,7 @@
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="color" keyPath="shadowBackgoundColor">
-                                                <color key="value" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="value" red="0.38526773452758789" green="0.13679999113082886" blue="0.1175478994846344" alpha="1" colorSpace="calibratedRGB"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
