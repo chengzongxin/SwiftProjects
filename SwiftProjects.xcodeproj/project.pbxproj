@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		393F97C9F62430539252FC1B /* Pods_SwiftProjectsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D3F3905BF3AF9E94BA98B17 /* Pods_SwiftProjectsTests.framework */; };
 		4A1FD3173E5653620CE54EAB /* Pods_SwiftProjects.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8FC9E3CD86C4B3747AA6BF5 /* Pods_SwiftProjects.framework */; };
+		96044EC92142604300F29398 /* MovieTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96044EC82142604300F29398 /* MovieTableViewController.swift */; };
+		96044ECE2142623D00F29398 /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96044ECC2142623D00F29398 /* MovieCell.swift */; };
+		96044ECF2142623D00F29398 /* MovieCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96044ECD2142623D00F29398 /* MovieCell.xib */; };
+		96044ED1214267B900F29398 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96044ED0214267B800F29398 /* Movie.swift */; };
+		96044ED3214275B000F29398 /* MovieViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96044ED2214275B000F29398 /* MovieViewModel.swift */; };
 		9605C5C12101BF67004BD566 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9605C5C02101BF67004BD566 /* AppDelegate.swift */; };
 		9605C5C62101BF67004BD566 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9605C5C42101BF67004BD566 /* Main.storyboard */; };
 		9605C5C82101BF68004BD566 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9605C5C72101BF68004BD566 /* Assets.xcassets */; };
@@ -62,6 +67,11 @@
 		38002E07F99AAC7494340B6A /* Pods-SwiftProjects.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftProjects.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftProjects/Pods-SwiftProjects.debug.xcconfig"; sourceTree = "<group>"; };
 		4D3F3905BF3AF9E94BA98B17 /* Pods_SwiftProjectsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftProjectsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		95BC1AA6804C7BCA478B9C46 /* Pods-SwiftProjectsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftProjectsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftProjectsTests/Pods-SwiftProjectsTests.release.xcconfig"; sourceTree = "<group>"; };
+		96044EC82142604300F29398 /* MovieTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTableViewController.swift; sourceTree = "<group>"; };
+		96044ECC2142623D00F29398 /* MovieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCell.swift; sourceTree = "<group>"; };
+		96044ECD2142623D00F29398 /* MovieCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieCell.xib; sourceTree = "<group>"; };
+		96044ED0214267B800F29398 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		96044ED2214275B000F29398 /* MovieViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieViewModel.swift; sourceTree = "<group>"; };
 		9605C5BD2101BF67004BD566 /* SwiftProjects.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftProjects.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9605C5C02101BF67004BD566 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9605C5C52101BF67004BD566 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -131,6 +141,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		96044EC72142603100F29398 /* Movie */ = {
+			isa = PBXGroup;
+			children = (
+				96044EC82142604300F29398 /* MovieTableViewController.swift */,
+				96044ECC2142623D00F29398 /* MovieCell.swift */,
+				96044ECD2142623D00F29398 /* MovieCell.xib */,
+				96044ED0214267B800F29398 /* Movie.swift */,
+				96044ED2214275B000F29398 /* MovieViewModel.swift */,
+			);
+			path = Movie;
+			sourceTree = "<group>";
+		};
 		9605C5B42101BF67004BD566 = {
 			isa = PBXGroup;
 			children = (
@@ -205,6 +227,7 @@
 				9605C5F62101E189004BD566 /* HomeViewController.swift */,
 				96A5B8FD210867F10039E81B /* DouBanBook */,
 				96C3F3C321421BD500F5212B /* CustomView */,
+				96044EC72142603100F29398 /* Movie */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -430,6 +453,7 @@
 				9605C5C82101BF68004BD566 /* Assets.xcassets in Resources */,
 				9605C5C62101BF67004BD566 /* Main.storyboard in Resources */,
 				966628F1213FD34100820701 /* SecondCell.xib in Resources */,
+				96044ECF2142623D00F29398 /* MovieCell.xib in Resources */,
 				9605C6062101F01C004BD566 /* Second.storyboard in Resources */,
 				9605C60A2101F055004BD566 /* Four.storyboard in Resources */,
 				9605C6082101F042004BD566 /* Third.storyboard in Resources */,
@@ -531,14 +555,17 @@
 				96A5B908210870120039E81B /* LogCategory.m in Sources */,
 				96BE4A1821073C91001AED2C /* NetworkManager.swift in Sources */,
 				96A5B8FF210868010039E81B /* Book.swift in Sources */,
+				96044EC92142604300F29398 /* MovieTableViewController.swift in Sources */,
 				966628F6213FEB2C00820701 /* BaseViewController.swift in Sources */,
 				9605C5FD2101E19D004BD566 /* FourViewController.swift in Sources */,
 				9617D771214119E300FD1060 /* ShadowButton.swift in Sources */,
 				96A5B90C21087B230039E81B /* BookTableViewController.swift in Sources */,
 				966628F0213FD34100820701 /* SecondCell.swift in Sources */,
+				96044ED3214275B000F29398 /* MovieViewModel.swift in Sources */,
 				9617D76D2140D7B000FD1060 /* Shadow.swift in Sources */,
 				96BE4A152106FD7C001AED2C /* CenterViewController.swift in Sources */,
 				9605C60E2101F67C004BD566 /* TabBar.swift in Sources */,
+				96044ECE2142623D00F29398 /* MovieCell.swift in Sources */,
 				96A5B90F21087D2A0039E81B /* BookCell.swift in Sources */,
 				9617D76F2140E5FE00FD1060 /* ShadowView.swift in Sources */,
 				9617D77521411F0000FD1060 /* DesignableView.swift in Sources */,
@@ -547,6 +574,7 @@
 				9605C5FB2101E196004BD566 /* ThirdViewController.swift in Sources */,
 				96C3F3C521421BF500F5212B /* CustomViewController.swift in Sources */,
 				9605C5C12101BF67004BD566 /* AppDelegate.swift in Sources */,
+				96044ED1214267B900F29398 /* Movie.swift in Sources */,
 				966628F4213FEA9200820701 /* Animation1ViewController.swift in Sources */,
 				96A5B90A210870250039E81B /* Logger.swift in Sources */,
 				966628F8213FECA700820701 /* Define.swift in Sources */,

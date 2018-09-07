@@ -21,6 +21,7 @@ class HomeViewController: UIViewController {
         
         dataSource.append((title:"图书展示" , viewController:"BookTableViewController"))
         dataSource.append((title:"自定义View", viewController: "CustomViewController"))
+        dataSource.append((title:"豆瓣Top250(StackView Achieve)", viewController: "MovieTableViewController"))
         
         view.backgroundColor = UIColor(gradientStyle: .topToBottom, withFrame: view.bounds, andColors: [UIColor.randomFlat,UIColor.randomFlat])
         

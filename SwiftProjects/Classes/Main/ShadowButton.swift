@@ -12,6 +12,7 @@ class ShadowButton: UIButton {
 
     var shadowLayer: CAShapeLayer?
     
+    @IBInspectable
     var shadowBackgoundColor: UIColor! = UIColor.darkGray {
         didSet {
             shadowLayer?.removeFromSuperlayer()
