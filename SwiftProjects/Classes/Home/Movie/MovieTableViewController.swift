@@ -9,7 +9,6 @@
 import UIKit
 import ESPullToRefresh
 
-
 let movieCellID = "MovieCell"
 
 class MovieTableViewController: UITableViewController {
@@ -31,11 +30,12 @@ class MovieTableViewController: UITableViewController {
         
         edgesForExtendedLayout = .init(rawValue: 0) // Set content view following the navbar
         
-        self.initTableView()
+        initTableView()
         
         self.tableView.es.startPullToRefresh()
+        
     }
-    
+    // MARK: Initial TableView
     private func initTableView() {
         self.tableView.register(UINib(nibName: "MovieCell", bundle: nil), forCellReuseIdentifier: movieCellID)
         
@@ -56,9 +56,10 @@ class MovieTableViewController: UITableViewController {
     }
     
     private func loadDatas() {
+        start = 0
         MovieViewModel.getMovies(start: start, count: count, success: { (responseData) in
-            print(responseData ?? "not value")
             self.movies = responseData as? Movie
+            print(self.movies ?? "not a value")
             self.tableView.reloadData()
             self.tableView.es.stopPullToRefresh()
             self.start += self.count

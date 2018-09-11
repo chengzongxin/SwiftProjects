@@ -26,6 +26,7 @@ class Movie: HandyJSON{
 }
 
 
+
 class Subject: HandyJSON{
     var alt : String!
     var casts : [Cast]!
@@ -41,6 +42,28 @@ class Subject: HandyJSON{
     var year : String!
     
     required init() {}
+}
+
+// 实现协议自定义输出
+extension Movie: CustomStringConvertible {
+    var description: String {
+        
+        var des = "Movie Model: \nTITLE:[\(self.title ?? "")]\nTOTAL:[\(self.total ?? 0)]\nCOUNT:[\(self.subjects.count)]"
+        
+        for item in self.subjects {
+            des.append("\n")
+            des.append(item.description)
+        }
+        
+        return des
+    }
+}
+
+
+extension Subject: CustomStringConvertible {
+    var description: String {
+        return self.toJSON()?.description ?? ""
+    }
 }
 
 class MovieRating: HandyJSON{
