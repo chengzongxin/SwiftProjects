@@ -45,6 +45,9 @@ class MovieCell: UITableViewCell {
             }
             
             castLabel.text = castStr
+            
+//            let supercolor = #keyPath(UIView.superview.backgroundColor)
+//            self.contentView.value(forKey: supercolor)
         }
     }
     

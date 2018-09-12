@@ -24,6 +24,8 @@ class MovieTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        print(self)
+        
         self.navigationItem.title = "豆瓣Top250"
         
         self.navigationController?.navigationBar.isTranslucent = false
@@ -33,6 +35,8 @@ class MovieTableViewController: UITableViewController {
         initTableView()
         
         self.tableView.es.startPullToRefresh()
+        
+//        let index: String.Index = "".startIndex
         
     }
     // MARK: Initial TableView
@@ -68,6 +72,7 @@ class MovieTableViewController: UITableViewController {
         }
     }
     
+    /// load network data
     private func loadMoreData() {
         MovieViewModel.getMovies(start: start, count: count, success: { (responseData) in
             print(responseData ?? "not value")
