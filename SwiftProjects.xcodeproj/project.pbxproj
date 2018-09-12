@@ -41,6 +41,7 @@
 		966628F8213FECA700820701 /* Define.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966628F7213FECA700820701 /* Define.swift */; };
 		966628FD213FF00400820701 /* Position.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966628FC213FF00400820701 /* Position.swift */; };
 		966628FF213FF03200820701 /* RandomColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966628FE213FF03200820701 /* RandomColor.swift */; };
+		9677B8D52149190800000E4C /* Animation2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9677B8D42149190800000E4C /* Animation2ViewController.swift */; };
 		96A5B8FF210868010039E81B /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A5B8FE210868010039E81B /* Book.swift */; };
 		96A5B908210870120039E81B /* LogCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 96A5B907210870120039E81B /* LogCategory.m */; };
 		96A5B90A210870250039E81B /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A5B909210870250039E81B /* Logger.swift */; };
@@ -103,6 +104,7 @@
 		966628F7213FECA700820701 /* Define.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Define.swift; sourceTree = "<group>"; };
 		966628FC213FF00400820701 /* Position.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Position.swift; sourceTree = "<group>"; };
 		966628FE213FF03200820701 /* RandomColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomColor.swift; sourceTree = "<group>"; };
+		9677B8D42149190800000E4C /* Animation2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animation2ViewController.swift; sourceTree = "<group>"; };
 		96A5B8FE210868010039E81B /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 		96A5B904210870110039E81B /* SwiftProjects-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SwiftProjects-Bridging-Header.h"; sourceTree = "<group>"; };
 		96A5B905210870120039E81B /* LogCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogCategory.h; sourceTree = "<group>"; };
@@ -271,6 +273,7 @@
 			children = (
 				966628F5213FEB2C00820701 /* BaseViewController.swift */,
 				966628F3213FEA9200820701 /* Animation1ViewController.swift */,
+				9677B8D42149190800000E4C /* Animation2ViewController.swift */,
 			);
 			path = ChildVC;
 			sourceTree = "<group>";
@@ -567,6 +570,7 @@
 				9617D76D2140D7B000FD1060 /* Shadow.swift in Sources */,
 				96BE4A152106FD7C001AED2C /* CenterViewController.swift in Sources */,
 				9605C60E2101F67C004BD566 /* TabBar.swift in Sources */,
+				9677B8D52149190800000E4C /* Animation2ViewController.swift in Sources */,
 				96044ECE2142623D00F29398 /* MovieCell.swift in Sources */,
 				96A5B90F21087D2A0039E81B /* BookCell.swift in Sources */,
 				9617D76F2140E5FE00FD1060 /* ShadowView.swift in Sources */,

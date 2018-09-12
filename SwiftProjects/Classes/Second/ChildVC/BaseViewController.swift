@@ -9,13 +9,15 @@
 import UIKit
 
 class BaseViewController: UIViewController {
-    
+    // MARK: - Properties
+    // MyView
     lazy var myView: UIView = {
         let view = ShadowView(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
+        view.shadowBackgoundColor = UIColor.flatOrange
         view.center = self.view.center
         return view
     }()
-    
+    // StartButton
     lazy var startButton: UIButton = {
         let button = ShadowButton(type: .system)
         button.setTitle("Start Animation", for: .normal)
@@ -26,6 +28,7 @@ class BaseViewController: UIViewController {
         return button
     }()
 
+    // MARK: - View Did Load
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -40,6 +43,7 @@ class BaseViewController: UIViewController {
         view.addSubview(startButton)
     }
     
+    // MARK: - Private Method
     @objc public func buttonClick() {
         print(self)
     }

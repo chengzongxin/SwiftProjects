@@ -22,6 +22,7 @@ class SecondViewController: UIViewController, UICollectionViewDelegate, UICollec
         
         dataSouces[0] = "BaseViewController"
         dataSouces[1] = "Animation1ViewController"
+        dataSouces[2] = "Animation2ViewController"
         
         return dataSouces
     }()
