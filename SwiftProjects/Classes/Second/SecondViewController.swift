@@ -23,6 +23,7 @@ class SecondViewController: UIViewController, UICollectionViewDelegate, UICollec
         dataSouces[0] = ("BaseViewController","BaseViewController")
         dataSouces[1] = ("MoveAndOpacity","Animation1ViewController")
         dataSouces[2] = ("Implicitly&Explicity","Animation2ViewController")
+        dataSouces[3] = ("KeyFrameAnimation","Animation3ViewController")
         
         return dataSouces
     }()
