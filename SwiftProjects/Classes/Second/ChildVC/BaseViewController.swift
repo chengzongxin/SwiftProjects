@@ -17,8 +17,16 @@ class BaseViewController: UIViewController {
         
         edgesForExtendedLayout = .init(rawValue: 0) // Set content view following the navbar
         
-        view.backgroundColor = UIColor.randomGradientColor(bounds: view.bounds)
+//        view.backgroundColor = UIColor.randomGradientColor(bounds: view.bounds)
+        view.backgroundColor = UIColor.white
         
-        navigationController?.navigationBar.topItem?.backBarButtonItem = UIBarButtonItem(title: "Back", style: .plain, target: nil, action: nil)
+        // 返回图标
+        navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "EC_Back"), style: .done, target: self, action: #selector(back))
+        // 返回图标y
+        navigationController?.navigationBar.tintColor = UIColor.flatOrange
+    }
+    
+    @objc private func back() {
+        navigationController?.popViewController(animated: true)
     }
 }
