@@ -13,16 +13,16 @@ let secondCellID = "seconCellID"
 
 class SecondViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
-    lazy var dataSouces: [String] = {
-        var dataSouces: [String] = []
+    lazy var dataSouces: [(title:String, viewController:String)] = {
+        var dataSouces: [(title:String, viewController:String)] = []
         
         for i in 0..<100 {
-            dataSouces.append("\(i)")
+            dataSouces.append((String(i),"UIViewController"))
         }
         
-        dataSouces[0] = "BaseViewController"
-        dataSouces[1] = "Animation1ViewController"
-        dataSouces[2] = "Animation2ViewController"
+        dataSouces[0] = ("BaseViewController","BaseViewController")
+        dataSouces[1] = ("MoveAndOpacity","Animation1ViewController")
+        dataSouces[2] = ("Implicitly&Explicity","Animation2ViewController")
         
         return dataSouces
     }()
@@ -108,7 +108,7 @@ extension SecondViewController {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: secondCellID, for: indexPath) as! SecondCell
         
-        cell.titleLabel.text = dataSouces[indexPath.item]
+        cell.titleLabel.text = dataSouces[indexPath.item].title
         
         return cell;
     }
@@ -125,13 +125,14 @@ extension SecondViewController {
         // get namespace
         let namespace = Bundle.main.infoDictionary!["CFBundleExecutable"] as! String
         // get 'anyClass' with classname and namespace
-        guard let className = NSClassFromString("\(namespace).\(dataSouces[indexPath.item])") as? UIViewController.Type else {
+        guard let className = NSClassFromString("\(namespace).\(dataSouces[indexPath.item].viewController)") as? UIViewController.Type else {
             print("It's not a view controller!")
             return
         }
         
         // Instance a ViewController
         let vc = className.init()
+        vc.navigationItem.title = dataSouces[indexPath.item].title
         vc.hidesBottomBarWhenPushed = true
         navigationController?.pushViewController(vc, animated: true)
     }

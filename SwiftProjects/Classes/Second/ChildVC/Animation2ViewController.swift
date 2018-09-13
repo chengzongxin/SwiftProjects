@@ -11,19 +11,12 @@ import SnapKit
 import RxSwift
 import RxCocoa
 
-class Animation2ViewController: UIViewController {
+class Animation2ViewController: BaseViewController {
     var disposeBag = DisposeBag()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        print(self)
-        
-        view.backgroundColor = UIColor.flatWhite
-        
-        edgesForExtendedLayout = .init(rawValue: 0)
-        
-        
         let view1 = ShadowView()
         view1.frame = CGRect(x: 50, y: 50, width: 100, height: 100)
         view1.shadowBackgoundColor = UIColor.red

@@ -10,8 +10,31 @@ import UIKit
 
 class Animation1ViewController: BaseViewController {
 
+    // MARK: - Properties
+    // MyView
+    lazy var myView: UIView = {
+        let view = ShadowView(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
+        view.shadowBackgoundColor = UIColor.flatOrange
+        view.center = self.view.center
+        return view
+    }()
+    // StartButton
+    lazy var startButton: UIButton = {
+        let button = ShadowButton(type: .system)
+        button.setTitle("Start Animation", for: .normal)
+        button.frame = CGRect(x: 0, y: 0, width: 300, height: 50)
+        button.shadowBackgoundColor = UIColor.randomGradientColor(bounds: button.bounds)
+        button.center = CGPoint(x: self.view.center.x, y: self.view.frame.size.height - 200)
+        button.addTarget(self, action: #selector(buttonClick), for: .touchUpInside)
+        return button
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        view.addSubview(myView)
+        
+        view.addSubview(startButton)
 
         self.title = "Animation 1"
         
@@ -32,10 +55,7 @@ class Animation1ViewController: BaseViewController {
         
     }
     
-    override public func buttonClick() {
-        super.buttonClick()
-        
-        
+    @objc func buttonClick() {
         UIView.animate(withDuration: 1.0, animations: {
             // Change the opacity imlicitly
             self.myView.layer.opacity = 0.0
