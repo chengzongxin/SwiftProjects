@@ -76,9 +76,15 @@ class Animation2ViewController: UIViewController {
             fadeAnim.toValue = 0
             fadeAnim.duration = 1
             view2.layer.add(fadeAnim, forKey: "opacity")
+            // dont forget change the property
+            view2.layer.opacity = 0.0
             
         }.disposed(by: disposeBag)
         
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        print(self)
     }
     
 }
