@@ -20,6 +20,9 @@ class MovieTableViewController: UITableViewController {
     
     var movies: Movie?
     
+    deinit {
+        print(String(NSStringFromClass(self.classForCoder)) + " had deinit")
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,20 +46,19 @@ class MovieTableViewController: UITableViewController {
     private func initTableView() {
         self.tableView.register(UINib(nibName: "MovieCell", bundle: nil), forCellReuseIdentifier: movieCellID)
         
-        self.tableView.es.addPullToRefresh {
+        // Add Refresh
+        self.tableView.addPullToRefresh {
             [unowned self] in
             
             self.loadDatas()
         }
         
-        self.tableView.es.addInfiniteScrolling {
+        
+        self.tableView.addInfiniteScrolling {
             [unowned self] in
             
             self.loadMoreData()
         }
-        
-        self.tableView.expiredTimeInterval = 20.0
-        
     }
     
     private func loadDatas() {

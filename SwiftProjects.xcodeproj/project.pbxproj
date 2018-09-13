@@ -43,6 +43,9 @@
 		966628FF213FF03200820701 /* RandomColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966628FE213FF03200820701 /* RandomColor.swift */; };
 		9677B8D52149190800000E4C /* Animation2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9677B8D42149190800000E4C /* Animation2ViewController.swift */; };
 		967E1C11214A4535004C7EB3 /* Animation3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967E1C10214A4535004C7EB3 /* Animation3ViewController.swift */; };
+		967E1C15214A73F3004C7EB3 /* MTRefreshFooterAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967E1C13214A73F3004C7EB3 /* MTRefreshFooterAnimator.swift */; };
+		967E1C16214A73F3004C7EB3 /* MTRefreshHeaderAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967E1C14214A73F3004C7EB3 /* MTRefreshHeaderAnimator.swift */; };
+		967E1C18214A77FA004C7EB3 /* Refresh.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967E1C17214A77FA004C7EB3 /* Refresh.swift */; };
 		96A5B8FF210868010039E81B /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A5B8FE210868010039E81B /* Book.swift */; };
 		96A5B908210870120039E81B /* LogCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 96A5B907210870120039E81B /* LogCategory.m */; };
 		96A5B90A210870250039E81B /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A5B909210870250039E81B /* Logger.swift */; };
@@ -107,6 +110,9 @@
 		966628FE213FF03200820701 /* RandomColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomColor.swift; sourceTree = "<group>"; };
 		9677B8D42149190800000E4C /* Animation2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animation2ViewController.swift; sourceTree = "<group>"; };
 		967E1C10214A4535004C7EB3 /* Animation3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animation3ViewController.swift; sourceTree = "<group>"; };
+		967E1C13214A73F3004C7EB3 /* MTRefreshFooterAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTRefreshFooterAnimator.swift; sourceTree = "<group>"; };
+		967E1C14214A73F3004C7EB3 /* MTRefreshHeaderAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTRefreshHeaderAnimator.swift; sourceTree = "<group>"; };
+		967E1C17214A77FA004C7EB3 /* Refresh.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Refresh.swift; sourceTree = "<group>"; };
 		96A5B8FE210868010039E81B /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 		96A5B904210870110039E81B /* SwiftProjects-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SwiftProjects-Bridging-Header.h"; sourceTree = "<group>"; };
 		96A5B905210870120039E81B /* LogCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogCategory.h; sourceTree = "<group>"; };
@@ -291,6 +297,16 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		967E1C12214A7305004C7EB3 /* Refresh */ = {
+			isa = PBXGroup;
+			children = (
+				967E1C14214A73F3004C7EB3 /* MTRefreshHeaderAnimator.swift */,
+				967E1C13214A73F3004C7EB3 /* MTRefreshFooterAnimator.swift */,
+				967E1C17214A77FA004C7EB3 /* Refresh.swift */,
+			);
+			path = Refresh;
+			sourceTree = "<group>";
+		};
 		96A5B8FD210867F10039E81B /* DouBanBook */ = {
 			isa = PBXGroup;
 			children = (
@@ -307,6 +323,7 @@
 			children = (
 				966628F9213FEF5E00820701 /* Extensions */,
 				96A5B903210870000039E81B /* LogChinease */,
+				967E1C12214A7305004C7EB3 /* Refresh */,
 			);
 			path = Untils;
 			sourceTree = "<group>";
@@ -561,6 +578,7 @@
 				9605C5F92101E18F004BD566 /* SecondViewController.swift in Sources */,
 				9605C5F02101C69B004BD566 /* PrefixHeader.swift in Sources */,
 				96A5B908210870120039E81B /* LogCategory.m in Sources */,
+				967E1C15214A73F3004C7EB3 /* MTRefreshFooterAnimator.swift in Sources */,
 				96BE4A1821073C91001AED2C /* NetworkManager.swift in Sources */,
 				96A5B8FF210868010039E81B /* Book.swift in Sources */,
 				96044EC92142604300F29398 /* MovieTableViewController.swift in Sources */,
@@ -584,9 +602,11 @@
 				9605C5FB2101E196004BD566 /* ThirdViewController.swift in Sources */,
 				96C3F3C521421BF500F5212B /* CustomViewController.swift in Sources */,
 				9605C5C12101BF67004BD566 /* AppDelegate.swift in Sources */,
+				967E1C18214A77FA004C7EB3 /* Refresh.swift in Sources */,
 				96044ED1214267B900F29398 /* Movie.swift in Sources */,
 				966628F4213FEA9200820701 /* Animation1ViewController.swift in Sources */,
 				96A5B90A210870250039E81B /* Logger.swift in Sources */,
+				967E1C16214A73F3004C7EB3 /* MTRefreshHeaderAnimator.swift in Sources */,
 				966628F8213FECA700820701 /* Define.swift in Sources */,
 				966628FD213FF00400820701 /* Position.swift in Sources */,
 				9605C5F72101E189004BD566 /* HomeViewController.swift in Sources */,
