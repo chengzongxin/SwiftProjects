@@ -56,6 +56,7 @@
 		96BE4A152106FD7C001AED2C /* CenterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BE4A142106FD7C001AED2C /* CenterViewController.swift */; };
 		96BE4A1821073C91001AED2C /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BE4A1721073C91001AED2C /* NetworkManager.swift */; };
 		96C3F3C521421BF500F5212B /* CustomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C3F3C421421BF500F5212B /* CustomViewController.swift */; };
+		96C51058214FAAD80033AF0F /* ChartsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C51057214FAAD80033AF0F /* ChartsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -126,6 +127,7 @@
 		96BE4A142106FD7C001AED2C /* CenterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterViewController.swift; sourceTree = "<group>"; };
 		96BE4A1721073C91001AED2C /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		96C3F3C421421BF500F5212B /* CustomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomViewController.swift; sourceTree = "<group>"; };
+		96C51057214FAAD80033AF0F /* ChartsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsViewController.swift; sourceTree = "<group>"; };
 		A477FA7791C6D9A6002D9438 /* Pods-SwiftProjectsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftProjectsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftProjectsTests/Pods-SwiftProjectsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C8FC9E3CD86C4B3747AA6BF5 /* Pods_SwiftProjects.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftProjects.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1F39029FE479AF53D9FD2BD /* Pods-SwiftProjects.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftProjects.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftProjects/Pods-SwiftProjects.release.xcconfig"; sourceTree = "<group>"; };
@@ -238,6 +240,7 @@
 				96A5B8FD210867F10039E81B /* DouBanBook */,
 				96C3F3C321421BD500F5212B /* CustomView */,
 				96044EC72142603100F29398 /* Movie */,
+				96C51056214FAAB90033AF0F /* Charts */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -363,6 +366,14 @@
 				96C3F3C421421BF500F5212B /* CustomViewController.swift */,
 			);
 			path = CustomView;
+			sourceTree = "<group>";
+		};
+		96C51056214FAAB90033AF0F /* Charts */ = {
+			isa = PBXGroup;
+			children = (
+				96C51057214FAAD80033AF0F /* ChartsViewController.swift */,
+			);
+			path = Charts;
 			sourceTree = "<group>";
 		};
 		9847DC7A848A35868BD57663 /* Pods */ = {
@@ -521,6 +532,7 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-SwiftProjects/Pods-SwiftProjects-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
 				"${BUILT_PRODUCTS_DIR}/ChameleonFramework/ChameleonFramework.framework",
+				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
 				"${BUILT_PRODUCTS_DIR}/ESPullToRefresh/ESPullToRefresh.framework",
 				"${BUILT_PRODUCTS_DIR}/HandyJSON/HandyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
@@ -535,6 +547,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ChameleonFramework.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ESPullToRefresh.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HandyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
@@ -596,6 +609,7 @@
 				96044ECE2142623D00F29398 /* MovieCell.swift in Sources */,
 				96A5B90F21087D2A0039E81B /* BookCell.swift in Sources */,
 				9617D76F2140E5FE00FD1060 /* ShadowView.swift in Sources */,
+				96C51058214FAAD80033AF0F /* ChartsViewController.swift in Sources */,
 				9617D77521411F0000FD1060 /* DesignableView.swift in Sources */,
 				9605C6022101E373004BD566 /* MainTabBarController.swift in Sources */,
 				966628FF213FF03200820701 /* RandomColor.swift in Sources */,

@@ -24,6 +24,8 @@ target 'SwiftProjects' do
     # Refresh
     pod 'ESPullToRefresh'
     
+    pod 'Charts'
+    
   target 'SwiftProjectsTests' do
     inherit! :search_paths
     # Pods for testing

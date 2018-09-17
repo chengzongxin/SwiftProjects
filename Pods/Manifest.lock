@@ -17,6 +17,9 @@ PODS:
   - ChameleonFramework/Default (2.1.0)
   - ChameleonFramework/Swift (2.1.0):
     - ChameleonFramework/Default
+  - Charts (3.1.1):
+    - Charts/Core (= 3.1.1)
+  - Charts/Core (3.1.1)
   - ESPullToRefresh (2.7)
   - HandyJSON (4.1.1)
   - Kingfisher (4.8.0)
@@ -31,6 +34,7 @@ PODS:
 DEPENDENCIES:
   - AFNetworking
   - ChameleonFramework/Swift (from `https://github.com/ViccAlexander/Chameleon.git`)
+  - Charts
   - ESPullToRefresh
   - HandyJSON (~> 4.1.1)
   - Kingfisher (~> 4.0)
@@ -44,6 +48,7 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - AFNetworking
+    - Charts
     - ESPullToRefresh
     - HandyJSON
     - Kingfisher
@@ -66,6 +71,7 @@ CHECKOUT OPTIONS:
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
   ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
+  Charts: 90a4d61da0f6e06684c591e3bcab11940fe61736
   ESPullToRefresh: 119e2710b82b75536aab2bbe4883ba119fca35c8
   HandyJSON: 3a3de917c4118767ffe41c29b5acba23409649f4
   Kingfisher: 976d828df2b24834c6a3f2fc4d82cdbd26552be1
@@ -76,6 +82,6 @@ SPEC CHECKSUMS:
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
   Toast: 91b396c56ee72a5790816f40d3a94dd357abc196
 
-PODFILE CHECKSUM: fe3d08943499bc1b5269fb2dc65a429e4c428e61
+PODFILE CHECKSUM: 655ea6ac8f2401c90268b8d9293703d1ff917282
 
 COCOAPODS: 1.5.3

@@ -58,6 +58,7 @@
                         <segue destination="1KX-Dj-exU" kind="show" identifier="BookTableViewController" id="YdG-mC-HtV"/>
                         <segue destination="oec-eZ-fwx" kind="show" identifier="CustomViewController" id="l62-EI-5rr"/>
                         <segue destination="jWl-5q-Yvk" kind="show" identifier="MovieTableViewController" id="jLc-p1-ror"/>
+                        <segue destination="IZg-WN-K94" kind="show" identifier="ChartsViewController" id="lf2-iS-dz1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FHF-Gh-DgS" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -163,6 +164,36 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cON-7s-acM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="476" y="310"/>
+        </scene>
+        <!--Charts View Controller-->
+        <scene sceneID="Yr2-12-h9Q">
+            <objects>
+                <viewController id="IZg-WN-K94" customClass="ChartsViewController" customModule="SwiftProjects" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="g2j-ST-r6y">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="idC-1p-lBz" customClass="LineChartView" customModule="Charts">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="idC-1p-lBz" firstAttribute="top" secondItem="Ew2-6Q-AsP" secondAttribute="top" id="ILr-ms-kWj"/>
+                            <constraint firstItem="idC-1p-lBz" firstAttribute="leading" secondItem="Ew2-6Q-AsP" secondAttribute="leading" id="Omg-8T-JpG"/>
+                            <constraint firstItem="Ew2-6Q-AsP" firstAttribute="bottom" secondItem="idC-1p-lBz" secondAttribute="bottom" id="TB8-jf-fcq"/>
+                            <constraint firstItem="Ew2-6Q-AsP" firstAttribute="trailing" secondItem="idC-1p-lBz" secondAttribute="trailing" id="YAu-ZD-MXX"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Ew2-6Q-AsP"/>
+                    </view>
+                    <connections>
+                        <outlet property="lineView" destination="idC-1p-lBz" id="qzF-Sm-Dmc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kBI-Qc-6ha" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-274" y="1111"/>
         </scene>
         <!--Movie Table View Controller-->
         <scene sceneID="lQv-5t-hYg">
