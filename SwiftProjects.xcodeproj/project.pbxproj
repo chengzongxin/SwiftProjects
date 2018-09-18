@@ -34,6 +34,9 @@
 		9617D76F2140E5FE00FD1060 /* ShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9617D76E2140E5FE00FD1060 /* ShadowView.swift */; };
 		9617D771214119E300FD1060 /* ShadowButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9617D770214119E300FD1060 /* ShadowButton.swift */; };
 		9617D77521411F0000FD1060 /* DesignableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9617D77421411F0000FD1060 /* DesignableView.swift */; };
+		96463A392150E966000726B2 /* DateValueFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96463A382150E966000726B2 /* DateValueFormatter.swift */; };
+		96463A3B2150EEC6000726B2 /* LargeValueFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96463A3A2150EEC6000726B2 /* LargeValueFormatter.swift */; };
+		96463A3D2151018D000726B2 /* ChartMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96463A3C2151018D000726B2 /* ChartMarker.swift */; };
 		966628F0213FD34100820701 /* SecondCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966628EE213FD34100820701 /* SecondCell.swift */; };
 		966628F1213FD34100820701 /* SecondCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 966628EF213FD34100820701 /* SecondCell.xib */; };
 		966628F4213FEA9200820701 /* Animation1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966628F3213FEA9200820701 /* Animation1ViewController.swift */; };
@@ -102,6 +105,9 @@
 		9617D76E2140E5FE00FD1060 /* ShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowView.swift; sourceTree = "<group>"; };
 		9617D770214119E300FD1060 /* ShadowButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowButton.swift; sourceTree = "<group>"; };
 		9617D77421411F0000FD1060 /* DesignableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignableView.swift; sourceTree = "<group>"; };
+		96463A382150E966000726B2 /* DateValueFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateValueFormatter.swift; sourceTree = "<group>"; };
+		96463A3A2150EEC6000726B2 /* LargeValueFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeValueFormatter.swift; sourceTree = "<group>"; };
+		96463A3C2151018D000726B2 /* ChartMarker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartMarker.swift; sourceTree = "<group>"; };
 		966628EE213FD34100820701 /* SecondCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondCell.swift; sourceTree = "<group>"; };
 		966628EF213FD34100820701 /* SecondCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SecondCell.xib; sourceTree = "<group>"; };
 		966628F3213FEA9200820701 /* Animation1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animation1ViewController.swift; sourceTree = "<group>"; };
@@ -372,6 +378,9 @@
 			isa = PBXGroup;
 			children = (
 				96C51057214FAAD80033AF0F /* ChartsViewController.swift */,
+				96463A382150E966000726B2 /* DateValueFormatter.swift */,
+				96463A3A2150EEC6000726B2 /* LargeValueFormatter.swift */,
+				96463A3C2151018D000726B2 /* ChartMarker.swift */,
 			);
 			path = Charts;
 			sourceTree = "<group>";
@@ -600,6 +609,7 @@
 				9617D771214119E300FD1060 /* ShadowButton.swift in Sources */,
 				96A5B90C21087B230039E81B /* BookTableViewController.swift in Sources */,
 				966628F0213FD34100820701 /* SecondCell.swift in Sources */,
+				96463A3B2150EEC6000726B2 /* LargeValueFormatter.swift in Sources */,
 				967E1C11214A4535004C7EB3 /* Animation3ViewController.swift in Sources */,
 				96044ED3214275B000F29398 /* MovieViewModel.swift in Sources */,
 				9617D76D2140D7B000FD1060 /* Shadow.swift in Sources */,
@@ -616,10 +626,12 @@
 				9605C5FB2101E196004BD566 /* ThirdViewController.swift in Sources */,
 				96C3F3C521421BF500F5212B /* CustomViewController.swift in Sources */,
 				9605C5C12101BF67004BD566 /* AppDelegate.swift in Sources */,
+				96463A392150E966000726B2 /* DateValueFormatter.swift in Sources */,
 				967E1C18214A77FA004C7EB3 /* Refresh.swift in Sources */,
 				96044ED1214267B900F29398 /* Movie.swift in Sources */,
 				966628F4213FEA9200820701 /* Animation1ViewController.swift in Sources */,
 				96A5B90A210870250039E81B /* Logger.swift in Sources */,
+				96463A3D2151018D000726B2 /* ChartMarker.swift in Sources */,
 				967E1C16214A73F3004C7EB3 /* MTRefreshHeaderAnimator.swift in Sources */,
 				966628F8213FECA700820701 /* Define.swift in Sources */,
 				966628FD213FF00400820701 /* Position.swift in Sources */,
