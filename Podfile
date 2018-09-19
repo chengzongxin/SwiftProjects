@@ -10,7 +10,8 @@ target 'SwiftProjects' do
     pod 'AFNetworking'
     pod 'Toast'
     pod 'SVProgressHUD'
-    pod 'HandyJSON', '~> 4.1.1'
+    # JSON Prase
+    pod 'HandyJSON', '~> 4.2.0'
     pod 'Kingfisher', '~> 4.0'
     pod 'SCLAlertView'
     
@@ -24,8 +25,8 @@ target 'SwiftProjects' do
     # Refresh
     pod 'ESPullToRefresh'
     
-    pod 'Charts'
-    
+#    pod 'Charts'
+
   target 'SwiftProjectsTests' do
     inherit! :search_paths
     # Pods for testing

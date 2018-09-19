@@ -17,26 +17,22 @@ PODS:
   - ChameleonFramework/Default (2.1.0)
   - ChameleonFramework/Swift (2.1.0):
     - ChameleonFramework/Default
-  - Charts (3.1.1):
-    - Charts/Core (= 3.1.1)
-  - Charts/Core (3.1.1)
   - ESPullToRefresh (2.7)
-  - HandyJSON (4.1.1)
-  - Kingfisher (4.8.0)
-  - RxCocoa (4.2.0):
+  - HandyJSON (4.2.0)
+  - Kingfisher (4.9.0)
+  - RxCocoa (4.3.0):
     - RxSwift (~> 4.0)
-  - RxSwift (4.2.0)
+  - RxSwift (4.3.0)
   - SCLAlertView (0.8)
-  - SnapKit (4.0.0)
+  - SnapKit (4.0.1)
   - SVProgressHUD (2.2.5)
   - Toast (4.0.0)
 
 DEPENDENCIES:
   - AFNetworking
   - ChameleonFramework/Swift (from `https://github.com/ViccAlexander/Chameleon.git`)
-  - Charts
   - ESPullToRefresh
-  - HandyJSON (~> 4.1.1)
+  - HandyJSON (~> 4.2.0)
   - Kingfisher (~> 4.0)
   - RxCocoa (~> 4.0)
   - RxSwift (~> 4.0)
@@ -48,7 +44,6 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - AFNetworking
-    - Charts
     - ESPullToRefresh
     - HandyJSON
     - Kingfisher
@@ -71,17 +66,16 @@ CHECKOUT OPTIONS:
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
   ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
-  Charts: 90a4d61da0f6e06684c591e3bcab11940fe61736
   ESPullToRefresh: 119e2710b82b75536aab2bbe4883ba119fca35c8
-  HandyJSON: 3a3de917c4118767ffe41c29b5acba23409649f4
-  Kingfisher: 976d828df2b24834c6a3f2fc4d82cdbd26552be1
-  RxCocoa: 0b54909c902e1e581212a03e690bbd94032d8baa
-  RxSwift: 99e10317ddfcc7fbe01356aafd118fde4a0be104
+  HandyJSON: 9dfc026c7d7adc1f0f8ba8b181495f0e0763b0f4
+  Kingfisher: 64539b51826b778206daa6ed815d12653caa69dd
+  RxCocoa: 71b9cce833fbcb89a8eec11816dd225830c2bd3c
+  RxSwift: a9717a34df3179fe63563f76e046ad345078dd3a
   SCLAlertView: 6a77bb2edfc65e04dbe57725546cb4107a506b85
-  SnapKit: a42d492c16e80209130a3379f73596c3454b7694
+  SnapKit: 0de968a9fec17499afa29683b05d0c775b6d1c29
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
   Toast: 91b396c56ee72a5790816f40d3a94dd357abc196
 
-PODFILE CHECKSUM: 655ea6ac8f2401c90268b8d9293703d1ff917282
+PODFILE CHECKSUM: 038f8ee06b66452e817c3fa9703dfbf6df338902
 
 COCOAPODS: 1.5.3
