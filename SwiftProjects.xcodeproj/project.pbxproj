@@ -51,7 +51,7 @@
 		96887E16215255780019B39D /* ProtocolPractice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96887E15215255780019B39D /* ProtocolPractice.swift */; };
 		96887E18215255950019B39D /* ProtocolPracticeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96887E17215255950019B39D /* ProtocolPracticeViewController.swift */; };
 		96887E1A215256880019B39D /* ProtocolInstance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96887E19215256880019B39D /* ProtocolInstance.swift */; };
-		96887E1C21525D660019B39D /* ViewControllerFromString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96887E1B21525D660019B39D /* ViewControllerFromString.swift */; };
+		96887E1E2152707D0019B39D /* ViewControllerExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96887E1D2152707D0019B39D /* ViewControllerExtention.swift */; };
 		96A5B8FF210868010039E81B /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A5B8FE210868010039E81B /* Book.swift */; };
 		96A5B908210870120039E81B /* LogCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 96A5B907210870120039E81B /* LogCategory.m */; };
 		96A5B90A210870250039E81B /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A5B909210870250039E81B /* Logger.swift */; };
@@ -141,7 +141,7 @@
 		96887E15215255780019B39D /* ProtocolPractice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolPractice.swift; sourceTree = "<group>"; };
 		96887E17215255950019B39D /* ProtocolPracticeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolPracticeViewController.swift; sourceTree = "<group>"; };
 		96887E19215256880019B39D /* ProtocolInstance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolInstance.swift; sourceTree = "<group>"; };
-		96887E1B21525D660019B39D /* ViewControllerFromString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerFromString.swift; sourceTree = "<group>"; };
+		96887E1D2152707D0019B39D /* ViewControllerExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerExtention.swift; sourceTree = "<group>"; };
 		96A5B8FE210868010039E81B /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 		96A5B904210870110039E81B /* SwiftProjects-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SwiftProjects-Bridging-Header.h"; sourceTree = "<group>"; };
 		96A5B905210870120039E81B /* LogCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogCategory.h; sourceTree = "<group>"; };
@@ -335,7 +335,7 @@
 				966628FC213FF00400820701 /* Position.swift */,
 				966628FE213FF03200820701 /* RandomColor.swift */,
 				9617D76C2140D7B000FD1060 /* Shadow.swift */,
-				96887E1B21525D660019B39D /* ViewControllerFromString.swift */,
+				96887E1D2152707D0019B39D /* ViewControllerExtention.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -637,7 +637,6 @@
 				96A5B8FF210868010039E81B /* Book.swift in Sources */,
 				96044EC92142604300F29398 /* MovieTableViewController.swift in Sources */,
 				966628F6213FEB2C00820701 /* BaseViewController.swift in Sources */,
-				96887E1C21525D660019B39D /* ViewControllerFromString.swift in Sources */,
 				9605C5FD2101E19D004BD566 /* FourViewController.swift in Sources */,
 				9617D771214119E300FD1060 /* ShadowButton.swift in Sources */,
 				96887E1A215256880019B39D /* ProtocolInstance.swift in Sources */,
@@ -666,6 +665,7 @@
 				96044ED1214267B900F29398 /* Movie.swift in Sources */,
 				966628F4213FEA9200820701 /* Animation1ViewController.swift in Sources */,
 				96A5B90A210870250039E81B /* Logger.swift in Sources */,
+				96887E1E2152707D0019B39D /* ViewControllerExtention.swift in Sources */,
 				96463A3D2151018D000726B2 /* ChartMarker.swift in Sources */,
 				967E1C16214A73F3004C7EB3 /* MTRefreshHeaderAnimator.swift in Sources */,
 				966628F8213FECA700820701 /* Define.swift in Sources */,
@@ -836,7 +836,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ARGK844GXV;
 				INFOPLIST_FILE = SwiftProjects/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -859,7 +859,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ARGK844GXV;
 				INFOPLIST_FILE = SwiftProjects/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

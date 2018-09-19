@@ -26,7 +26,7 @@ class BaseViewController: UIViewController {
         navigationController?.navigationBar.tintColor = UIColor.flatOrange
     }
     
-    @objc private func back() {
+    @objc internal override func back() {
         navigationController?.popViewController(animated: true)
     }
 }

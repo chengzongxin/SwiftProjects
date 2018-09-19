@@ -23,6 +23,14 @@ class ProtocolPracticeViewController: UIViewController {
         
         view.backgroundColor = UIColor.randomGradientColor(bounds: view.bounds)
         
+        if #available(iOS 11.0, *) {
+            view.backgroundColor = UIColor.init(named: "Tiffany Blue")
+        } else {
+            // Fallback on earlier versions
+        }
+        
+        setBackItem()
+        
         initView()
         
         demo = ProtocolInstance()
