@@ -48,8 +48,6 @@
 		967E1C15214A73F3004C7EB3 /* MTRefreshFooterAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967E1C13214A73F3004C7EB3 /* MTRefreshFooterAnimator.swift */; };
 		967E1C16214A73F3004C7EB3 /* MTRefreshHeaderAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967E1C14214A73F3004C7EB3 /* MTRefreshHeaderAnimator.swift */; };
 		967E1C18214A77FA004C7EB3 /* Refresh.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967E1C17214A77FA004C7EB3 /* Refresh.swift */; };
-		96887E0E21524F820019B39D /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96887E0D21524F820019B39D /* Charts.framework */; };
-		96887E0F21524F820019B39D /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 96887E0D21524F820019B39D /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		96A5B8FF210868010039E81B /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A5B8FE210868010039E81B /* Book.swift */; };
 		96A5B908210870120039E81B /* LogCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 96A5B907210870120039E81B /* LogCategory.m */; };
 		96A5B90A210870250039E81B /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A5B909210870250039E81B /* Logger.swift */; };
@@ -81,7 +79,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				96887E0F21524F820019B39D /* Charts.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -137,7 +134,6 @@
 		967E1C13214A73F3004C7EB3 /* MTRefreshFooterAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTRefreshFooterAnimator.swift; sourceTree = "<group>"; };
 		967E1C14214A73F3004C7EB3 /* MTRefreshHeaderAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTRefreshHeaderAnimator.swift; sourceTree = "<group>"; };
 		967E1C17214A77FA004C7EB3 /* Refresh.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Refresh.swift; sourceTree = "<group>"; };
-		96887E0D21524F820019B39D /* Charts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Charts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		96A5B8FE210868010039E81B /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 		96A5B904210870110039E81B /* SwiftProjects-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SwiftProjects-Bridging-Header.h"; sourceTree = "<group>"; };
 		96A5B905210870120039E81B /* LogCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogCategory.h; sourceTree = "<group>"; };
@@ -162,7 +158,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				CBC234118736557F64104818 /* Pods_SwiftProjects.framework in Frameworks */,
-				96887E0E21524F820019B39D /* Charts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -203,7 +198,6 @@
 		9605C5B42101BF67004BD566 = {
 			isa = PBXGroup;
 			children = (
-				96887E0D21524F820019B39D /* Charts.framework */,
 				9605C5BF2101BF67004BD566 /* SwiftProjects */,
 				9605C5D42101BF68004BD566 /* SwiftProjectsTests */,
 				9605C5BE2101BF67004BD566 /* Products */,
