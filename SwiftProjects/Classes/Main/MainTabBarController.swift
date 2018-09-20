@@ -22,7 +22,7 @@ class MainTabBarController: UITabBarController, UITabBarControllerDelegate {
         addChildVC()
         
         // Select Second ViewController
-        self.selectedIndex = 1
+//        self.selectedIndex = 1
     }
     
     //MARK: Setup UI

@@ -20,7 +20,7 @@ struct NetworkManager {
         manager.requestSerializer.timeoutInterval = 10
         
         if showHUD {
-            SVProgressHUD.show()
+            SVProgressHUD.showInfo(withStatus: "Loading...")
         }
         
         manager.get(URLString, parameters: parameters, progress: { (progress) in

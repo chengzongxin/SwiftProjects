@@ -52,6 +52,7 @@
 		96887E18215255950019B39D /* ProtocolPracticeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96887E17215255950019B39D /* ProtocolPracticeViewController.swift */; };
 		96887E1A215256880019B39D /* ProtocolInstance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96887E19215256880019B39D /* ProtocolInstance.swift */; };
 		96887E1E2152707D0019B39D /* ViewControllerExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96887E1D2152707D0019B39D /* ViewControllerExtention.swift */; };
+		969C46A421537530002818FD /* ProgressHub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969C46A321537530002818FD /* ProgressHub.swift */; };
 		96A5B8FF210868010039E81B /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A5B8FE210868010039E81B /* Book.swift */; };
 		96A5B908210870120039E81B /* LogCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 96A5B907210870120039E81B /* LogCategory.m */; };
 		96A5B90A210870250039E81B /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A5B909210870250039E81B /* Logger.swift */; };
@@ -142,6 +143,7 @@
 		96887E17215255950019B39D /* ProtocolPracticeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolPracticeViewController.swift; sourceTree = "<group>"; };
 		96887E19215256880019B39D /* ProtocolInstance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolInstance.swift; sourceTree = "<group>"; };
 		96887E1D2152707D0019B39D /* ViewControllerExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerExtention.swift; sourceTree = "<group>"; };
+		969C46A321537530002818FD /* ProgressHub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressHub.swift; sourceTree = "<group>"; };
 		96A5B8FE210868010039E81B /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 		96A5B904210870110039E81B /* SwiftProjects-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SwiftProjects-Bridging-Header.h"; sourceTree = "<group>"; };
 		96A5B905210870120039E81B /* LogCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogCategory.h; sourceTree = "<group>"; };
@@ -360,6 +362,14 @@
 			path = ProtocolPractice;
 			sourceTree = "<group>";
 		};
+		969C46A221537382002818FD /* ProgressHub */ = {
+			isa = PBXGroup;
+			children = (
+				969C46A321537530002818FD /* ProgressHub.swift */,
+			);
+			path = ProgressHub;
+			sourceTree = "<group>";
+		};
 		96A5B8FD210867F10039E81B /* DouBanBook */ = {
 			isa = PBXGroup;
 			children = (
@@ -377,6 +387,7 @@
 				966628F9213FEF5E00820701 /* Extensions */,
 				96A5B903210870000039E81B /* LogChinease */,
 				967E1C12214A7305004C7EB3 /* Refresh */,
+				969C46A221537382002818FD /* ProgressHub */,
 			);
 			path = Untils;
 			sourceTree = "<group>";
@@ -649,6 +660,7 @@
 				96887E18215255950019B39D /* ProtocolPracticeViewController.swift in Sources */,
 				96BE4A152106FD7C001AED2C /* CenterViewController.swift in Sources */,
 				9605C60E2101F67C004BD566 /* TabBar.swift in Sources */,
+				969C46A421537530002818FD /* ProgressHub.swift in Sources */,
 				9677B8D52149190800000E4C /* Animation2ViewController.swift in Sources */,
 				96044ECE2142623D00F29398 /* MovieCell.swift in Sources */,
 				96A5B90F21087D2A0039E81B /* BookCell.swift in Sources */,

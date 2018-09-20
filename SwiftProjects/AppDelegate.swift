@@ -21,6 +21,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.rootViewController = MainTabBarController()
         
         window?.makeKeyAndVisible()
+        // Config ProgressHud
+        configProgressHub()
         
         return true
     }
