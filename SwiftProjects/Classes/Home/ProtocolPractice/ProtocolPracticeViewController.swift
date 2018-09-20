@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 class ProtocolPracticeViewController: UIViewController {
 
@@ -16,6 +18,9 @@ class ProtocolPracticeViewController: UIViewController {
     
     var label2: UILabel!
     
+    var button: UIButton!
+    
+    var bag = DisposeBag()
     
     
     override func viewDidLoad() {
@@ -56,6 +61,18 @@ extension ProtocolPracticeViewController {
             make.centerX.equalToSuperview()
             make.top.equalTo(label1.snp.bottom).offset(30)
         }
+        
+        button = UIButton(type: .system)
+        button.setTitle("dismiss", for: .normal)
+        button.rx.tap.bind{
+            self.dismiss(animated: true, completion: nil)
+        }.disposed(by: bag)
+        self.view.addSubview(button)
+        button.snp.makeConstraints { (make) in
+            make.centerX.equalToSuperview()
+            make.top.equalTo(label2.snp.bottom).offset(30)
+        }
+        
     }
     
     

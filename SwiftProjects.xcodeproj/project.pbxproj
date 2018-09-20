@@ -53,6 +53,7 @@
 		96887E1A215256880019B39D /* ProtocolInstance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96887E19215256880019B39D /* ProtocolInstance.swift */; };
 		96887E1E2152707D0019B39D /* ViewControllerExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96887E1D2152707D0019B39D /* ViewControllerExtention.swift */; };
 		969C46A421537530002818FD /* ProgressHub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969C46A321537530002818FD /* ProgressHub.swift */; };
+		969C46A82153AD39002818FD /* Animator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969C46A72153AD39002818FD /* Animator.swift */; };
 		96A5B8FF210868010039E81B /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A5B8FE210868010039E81B /* Book.swift */; };
 		96A5B908210870120039E81B /* LogCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 96A5B907210870120039E81B /* LogCategory.m */; };
 		96A5B90A210870250039E81B /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A5B909210870250039E81B /* Logger.swift */; };
@@ -144,6 +145,7 @@
 		96887E19215256880019B39D /* ProtocolInstance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolInstance.swift; sourceTree = "<group>"; };
 		96887E1D2152707D0019B39D /* ViewControllerExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerExtention.swift; sourceTree = "<group>"; };
 		969C46A321537530002818FD /* ProgressHub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressHub.swift; sourceTree = "<group>"; };
+		969C46A72153AD39002818FD /* Animator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animator.swift; sourceTree = "<group>"; };
 		96A5B8FE210868010039E81B /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 		96A5B904210870110039E81B /* SwiftProjects-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SwiftProjects-Bridging-Header.h"; sourceTree = "<group>"; };
 		96A5B905210870120039E81B /* LogCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogCategory.h; sourceTree = "<group>"; };
@@ -370,6 +372,14 @@
 			path = ProgressHub;
 			sourceTree = "<group>";
 		};
+		969C46A62153ABCD002818FD /* Transition */ = {
+			isa = PBXGroup;
+			children = (
+				969C46A72153AD39002818FD /* Animator.swift */,
+			);
+			path = Transition;
+			sourceTree = "<group>";
+		};
 		96A5B8FD210867F10039E81B /* DouBanBook */ = {
 			isa = PBXGroup;
 			children = (
@@ -388,6 +398,7 @@
 				96A5B903210870000039E81B /* LogChinease */,
 				967E1C12214A7305004C7EB3 /* Refresh */,
 				969C46A221537382002818FD /* ProgressHub */,
+				969C46A62153ABCD002818FD /* Transition */,
 			);
 			path = Untils;
 			sourceTree = "<group>";
@@ -655,6 +666,7 @@
 				966628F0213FD34100820701 /* SecondCell.swift in Sources */,
 				96463A3B2150EEC6000726B2 /* LargeValueFormatter.swift in Sources */,
 				967E1C11214A4535004C7EB3 /* Animation3ViewController.swift in Sources */,
+				969C46A82153AD39002818FD /* Animator.swift in Sources */,
 				96044ED3214275B000F29398 /* MovieViewModel.swift in Sources */,
 				9617D76D2140D7B000FD1060 /* Shadow.swift in Sources */,
 				96887E18215255950019B39D /* ProtocolPracticeViewController.swift in Sources */,

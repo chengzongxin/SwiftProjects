@@ -10,11 +10,13 @@ import UIKit
 
 let cellIdentifier = "UITableViewCell"
 
-class HomeViewController: UIViewController {
+class HomeViewController: UIViewController, UIViewControllerTransitioningDelegate {
     // 元组数组->(Title,ViewController)
     var dataSource = [(title:String ,viewController:String, isXib:Bool)]()
     
     @IBOutlet weak var tableView: UITableView!
+    
+    let animator = Animator()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,9 +34,13 @@ class HomeViewController: UIViewController {
 
 
         tableView.tableFooterView = UIView()
+        
+        navigationController?.delegate = self
     }
     
-    
+    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        return (animator as UIViewControllerAnimatedTransitioning)
+    }
 }
 
 extension HomeViewController: UITableViewDelegate,UITableViewDataSource {
@@ -67,12 +73,23 @@ extension HomeViewController: UITableViewDelegate,UITableViewDataSource {
             self.performSegue(withIdentifier: vcName, sender: nil)
         }else{
             // navigationPush
-            let vc = UIViewController.getViewController(VCString: vcName)
-            vc?.hidesBottomBarWhenPushed = true
-            self.navigationController?.pushViewController(vc!, animated: true)
+            
+            let vc = UIViewController.getViewController(VCString: vcName)!
+            vc.hidesBottomBarWhenPushed = true
+            
+            vc.modalPresentationStyle = .custom
+//            vc.modalTransitionStyle = .coverVertical
+            navigationController?.pushViewController(vc, animated: true)
         }
         
     }
 }
 
 
+// MARK: UINavigationControllerDelegate
+extension HomeViewController: UINavigationControllerDelegate {
+    func navigationController(_ navigationController: UINavigationController, animationControllerFor operation: UINavigationControllerOperation, from fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        let transition = Animator()
+        return transition
+    }
+}
