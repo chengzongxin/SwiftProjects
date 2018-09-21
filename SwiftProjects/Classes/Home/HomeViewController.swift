@@ -10,13 +10,14 @@ import UIKit
 
 let cellIdentifier = "UITableViewCell"
 
-class HomeViewController: UIViewController, UIViewControllerTransitioningDelegate {
+class HomeViewController: UIViewController {
     // 元组数组->(Title,ViewController)
     var dataSource = [(title:String ,viewController:String, isXib:Bool)]()
     
     @IBOutlet weak var tableView: UITableView!
+    // 1. Create animator object
+    var animator = MagicMoveAnimator()
     
-    let animator = Animator()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,14 +33,9 @@ class HomeViewController: UIViewController, UIViewControllerTransitioningDelegat
 
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellIdentifier)
 
-
         tableView.tableFooterView = UIView()
-        
-        navigationController?.delegate = self
-    }
-    
-    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        return (animator as UIViewControllerAnimatedTransitioning)
+        // 2.1 Set navigation delegate
+        navigationController?.delegate = animator
     }
 }
 
@@ -73,23 +69,14 @@ extension HomeViewController: UITableViewDelegate,UITableViewDataSource {
             self.performSegue(withIdentifier: vcName, sender: nil)
         }else{
             // navigationPush
-            
             let vc = UIViewController.getViewController(VCString: vcName)!
             vc.hidesBottomBarWhenPushed = true
+//            navigationController?.pushViewController(vc, animated: true)
             
-            vc.modalPresentationStyle = .custom
-//            vc.modalTransitionStyle = .coverVertical
-            navigationController?.pushViewController(vc, animated: true)
+            // 2.2 Set present modal delegate
+            vc.transitioningDelegate = animator
+            present(vc, animated: true, completion: nil)
         }
         
-    }
-}
-
-
-// MARK: UINavigationControllerDelegate
-extension HomeViewController: UINavigationControllerDelegate {
-    func navigationController(_ navigationController: UINavigationController, animationControllerFor operation: UINavigationControllerOperation, from fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        let transition = Animator()
-        return transition
     }
 }
