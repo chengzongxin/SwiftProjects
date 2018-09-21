@@ -12,6 +12,8 @@ class Animation3ViewController: BaseViewController {
     
     var flag = 1
     
+    var headerImageView = UIView(frame: CGRect(x: 100, y: 100, width: 100, height: 100))
+    
 
     lazy var view1: ShadowView = {
         let view = ShadowView(frame: CGRect(x: 50, y: 50, width: 40, height: 40))
@@ -70,8 +72,17 @@ class Animation3ViewController: BaseViewController {
         return button
     }()
     
+    convenience init() {
+        self.init(nibName:nil, bundle:nil)
+        view.addSubview(headerImageView)
+        headerImageView.backgroundColor = UIColor.flatOrange
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
 
         view.addSubview(view1)
         
