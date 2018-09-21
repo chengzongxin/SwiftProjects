@@ -52,7 +52,6 @@
 		96887E1A215256880019B39D /* ProtocolInstance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96887E19215256880019B39D /* ProtocolInstance.swift */; };
 		96887E1E2152707D0019B39D /* ViewControllerExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96887E1D2152707D0019B39D /* ViewControllerExtention.swift */; };
 		969C46A421537530002818FD /* ProgressHub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969C46A321537530002818FD /* ProgressHub.swift */; };
-		969C46A82153AD39002818FD /* Animator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969C46A72153AD39002818FD /* Animator.swift */; };
 		96A5B8FF210868010039E81B /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A5B8FE210868010039E81B /* Book.swift */; };
 		96A5B908210870120039E81B /* LogCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 96A5B907210870120039E81B /* LogCategory.m */; };
 		96A5B90A210870250039E81B /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A5B909210870250039E81B /* Logger.swift */; };
@@ -64,6 +63,8 @@
 		96BE4A1821073C91001AED2C /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BE4A1721073C91001AED2C /* NetworkManager.swift */; };
 		96C3F3C521421BF500F5212B /* CustomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C3F3C421421BF500F5212B /* CustomViewController.swift */; };
 		96C400A221548F0900255225 /* MagicMoveAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C400A121548F0900255225 /* MagicMoveAnimator.swift */; };
+		96C400A42154AAAD00255225 /* BaseAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C400A32154AAAD00255225 /* BaseAnimator.swift */; };
+		96C400A82154ABFA00255225 /* EaseInAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C400A72154ABFA00255225 /* EaseInAnimator.swift */; };
 		96C51058214FAAD80033AF0F /* ChartsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C51057214FAAD80033AF0F /* ChartsViewController.swift */; };
 		CBC234118736557F64104818 /* Pods_SwiftProjects.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 327549ADADD7AF94D65CA2B8 /* Pods_SwiftProjects.framework */; };
 /* End PBXBuildFile section */
@@ -144,7 +145,6 @@
 		96887E19215256880019B39D /* ProtocolInstance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolInstance.swift; sourceTree = "<group>"; };
 		96887E1D2152707D0019B39D /* ViewControllerExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerExtention.swift; sourceTree = "<group>"; };
 		969C46A321537530002818FD /* ProgressHub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressHub.swift; sourceTree = "<group>"; };
-		969C46A72153AD39002818FD /* Animator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animator.swift; sourceTree = "<group>"; };
 		96A5B8FE210868010039E81B /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 		96A5B904210870110039E81B /* SwiftProjects-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SwiftProjects-Bridging-Header.h"; sourceTree = "<group>"; };
 		96A5B905210870120039E81B /* LogCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogCategory.h; sourceTree = "<group>"; };
@@ -159,6 +159,8 @@
 		96BE4A1721073C91001AED2C /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		96C3F3C421421BF500F5212B /* CustomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomViewController.swift; sourceTree = "<group>"; };
 		96C400A121548F0900255225 /* MagicMoveAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagicMoveAnimator.swift; sourceTree = "<group>"; };
+		96C400A32154AAAD00255225 /* BaseAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseAnimator.swift; sourceTree = "<group>"; };
+		96C400A72154ABFA00255225 /* EaseInAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EaseInAnimator.swift; sourceTree = "<group>"; };
 		96C51057214FAAD80033AF0F /* ChartsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsViewController.swift; sourceTree = "<group>"; };
 		CDCAC8CBBB578F5D11DF92B1 /* Pods-SwiftProjectsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftProjectsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftProjectsTests/Pods-SwiftProjectsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		EB42F02FF7E074EA56D4556F /* Pods-SwiftProjects.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftProjects.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftProjects/Pods-SwiftProjects.debug.xcconfig"; sourceTree = "<group>"; };
@@ -374,8 +376,9 @@
 		969C46A62153ABCD002818FD /* Transition */ = {
 			isa = PBXGroup;
 			children = (
-				969C46A72153AD39002818FD /* Animator.swift */,
+				96C400A32154AAAD00255225 /* BaseAnimator.swift */,
 				96C400A121548F0900255225 /* MagicMoveAnimator.swift */,
+				96C400A72154ABFA00255225 /* EaseInAnimator.swift */,
 			);
 			path = Transition;
 			sourceTree = "<group>";
@@ -666,13 +669,13 @@
 				966628F0213FD34100820701 /* SecondCell.swift in Sources */,
 				96463A3B2150EEC6000726B2 /* LargeValueFormatter.swift in Sources */,
 				967E1C11214A4535004C7EB3 /* Animation3ViewController.swift in Sources */,
-				969C46A82153AD39002818FD /* Animator.swift in Sources */,
 				96044ED3214275B000F29398 /* MovieViewModel.swift in Sources */,
 				9617D76D2140D7B000FD1060 /* Shadow.swift in Sources */,
 				96887E18215255950019B39D /* ProtocolPracticeViewController.swift in Sources */,
 				96BE4A152106FD7C001AED2C /* CenterViewController.swift in Sources */,
 				9605C60E2101F67C004BD566 /* TabBar.swift in Sources */,
 				969C46A421537530002818FD /* ProgressHub.swift in Sources */,
+				96C400A82154ABFA00255225 /* EaseInAnimator.swift in Sources */,
 				9677B8D52149190800000E4C /* Animation2ViewController.swift in Sources */,
 				96044ECE2142623D00F29398 /* MovieCell.swift in Sources */,
 				96A5B90F21087D2A0039E81B /* BookCell.swift in Sources */,
@@ -690,6 +693,7 @@
 				966628F4213FEA9200820701 /* Animation1ViewController.swift in Sources */,
 				96A5B90A210870250039E81B /* Logger.swift in Sources */,
 				96887E1E2152707D0019B39D /* ViewControllerExtention.swift in Sources */,
+				96C400A42154AAAD00255225 /* BaseAnimator.swift in Sources */,
 				96463A3D2151018D000726B2 /* ChartMarker.swift in Sources */,
 				967E1C16214A73F3004C7EB3 /* MTRefreshHeaderAnimator.swift in Sources */,
 				966628F8213FECA700820701 /* Define.swift in Sources */,
