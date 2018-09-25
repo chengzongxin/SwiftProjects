@@ -13,6 +13,7 @@
 		96044ECF2142623D00F29398 /* MovieCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96044ECD2142623D00F29398 /* MovieCell.xib */; };
 		96044ED1214267B900F29398 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96044ED0214267B800F29398 /* Movie.swift */; };
 		96044ED3214275B000F29398 /* MovieViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96044ED2214275B000F29398 /* MovieViewModel.swift */; };
+		960500722159EB8D004A32A1 /* ShortVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960500712159EB8D004A32A1 /* ShortVideoViewController.swift */; };
 		9605C5C12101BF67004BD566 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9605C5C02101BF67004BD566 /* AppDelegate.swift */; };
 		9605C5C82101BF68004BD566 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9605C5C72101BF68004BD566 /* Assets.xcassets */; };
 		9605C5CB2101BF68004BD566 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9605C5C92101BF68004BD566 /* LaunchScreen.storyboard */; };
@@ -28,6 +29,8 @@
 		9605C60A2101F055004BD566 /* Four.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9605C6092101F055004BD566 /* Four.storyboard */; };
 		9605C60C2101F381004BD566 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9605C60B2101F381004BD566 /* Home.storyboard */; };
 		9605C60E2101F67C004BD566 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9605C60D2101F67C004BD566 /* TabBar.swift */; };
+		960DE7752159F3BA007F7A5E /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 960DE7742159F3BA007F7A5E /* Charts.framework */; };
+		960DE7762159F3BA007F7A5E /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 960DE7742159F3BA007F7A5E /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9617D76D2140D7B000FD1060 /* Shadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9617D76C2140D7B000FD1060 /* Shadow.swift */; };
 		9617D76F2140E5FE00FD1060 /* ShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9617D76E2140E5FE00FD1060 /* ShadowView.swift */; };
 		9617D771214119E300FD1060 /* ShadowButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9617D770214119E300FD1060 /* ShadowButton.swift */; };
@@ -87,6 +90,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				960DE7762159F3BA007F7A5E /* Charts.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -103,6 +107,7 @@
 		96044ECD2142623D00F29398 /* MovieCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieCell.xib; sourceTree = "<group>"; };
 		96044ED0214267B800F29398 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		96044ED2214275B000F29398 /* MovieViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieViewModel.swift; sourceTree = "<group>"; };
+		960500712159EB8D004A32A1 /* ShortVideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortVideoViewController.swift; sourceTree = "<group>"; };
 		9605C5BD2101BF67004BD566 /* SwiftProjects.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftProjects.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9605C5C02101BF67004BD566 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9605C5C72101BF68004BD566 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -122,6 +127,7 @@
 		9605C6092101F055004BD566 /* Four.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Four.storyboard; sourceTree = "<group>"; };
 		9605C60B2101F381004BD566 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		9605C60D2101F67C004BD566 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
+		960DE7742159F3BA007F7A5E /* Charts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Charts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9617D76C2140D7B000FD1060 /* Shadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shadow.swift; sourceTree = "<group>"; };
 		9617D76E2140E5FE00FD1060 /* ShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowView.swift; sourceTree = "<group>"; };
 		9617D770214119E300FD1060 /* ShadowButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowButton.swift; sourceTree = "<group>"; };
@@ -174,6 +180,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CBC234118736557F64104818 /* Pods_SwiftProjects.framework in Frameworks */,
+				960DE7752159F3BA007F7A5E /* Charts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -211,9 +218,18 @@
 			path = Movie;
 			sourceTree = "<group>";
 		};
+		960500702159EB3D004A32A1 /* ShortVideo */ = {
+			isa = PBXGroup;
+			children = (
+				960500712159EB8D004A32A1 /* ShortVideoViewController.swift */,
+			);
+			path = ShortVideo;
+			sourceTree = "<group>";
+		};
 		9605C5B42101BF67004BD566 = {
 			isa = PBXGroup;
 			children = (
+				960DE7742159F3BA007F7A5E /* Charts.framework */,
 				9605C5BF2101BF67004BD566 /* SwiftProjects */,
 				9605C5D42101BF68004BD566 /* SwiftProjectsTests */,
 				9605C5BE2101BF67004BD566 /* Products */,
@@ -287,6 +303,7 @@
 				96044EC72142603100F29398 /* Movie */,
 				96C51056214FAAB90033AF0F /* Charts */,
 				96887E142152555C0019B39D /* ProtocolPractice */,
+				960500702159EB3D004A32A1 /* ShortVideo */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -622,7 +639,10 @@
 				"${BUILT_PRODUCTS_DIR}/ChameleonFramework/ChameleonFramework.framework",
 				"${BUILT_PRODUCTS_DIR}/ESPullToRefresh/ESPullToRefresh.framework",
 				"${BUILT_PRODUCTS_DIR}/HandyJSON/HandyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/HappyDNS/HappyDNS.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${PODS_ROOT}/PLPlayerKit/Pod/Library/PLPlayerKit.framework",
+				"${BUILT_PRODUCTS_DIR}/Qiniu/Qiniu.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SCLAlertView/SCLAlertView.framework",
@@ -636,7 +656,10 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ChameleonFramework.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ESPullToRefresh.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HandyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HappyDNS.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PLPlayerKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Qiniu.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SCLAlertView.framework",
@@ -676,6 +699,7 @@
 				9617D76D2140D7B000FD1060 /* Shadow.swift in Sources */,
 				96887E18215255950019B39D /* ProtocolPracticeViewController.swift in Sources */,
 				96BE4A152106FD7C001AED2C /* CenterViewController.swift in Sources */,
+				960500722159EB8D004A32A1 /* ShortVideoViewController.swift in Sources */,
 				9605C60E2101F67C004BD566 /* TabBar.swift in Sources */,
 				969C46A421537530002818FD /* ProgressHub.swift in Sources */,
 				96C400A82154ABFA00255225 /* EaseInAnimator.swift in Sources */,
@@ -865,7 +889,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.silknets.SwiftProjects;
+				PRODUCT_BUNDLE_IDENTIFIER = com.qbox.PLShortVideoKitDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "SwiftProjects/Untils/LogChinease/SwiftProjects-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -888,7 +912,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.silknets.SwiftProjects;
+				PRODUCT_BUNDLE_IDENTIFIER = com.qbox.PLShortVideoKitDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "SwiftProjects/Untils/LogChinease/SwiftProjects-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;

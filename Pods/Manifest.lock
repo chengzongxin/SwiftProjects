@@ -19,7 +19,21 @@ PODS:
     - ChameleonFramework/Default
   - ESPullToRefresh (2.7)
   - HandyJSON (4.2.0)
+  - HappyDNS (0.3.14)
   - Kingfisher (4.9.0)
+  - PLPlayerKit (3.3.3):
+    - PLPlayerKit/iphoneos (= 3.3.3)
+  - PLPlayerKit/iphoneos (3.3.3)
+  - PLShortVideoKit (1.13.1):
+    - PLShortVideoKit/ex-libMuseProcessor (= 1.13.1)
+    - PLShortVideoKit/libMuseProcessor (= 1.13.1)
+    - Qiniu (~> 7.1)
+  - PLShortVideoKit/ex-libMuseProcessor (1.13.1):
+    - Qiniu (~> 7.1)
+  - PLShortVideoKit/libMuseProcessor (1.13.1):
+    - Qiniu (~> 7.1)
+  - Qiniu (7.2.5):
+    - HappyDNS (~> 0.3)
   - RxCocoa (4.3.0):
     - RxSwift (~> 4.0)
   - RxSwift (4.3.0)
@@ -34,6 +48,9 @@ DEPENDENCIES:
   - ESPullToRefresh
   - HandyJSON (~> 4.2.0)
   - Kingfisher (~> 4.0)
+  - PLPlayerKit
+  - PLShortVideoKit
+  - Qiniu
   - RxCocoa (~> 4.0)
   - RxSwift (~> 4.0)
   - SCLAlertView
@@ -46,7 +63,11 @@ SPEC REPOS:
     - AFNetworking
     - ESPullToRefresh
     - HandyJSON
+    - HappyDNS
     - Kingfisher
+    - PLPlayerKit
+    - PLShortVideoKit
+    - Qiniu
     - RxCocoa
     - RxSwift
     - SCLAlertView
@@ -68,7 +89,11 @@ SPEC CHECKSUMS:
   ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
   ESPullToRefresh: 119e2710b82b75536aab2bbe4883ba119fca35c8
   HandyJSON: 9dfc026c7d7adc1f0f8ba8b181495f0e0763b0f4
+  HappyDNS: dc6a164ee81979093123c241c6353bcf0218add6
   Kingfisher: 64539b51826b778206daa6ed815d12653caa69dd
+  PLPlayerKit: 8089fa9ae8e2169cd5b3f1deb60041c676dc55e5
+  PLShortVideoKit: 8185233a269b9233be6565dac8a8c5412894871e
+  Qiniu: 909b408ee489ea54827e9717be90b94bc9dfbc48
   RxCocoa: 71b9cce833fbcb89a8eec11816dd225830c2bd3c
   RxSwift: a9717a34df3179fe63563f76e046ad345078dd3a
   SCLAlertView: 6a77bb2edfc65e04dbe57725546cb4107a506b85
@@ -76,6 +101,6 @@ SPEC CHECKSUMS:
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
   Toast: 91b396c56ee72a5790816f40d3a94dd357abc196
 
-PODFILE CHECKSUM: 038f8ee06b66452e817c3fa9703dfbf6df338902
+PODFILE CHECKSUM: f3bdcf26480635d148454807033616b78e434b85
 
 COCOAPODS: 1.5.3

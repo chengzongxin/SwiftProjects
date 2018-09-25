@@ -24,6 +24,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Config ProgressHud
         configProgressHub()
         
+        print("Finish Launch!")
+        
         return true
     }
 

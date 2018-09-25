@@ -59,6 +59,7 @@
                         <segue destination="oec-eZ-fwx" kind="show" identifier="CustomViewController" id="l62-EI-5rr"/>
                         <segue destination="jWl-5q-Yvk" kind="show" identifier="MovieTableViewController" id="jLc-p1-ror"/>
                         <segue destination="IZg-WN-K94" kind="show" identifier="ChartsViewController" id="lf2-iS-dz1"/>
+                        <segue destination="5Nl-3k-DEh" kind="presentation" identifier="ShortVideoViewController" id="8ua-CF-BvN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FHF-Gh-DgS" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -165,6 +166,59 @@
             </objects>
             <point key="canvasLocation" x="476" y="310"/>
         </scene>
+        <!--Short Video View Controller-->
+        <scene sceneID="xaM-IV-LJ7">
+            <objects>
+                <viewController id="5Nl-3k-DEh" customClass="ShortVideoViewController" customModule="SwiftProjects" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZTs-d7-5Pn">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aC3-WT-Dbg">
+                                <rect key="frame" x="329" y="43" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="toggle_camera"/>
+                                <connections>
+                                    <action selector="toggleCameraClick:" destination="5Nl-3k-DEh" eventType="touchUpInside" id="J5m-7X-flH"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uIv-5h-Kwz">
+                                <rect key="frame" x="329" y="81" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="flash_close"/>
+                                <state key="selected" image="flash_open"/>
+                                <state key="highlighted" image="flash_open"/>
+                                <connections>
+                                    <action selector="flashClick:" destination="5Nl-3k-DEh" eventType="touchUpInside" id="kBx-4F-2Po"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gtl-6x-sc9">
+                                <rect key="frame" x="16" y="43" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="btn_camera_cancel_a"/>
+                                <connections>
+                                    <action selector="backClick:" destination="5Nl-3k-DEh" eventType="touchUpInside" id="myF-ag-0T2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2W6-a9-KyN">
+                                <rect key="frame" x="327" y="119" width="32" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="icon_trim"/>
+                                <connections>
+                                    <action selector="screenShotClick:" destination="5Nl-3k-DEh" eventType="touchUpInside" id="yvH-Jk-VAd"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="2Nn-bq-2zO"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ewz-YW-0Jp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-962" y="1030"/>
+        </scene>
         <!--Charts View Controller-->
         <scene sceneID="Yr2-12-h9Q">
             <objects>
@@ -237,4 +291,11 @@
             <point key="canvasLocation" x="475" y="973"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="btn_camera_cancel_a" width="30" height="30"/>
+        <image name="flash_close" width="30" height="30"/>
+        <image name="flash_open" width="30" height="30"/>
+        <image name="icon_trim" width="32" height="32"/>
+        <image name="toggle_camera" width="30" height="30"/>
+    </resources>
 </document>

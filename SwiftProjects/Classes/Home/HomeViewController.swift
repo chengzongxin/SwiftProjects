@@ -26,6 +26,7 @@ class HomeViewController: UIViewController {
         dataSource.append((title: "豆瓣Top250(StackView Achieve)", viewController:"MovieTableViewController", isXib:true))
         dataSource.append((title: "图表框架Charts", viewController:"ChartsViewController", isXib:true))
         dataSource.append((title: "协议练习", viewController:"ProtocolPracticeViewController", isXib:false))
+        dataSource.append((title: "短视频(七牛)", viewController:"ShortVideoViewController", isXib:true))
 
         view.backgroundColor      = UIColor(gradientStyle: .topToBottom, withFrame: view.bounds, andColors: [UIColor.randomFlat,UIColor.randomFlat])
 
@@ -71,11 +72,11 @@ extension HomeViewController: UITableViewDelegate,UITableViewDataSource {
             // navigationPush
             let vc = UIViewController.getViewController(VCString: vcName)!
             vc.hidesBottomBarWhenPushed = true
-//            navigationController?.pushViewController(vc, animated: true)
+            navigationController?.pushViewController(vc, animated: true)
             
             // 2.2 Set present modal delegate
-            vc.transitioningDelegate = animator
-            present(vc, animated: true, completion: nil)
+//            vc.transitioningDelegate = animator
+//            present(vc, animated: true, completion: nil)
         }
         
     }

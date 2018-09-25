@@ -27,6 +27,11 @@ target 'SwiftProjects' do
     
 #    pod 'Charts'
 
+    # Short Video Kit (qiniu)
+    pod 'PLShortVideoKit'
+    pod 'Qiniu'
+    pod 'PLPlayerKit'
+
   target 'SwiftProjectsTests' do
     inherit! :search_paths
     # Pods for testing
