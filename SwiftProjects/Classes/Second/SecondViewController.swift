@@ -13,6 +13,9 @@ let secondCellID = "seconCellID"
 
 class SecondViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
+    var animator = Animator()
+    
+    
     lazy var dataSouces: [(title:String, viewController:String)] = {
         var dataSouces: [(title:String, viewController:String)] = []
         
@@ -71,6 +74,8 @@ class SecondViewController: UIViewController, UICollectionViewDelegate, UICollec
         view.backgroundColor = UIColor.randomGradientColor(bounds: view.bounds)
         
         view.addSubview(collectionView)
+        
+        navigationController?.delegate = animator
     }
     
     @objc fileprivate func longPressAction(_ gesture: UILongPressGestureRecognizer) {
@@ -136,6 +141,7 @@ extension SecondViewController {
         let vc = className.init()
         vc.navigationItem.title = dataSouces[indexPath.item].title
         vc.hidesBottomBarWhenPushed = true
+        animator.cell = collectionView.cellForItem(at: IndexPath(item: 3, section: 0)) as? SecondCell
         navigationController?.pushViewController(vc, animated: true)
     }
 }
