@@ -9,6 +9,7 @@ target 'SwiftProjects' do
     pod 'ChameleonFramework/Swift', :git => 'https://github.com/ViccAlexander/Chameleon.git'
     pod 'AFNetworking'
     pod 'Toast'
+#    pod 'Toast-Swift', '~> 4.0.0'
     pod 'SVProgressHUD'
     # JSON Prase
     pod 'HandyJSON', '~> 4.2.0'

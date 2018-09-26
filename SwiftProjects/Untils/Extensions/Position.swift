@@ -32,3 +32,8 @@ extension UIView {
     }
 }
 
+extension CGFloat {
+    func format(f: String) -> String {
+        return String(format: "%\(f)f", self)
+    }
+}

@@ -10,13 +10,19 @@ import UIKit
 import PLShortVideoKit
 import PLPlayerKit
 
+
 class ShortVideoViewController: UIViewController, PLShortVideoRecorderDelegate {
+    
+    @IBOutlet weak var progressView: UIProgressView!
+    
+    @IBOutlet weak var durationLabel: UILabel!
     
     var shortVideoRecorder: PLShortVideoRecorder!
     
     var filterView: FilterView!
     
     var currentFilter: PLSFilter?
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,6 +38,12 @@ class ShortVideoViewController: UIViewController, PLShortVideoRecorderDelegate {
     func addShortVideoRecorder() {
         // 1. 创建音视频的采集和编码配置对象
         let videoConfig = PLSVideoConfiguration.default()
+        videoConfig?.position = .front
+        videoConfig?.videoFrameRate = 25
+        videoConfig?.averageVideoBitRate = 1024*1000
+        videoConfig?.videoSize = CGSize(width: 544, height: 960)
+        videoConfig?.videoOrientation = .portrait
+        
         let audioConfig = PLSAudioConfiguration.default()
         // 2. 创建拍摄 recorder 对象
         shortVideoRecorder = PLShortVideoRecorder(videoConfiguration: videoConfig, audioConfiguration: audioConfig)
@@ -45,14 +57,15 @@ class ShortVideoViewController: UIViewController, PLShortVideoRecorderDelegate {
         shortVideoRecorder.recoderRate = .normal
         // 设置拍摄时长
         // 单位为秒
-        shortVideoRecorder.maxDuration = 60.0
+        shortVideoRecorder.maxDuration = 20.0
         shortVideoRecorder.minDuration = 2.0
+        shortVideoRecorder.setBeautifyModeOn(true) // 默认打开美颜
+        shortVideoRecorder.outputFileType = .MPEG4
+        shortVideoRecorder.innerFocusViewShowEnable = true // 显示 SDK 内部自带的对焦动画
         // 默认YES 从后台进入前台自动开始录制
         shortVideoRecorder.backgroundMonitorEnable = true
         // 5. 开始拍摄
-        shortVideoRecorder.startRecording()
-        
-        shortVideoRecorder.toggleCamera()
+//        shortVideoRecorder.startRecording()
         
     }
     
@@ -71,6 +84,14 @@ class ShortVideoViewController: UIViewController, PLShortVideoRecorderDelegate {
 
 extension ShortVideoViewController {
     // MARK: - Action
+    @IBAction func recordButtonClick(_ sender: UIButton) {
+        if shortVideoRecorder.isRecording {
+            shortVideoRecorder.stopRecording()
+        }else{
+            shortVideoRecorder.startRecording()
+        }
+    }
+    
     @IBAction func backClick(_ sender: UIButton) {
         dismiss(animated: true, completion: nil)
     }
@@ -82,24 +103,54 @@ extension ShortVideoViewController {
     
     @IBAction func flashClick(_ sender: UIButton) {
         sender.isSelected = !sender.isSelected
+        shortVideoRecorder.isTorchOn = !shortVideoRecorder.isTorchOn
     }
     
     @IBAction func screenShotClick(_ sender: UIButton) {
-        print(sender)
+        shortVideoRecorder.getScreenShot { (image) in
+            UIImageWriteToSavedPhotosAlbum(image!, nil, nil, nil)
+            self.view.makeToast("保存相片成功!")
+        }
     }
     
     @IBAction func filterButtonClick(_ sender: UIButton) {
         sender.isSelected = !sender.isSelected
         filterView.isHidden = !sender.isSelected
     }
+    
+    @IBAction func beatyButtonClick(_ sender: UIButton) {
+        sender.isSelected = !sender.isSelected
+        shortVideoRecorder.setBeautifyModeOn(!sender.isSelected)
+    }
 }
 
-
+// MARK: - PLShortVideoRecorderDelegate 视频录制回调 Short Video Delegate
 extension ShortVideoViewController {
+    // 获取录取原始数据(做滤镜处理)
     func shortVideoRecorder(_ recorder: PLShortVideoRecorder, cameraSourceDidGet pixelBuffer: CVPixelBuffer) -> Unmanaged<CVPixelBuffer> {
         if let filter = currentFilter {
             return filter.process(pixelBuffer)
         }
         return PLSFilter()!.process(pixelBuffer)
     }
+    
+    // 开始录制一段视频时
+    func shortVideoRecorder(_ recorder: PLShortVideoRecorder, didStartRecordingToOutputFileAt fileURL: URL) {
+        print("didStartRecordingToOutputFileAt:" + fileURL.absoluteString)
+        view.makeToast("视频存储地址:" + fileURL.absoluteString, duration: 10, position: "CSToastPositionCenter")
+    }
+    
+    // 正在录制的过程中
+    func shortVideoRecorder(_ recorder: PLShortVideoRecorder, didRecordingToOutputFileAt fileURL: URL, fileDuration: CGFloat, totalDuration: CGFloat) {
+        progressView.setProgress(Float(fileDuration/totalDuration), animated: false)
+        durationLabel.text = fileDuration.format(f: ".2")
+    }
+    
+    // 完成一段视频的录制时
+    func shortVideoRecorder(_ recorder: PLShortVideoRecorder, didFinishRecordingToOutputFileAt fileURL: URL, fileDuration: CGFloat, totalDuration: CGFloat) {
+        view.makeToast("didFinishRecordingToOutputFileAt fileURL:\(fileURL.absoluteString) fileDuration:\(fileDuration) totalDuration:\(totalDuration)")
+    }
 }
+
+
+
