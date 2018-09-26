@@ -30,6 +30,7 @@
 		960DE793215A4D69007F7A5E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960DE792215A4D69007F7A5E /* AppDelegate.swift */; };
 		960DE795215A4D98007F7A5E /* PrefixHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960DE794215A4D98007F7A5E /* PrefixHeader.swift */; };
 		960DE798215A4E63007F7A5E /* PLShortVideoKit.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 960DE797215A4E63007F7A5E /* PLShortVideoKit.bundle */; };
+		960DE79C215A5B81007F7A5E /* PLSFilterGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960DE79B215A5B81007F7A5E /* PLSFilterGroup.swift */; };
 		9617D76D2140D7B000FD1060 /* Shadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9617D76C2140D7B000FD1060 /* Shadow.swift */; };
 		9617D76F2140E5FE00FD1060 /* ShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9617D76E2140E5FE00FD1060 /* ShadowView.swift */; };
 		9617D771214119E300FD1060 /* ShadowButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9617D770214119E300FD1060 /* ShadowButton.swift */; };
@@ -69,6 +70,12 @@
 		96C400A82154ABFA00255225 /* EaseInAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C400A72154ABFA00255225 /* EaseInAnimator.swift */; };
 		96C400AA2154CED300255225 /* Animator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C400A92154CED300255225 /* Animator.swift */; };
 		96C51058214FAAD80033AF0F /* ChartsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C51057214FAAD80033AF0F /* ChartsViewController.swift */; };
+		96F97B96215B3BE7009E25B7 /* FilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F97B95215B3BE7009E25B7 /* FilterView.swift */; };
+		96F97B98215B3C81009E25B7 /* FilterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96F97B97215B3C81009E25B7 /* FilterView.xib */; };
+		96F97B9B215B3D4B009E25B7 /* FilterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F97B99215B3D4B009E25B7 /* FilterCell.swift */; };
+		96F97B9C215B3D4B009E25B7 /* FilterCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96F97B9A215B3D4B009E25B7 /* FilterCell.xib */; };
+		96F97B9E215B7118009E25B7 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96F97B9D215B7118009E25B7 /* Charts.framework */; };
+		96F97B9F215B7118009E25B7 /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 96F97B9D215B7118009E25B7 /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CBC234118736557F64104818 /* Pods_SwiftProjects.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 327549ADADD7AF94D65CA2B8 /* Pods_SwiftProjects.framework */; };
 /* End PBXBuildFile section */
 
@@ -89,6 +96,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				96F97B9F215B7118009E25B7 /* Charts.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -126,6 +134,7 @@
 		960DE792215A4D69007F7A5E /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		960DE794215A4D98007F7A5E /* PrefixHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrefixHeader.swift; sourceTree = "<group>"; };
 		960DE797215A4E63007F7A5E /* PLShortVideoKit.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = PLShortVideoKit.bundle; sourceTree = "<group>"; };
+		960DE79B215A5B81007F7A5E /* PLSFilterGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PLSFilterGroup.swift; sourceTree = "<group>"; };
 		9617D76C2140D7B000FD1060 /* Shadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shadow.swift; sourceTree = "<group>"; };
 		9617D76E2140E5FE00FD1060 /* ShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowView.swift; sourceTree = "<group>"; };
 		9617D770214119E300FD1060 /* ShadowButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowButton.swift; sourceTree = "<group>"; };
@@ -168,6 +177,11 @@
 		96C400A72154ABFA00255225 /* EaseInAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EaseInAnimator.swift; sourceTree = "<group>"; };
 		96C400A92154CED300255225 /* Animator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animator.swift; sourceTree = "<group>"; };
 		96C51057214FAAD80033AF0F /* ChartsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsViewController.swift; sourceTree = "<group>"; };
+		96F97B95215B3BE7009E25B7 /* FilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterView.swift; sourceTree = "<group>"; };
+		96F97B97215B3C81009E25B7 /* FilterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilterView.xib; sourceTree = "<group>"; };
+		96F97B99215B3D4B009E25B7 /* FilterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterCell.swift; sourceTree = "<group>"; };
+		96F97B9A215B3D4B009E25B7 /* FilterCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilterCell.xib; sourceTree = "<group>"; };
+		96F97B9D215B7118009E25B7 /* Charts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Charts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDCAC8CBBB578F5D11DF92B1 /* Pods-SwiftProjectsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftProjectsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftProjectsTests/Pods-SwiftProjectsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		EB42F02FF7E074EA56D4556F /* Pods-SwiftProjects.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftProjects.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftProjects/Pods-SwiftProjects.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -178,6 +192,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CBC234118736557F64104818 /* Pods_SwiftProjects.framework in Frameworks */,
+				96F97B9E215B7118009E25B7 /* Charts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -219,6 +234,11 @@
 			isa = PBXGroup;
 			children = (
 				960500712159EB8D004A32A1 /* ShortVideoViewController.swift */,
+				96F97B95215B3BE7009E25B7 /* FilterView.swift */,
+				96F97B97215B3C81009E25B7 /* FilterView.xib */,
+				960DE79B215A5B81007F7A5E /* PLSFilterGroup.swift */,
+				96F97B99215B3D4B009E25B7 /* FilterCell.swift */,
+				96F97B9A215B3D4B009E25B7 /* FilterCell.xib */,
 			);
 			path = ShortVideo;
 			sourceTree = "<group>";
@@ -226,6 +246,7 @@
 		9605C5B42101BF67004BD566 = {
 			isa = PBXGroup;
 			children = (
+				96F97B9D215B7118009E25B7 /* Charts.framework */,
 				9605C5BF2101BF67004BD566 /* SwiftProjects */,
 				9605C5D42101BF68004BD566 /* SwiftProjectsTests */,
 				9605C5BE2101BF67004BD566 /* Products */,
@@ -598,7 +619,9 @@
 				966628F1213FD34100820701 /* SecondCell.xib in Resources */,
 				96044ECF2142623D00F29398 /* MovieCell.xib in Resources */,
 				9605C6062101F01C004BD566 /* Second.storyboard in Resources */,
+				96F97B98215B3C81009E25B7 /* FilterView.xib in Resources */,
 				9605C60A2101F055004BD566 /* Four.storyboard in Resources */,
+				96F97B9C215B3D4B009E25B7 /* FilterCell.xib in Resources */,
 				9605C6082101F042004BD566 /* Third.storyboard in Resources */,
 				9605C60C2101F381004BD566 /* Home.storyboard in Resources */,
 			);
@@ -704,12 +727,15 @@
 				9605C5F92101E18F004BD566 /* SecondViewController.swift in Sources */,
 				96A5B908210870120039E81B /* LogCategory.m in Sources */,
 				967E1C15214A73F3004C7EB3 /* MTRefreshFooterAnimator.swift in Sources */,
+				960DE79C215A5B81007F7A5E /* PLSFilterGroup.swift in Sources */,
 				96BE4A1821073C91001AED2C /* NetworkManager.swift in Sources */,
+				96F97B9B215B3D4B009E25B7 /* FilterCell.swift in Sources */,
 				96C400A221548F0900255225 /* MagicMoveAnimator.swift in Sources */,
 				96A5B8FF210868010039E81B /* Book.swift in Sources */,
 				96044EC92142604300F29398 /* MovieTableViewController.swift in Sources */,
 				966628F6213FEB2C00820701 /* BaseViewController.swift in Sources */,
 				9605C5FD2101E19D004BD566 /* FourViewController.swift in Sources */,
+				96F97B96215B3BE7009E25B7 /* FilterView.swift in Sources */,
 				9617D771214119E300FD1060 /* ShadowButton.swift in Sources */,
 				960DE793215A4D69007F7A5E /* AppDelegate.swift in Sources */,
 				96887E1A215256880019B39D /* ProtocolInstance.swift in Sources */,

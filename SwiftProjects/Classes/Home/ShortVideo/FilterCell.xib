@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="FilterCell" id="gTV-IL-0wX" customClass="FilterCell" customModule="SwiftProjects" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="66" height="66"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="66" height="66"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1Of-me-19i">
+                        <rect key="frame" x="11" y="22" width="44" height="44"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="44" id="7VU-4j-6j5"/>
+                            <constraint firstAttribute="height" constant="44" id="NIz-kB-hvp"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="22"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="USM-3I-AT9">
+                        <rect key="frame" x="15.5" y="0.0" width="35.5" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="USM-3I-AT9" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="1BF-pc-H4W"/>
+                <constraint firstAttribute="bottom" secondItem="1Of-me-19i" secondAttribute="bottom" id="FRZ-pd-PjW"/>
+                <constraint firstItem="1Of-me-19i" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="O1O-iX-d0N"/>
+                <constraint firstItem="USM-3I-AT9" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="PMp-dp-lEl"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <connections>
+                <outlet property="bottomLabel" destination="USM-3I-AT9" id="uYQ-Cr-Mia"/>
+                <outlet property="topImageView" destination="1Of-me-19i" id="hfP-J9-Kbj"/>
+            </connections>
+            <point key="canvasLocation" x="56" y="48.575712143928037"/>
+        </collectionViewCell>
+    </objects>
+</document>

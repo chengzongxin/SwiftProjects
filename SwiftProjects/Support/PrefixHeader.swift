@@ -10,7 +10,7 @@ import Foundation
 import ChameleonFramework
 
 //获取屏幕宽度  高度
-let  SCREEN_WIDTH = UIScreen.main.bounds.height
+let  SCREEN_WIDTH = UIScreen.main.bounds.width
 
 let  SCREEN_HEIGH = UIScreen.main.bounds.height
 

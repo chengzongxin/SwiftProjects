@@ -14,18 +14,22 @@ class ShortVideoViewController: UIViewController, PLShortVideoRecorderDelegate {
     
     var shortVideoRecorder: PLShortVideoRecorder!
     
+    var filterView: FilterView!
     
+    var currentFilter: PLSFilter?
     
-
     override func viewDidLoad() {
         super.viewDidLoad()
 
         self.view.backgroundColor = UIColor.randomGradientColor(bounds: view.bounds)
         
-        showVideo()
+        addShortVideoRecorder()
+        
+        addFilterView()
+        
     }
     
-    func showVideo() {
+    func addShortVideoRecorder() {
         // 1. 创建音视频的采集和编码配置对象
         let videoConfig = PLSVideoConfiguration.default()
         let audioConfig = PLSAudioConfiguration.default()
@@ -47,6 +51,21 @@ class ShortVideoViewController: UIViewController, PLShortVideoRecorderDelegate {
         shortVideoRecorder.backgroundMonitorEnable = true
         // 5. 开始拍摄
         shortVideoRecorder.startRecording()
+        
+        shortVideoRecorder.toggleCamera()
+        
+    }
+    
+    func addFilterView() {
+        filterView = FilterView.instanceFromNib() as? FilterView
+        
+        filterView.frame = CGRect(x: 60, y: 50, width: UIScreen.main.bounds.width - 120, height: 88)
+        view.addSubview(filterView)
+        
+        filterView.didSelect { (filter) in
+            self.currentFilter = filter
+        }
+
     }
 }
 
@@ -68,11 +87,19 @@ extension ShortVideoViewController {
     @IBAction func screenShotClick(_ sender: UIButton) {
         print(sender)
     }
+    
+    @IBAction func filterButtonClick(_ sender: UIButton) {
+        sender.isSelected = !sender.isSelected
+        filterView.isHidden = !sender.isSelected
+    }
 }
 
 
 extension ShortVideoViewController {
     func shortVideoRecorder(_ recorder: PLShortVideoRecorder, cameraSourceDidGet pixelBuffer: CVPixelBuffer) -> Unmanaged<CVPixelBuffer> {
-        return (PLSFilter()?.process(pixelBuffer))!
+        if let filter = currentFilter {
+            return filter.process(pixelBuffer)
+        }
+        return PLSFilter()!.process(pixelBuffer)
     }
 }
