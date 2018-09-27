@@ -99,7 +99,13 @@ extension ShortVideoViewController {
     
     // 返回
     @IBAction func backClick(_ sender: UIButton) {
-        dismiss(animated: true, completion: nil)
+        UIAlertController.showConfirm(message: "确定放弃这个视频?(共\(shortVideoRecorder.getFilesCount())个视频段)?", in: self) { (action) in
+            print(action)
+            self.shortVideoRecorder.cancelRecording()
+            self.dismiss(animated: true, completion: nil)
+        }
+        
+        
     }
     
     // 切换摄像头
