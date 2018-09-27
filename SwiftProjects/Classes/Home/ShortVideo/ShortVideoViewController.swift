@@ -9,9 +9,12 @@
 import UIKit
 import PLShortVideoKit
 import PLPlayerKit
+import SVProgressHUD
 
 
 class ShortVideoViewController: UIViewController, PLShortVideoRecorderDelegate {
+    
+    @IBOutlet weak var musicButton: UIButton!
     
     @IBOutlet weak var progressView: UIProgressView!
     
@@ -69,6 +72,7 @@ class ShortVideoViewController: UIViewController, PLShortVideoRecorderDelegate {
         
     }
     
+    
     func addFilterView() {
         filterView = FilterView.instanceFromNib() as? FilterView
         
@@ -84,6 +88,7 @@ class ShortVideoViewController: UIViewController, PLShortVideoRecorderDelegate {
 
 extension ShortVideoViewController {
     // MARK: - Action
+    // 开始录制
     @IBAction func recordButtonClick(_ sender: UIButton) {
         if shortVideoRecorder.isRecording {
             shortVideoRecorder.stopRecording()
@@ -92,20 +97,23 @@ extension ShortVideoViewController {
         }
     }
     
+    // 返回
     @IBAction func backClick(_ sender: UIButton) {
         dismiss(animated: true, completion: nil)
     }
     
+    // 切换摄像头
     @IBAction func toggleCameraClick(_ sender: UIButton) {
         print(sender)
         shortVideoRecorder.toggleCamera()
     }
-    
+    // 闪光灯
     @IBAction func flashClick(_ sender: UIButton) {
         sender.isSelected = !sender.isSelected
         shortVideoRecorder.isTorchOn = !shortVideoRecorder.isTorchOn
     }
     
+    // 截屏
     @IBAction func screenShotClick(_ sender: UIButton) {
         shortVideoRecorder.getScreenShot { (image) in
             UIImageWriteToSavedPhotosAlbum(image!, nil, nil, nil)
@@ -113,14 +121,105 @@ extension ShortVideoViewController {
         }
     }
     
+    // 滤镜
     @IBAction func filterButtonClick(_ sender: UIButton) {
         sender.isSelected = !sender.isSelected
         filterView.isHidden = !sender.isSelected
     }
     
+    // 美颜
     @IBAction func beatyButtonClick(_ sender: UIButton) {
         sender.isSelected = !sender.isSelected
         shortVideoRecorder.setBeautifyModeOn(!sender.isSelected)
+    }
+    
+    // 结束录制
+    @IBAction func finishRecordButtonClick(_ sender: UIButton) {
+        let asset = shortVideoRecorder.assetRepresentingAllFiles()
+        playEvent(asset: asset)
+        shortVideoRecorder.cancelRecording()
+    }
+    
+    // 视频源处理
+    func playEvent(asset: AVAsset) {
+        // 获取当前会话的所有的视频段文件
+        let filesURLArray = shortVideoRecorder.getAllFilesURL()
+        print("filesURLArray:\(String(describing: filesURLArray))")
+        
+        var movieAsset: AVAsset? = asset
+        if musicButton.isSelected {
+            let semaphore = DispatchSemaphore(value: 0)
+            SVProgressHUD.show()
+            // MusicVolume：1.0，videoVolume:0.0 即完全丢弃掉拍摄时的所有声音，只保留背景音乐的声音
+            shortVideoRecorder.mix(withMusicVolume: 1.0, videoVolume: 0.0, completionHandler: { composition, audioMix, error in
+                var exporter: AVAssetExportSession? = nil
+                if let aComposition = composition {
+                    exporter = AVAssetExportSession(asset: aComposition, presetName: AVAssetExportPresetHighestQuality)
+                }
+                let outputPath: URL? = self.exportAudioMixPath()
+                exporter?.outputURL = outputPath
+                exporter?.outputFileType = .mp4
+                exporter?.shouldOptimizeForNetworkUse = true
+                exporter?.audioMix = audioMix
+                exporter?.exportAsynchronously(completionHandler: {
+                    switch exporter?.status {
+                    case .failed?:
+                        if let aDescription = exporter?.error.debugDescription {
+                            print("audio mix failed：\(aDescription)")
+                        }
+                    case .cancelled?:
+                        print("audio mix canceled")
+                    case .completed?:
+                        print("audio mix success")
+                        if let aPath = outputPath {
+                            movieAsset = AVAsset(url: aPath)
+                        }
+                    default: break
+                    }
+                    semaphore.signal()
+                })
+            })
+            SVProgressHUD.dismiss()
+            _ = semaphore.wait(timeout: .distantFuture)
+        }
+        // 设置音视频、水印等编辑信息
+        var outputSettings: [AnyHashable : Any] = [:]
+        // 待编辑的原始视频素材
+        var plsMovieSettings: [AnyHashable : Any] = [:]
+        plsMovieSettings[PLSAssetKey] = movieAsset
+        plsMovieSettings[PLSStartTimeKey] = 0.0
+        plsMovieSettings[PLSDurationKey] = shortVideoRecorder.getTotalDuration()
+        plsMovieSettings[PLSVolumeKey] = 1.0
+        outputSettings[PLSMovieSettingsKey] = plsMovieSettings
+        
+        performSegue(withIdentifier: "EditVideoViewController", sender: (outputSettings,filesURLArray))
+    }
+    // 输出路径
+    func exportAudioMixPath() -> URL? {
+        let paths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
+        let path = paths[0]
+        let fileManager = FileManager.default
+        if !fileManager.fileExists(atPath: path) {
+            try? fileManager.createDirectory(atPath: path, withIntermediateDirectories: true, attributes: nil)
+        }
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyyMMddHHmmss"
+        let nowTimeStr = formatter.string(from: Date(timeIntervalSinceNow: 0))
+        let fileName = URL(fileURLWithPath: path).appendingPathComponent("\(nowTimeStr)_mix.mp4").absoluteString
+        return URL(fileURLWithPath: fileName)
+    }
+
+    
+    // 跳转到下一个ViewController
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.destination is EditVideoViewController {
+            
+            let (setting,filesURLArray) = sender as! ([AnyHashable : Any],Array<Any>)
+            
+            let vc = segue.destination as! EditVideoViewController
+            vc.settings = setting as? [String : Any]
+            vc.filesURLArray = filesURLArray
+        }
     }
 }
 
@@ -137,7 +236,7 @@ extension ShortVideoViewController {
     // 开始录制一段视频时
     func shortVideoRecorder(_ recorder: PLShortVideoRecorder, didStartRecordingToOutputFileAt fileURL: URL) {
         print("didStartRecordingToOutputFileAt:" + fileURL.absoluteString)
-        view.makeToast("视频存储地址:" + fileURL.absoluteString, duration: 10, position: "CSToastPositionCenter")
+//        view.makeToast("视频存储地址:" + fileURL.absoluteString, duration: 10, position: "CSToastPositionCenter")
     }
     
     // 正在录制的过程中
@@ -148,7 +247,8 @@ extension ShortVideoViewController {
     
     // 完成一段视频的录制时
     func shortVideoRecorder(_ recorder: PLShortVideoRecorder, didFinishRecordingToOutputFileAt fileURL: URL, fileDuration: CGFloat, totalDuration: CGFloat) {
-        view.makeToast("didFinishRecordingToOutputFileAt fileURL:\(fileURL.absoluteString) fileDuration:\(fileDuration) totalDuration:\(totalDuration)")
+        print("didFinishRecordingToOutputFileAt fileURL:\(fileURL.absoluteString) fileDuration:\(fileDuration) totalDuration:\(totalDuration)")
+//        view.makeToast("didFinishRecordingToOutputFileAt fileURL:\(fileURL.absoluteString) fileDuration:\(fileDuration) totalDuration:\(totalDuration)")
     }
 }
 

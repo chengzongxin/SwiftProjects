@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5Nl-3k-DEh">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Short Video View Controller-->
+        <scene sceneID="xaM-IV-LJ7">
+            <objects>
+                <viewController id="5Nl-3k-DEh" customClass="ShortVideoViewController" customModule="SwiftProjects" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZTs-d7-5Pn">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="NXS-f7-Ugy">
+                                <rect key="frame" x="16" y="43" width="31" height="190"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gtl-6x-sc9">
+                                        <rect key="frame" x="0.5" y="0.0" width="30" height="30"/>
+                                        <state key="normal" image="btn_camera_cancel_a"/>
+                                        <connections>
+                                            <action selector="backClick:" destination="5Nl-3k-DEh" eventType="touchUpInside" id="myF-ag-0T2"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4JX-Cv-sLQ">
+                                        <rect key="frame" x="0.0" y="40" width="31" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <state key="normal" title="滤镜"/>
+                                        <connections>
+                                            <action selector="filterButtonClick:" destination="5Nl-3k-DEh" eventType="touchUpInside" id="5ta-jN-eL7"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aC3-WT-Dbg">
+                                        <rect key="frame" x="0.5" y="80" width="30" height="30"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" image="toggle_camera"/>
+                                        <connections>
+                                            <action selector="toggleCameraClick:" destination="5Nl-3k-DEh" eventType="touchUpInside" id="J5m-7X-flH"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uIv-5h-Kwz">
+                                        <rect key="frame" x="0.5" y="120" width="30" height="30"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" image="flash_close"/>
+                                        <state key="selected" image="flash_open"/>
+                                        <state key="highlighted" image="flash_open"/>
+                                        <connections>
+                                            <action selector="flashClick:" destination="5Nl-3k-DEh" eventType="touchUpInside" id="kBx-4F-2Po"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j5b-UG-5BM">
+                                        <rect key="frame" x="0.0" y="160" width="31" height="30"/>
+                                        <state key="normal" title="美颜">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="beatyButtonClick:" destination="5Nl-3k-DEh" eventType="touchUpInside" id="Okj-6X-Rfw"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U0q-1P-3nl">
+                                <rect key="frame" x="248" y="636" width="111" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="L6a-6i-BcJ">
+                                <rect key="frame" x="0.0" y="665" width="375" height="2"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </progressView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UKR-tC-d1T">
+                                <rect key="frame" x="143" y="539" width="88" height="89"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="btn_record_a"/>
+                                <connections>
+                                    <action selector="recordButtonClick:" destination="5Nl-3k-DEh" eventType="touchUpInside" id="53T-nI-CdM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2W6-a9-KyN">
+                                <rect key="frame" x="327" y="41" width="32" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="icon_trim"/>
+                                <connections>
+                                    <action selector="screenShotClick:" destination="5Nl-3k-DEh" eventType="touchUpInside" id="yvH-Jk-VAd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m8l-DY-wXD">
+                                <rect key="frame" x="276" y="556" width="55" height="55"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="end_normal"/>
+                                <state key="disabled" image="end_disable"/>
+                                <connections>
+                                    <action selector="finishRecordButtonClick:" destination="5Nl-3k-DEh" eventType="touchUpInside" id="euZ-Xf-5I1"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2di-WW-d9n">
+                                <rect key="frame" x="321" y="88" width="45" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="music_no_selected"/>
+                                <state key="selected" image="music_selected"/>
+                                <state key="highlighted" image="music_selected"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="2Nn-bq-2zO"/>
+                    </view>
+                    <connections>
+                        <outlet property="durationLabel" destination="U0q-1P-3nl" id="hf5-ee-YKk"/>
+                        <outlet property="musicButton" destination="2di-WW-d9n" id="iHE-8a-06U"/>
+                        <outlet property="progressView" destination="L6a-6i-BcJ" id="q1B-Ru-ZOm"/>
+                        <segue destination="yGk-tQ-eU3" kind="show" identifier="EditVideoViewController" id="AgP-j6-g12"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ewz-YW-0Jp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-962.39999999999998" y="1029.5352323838081"/>
+        </scene>
+        <!--Edit Video View Controller-->
+        <scene sceneID="WxN-hP-Lu6">
+            <objects>
+                <viewController id="yGk-tQ-eU3" customClass="EditVideoViewController" customModule="SwiftProjects" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vGX-iq-eay">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="24k-ii-Lev">
+                                <rect key="frame" x="16" y="20" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="btn_camera_cancel_a"/>
+                                <connections>
+                                    <action selector="backButtonClick:" destination="yGk-tQ-eU3" eventType="touchUpInside" id="9gC-n2-iSq"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="Rtn-sd-m86"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eOM-V1-ixZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-290" y="1030"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="btn_camera_cancel_a" width="30" height="30"/>
+        <image name="btn_record_a" width="88" height="89"/>
+        <image name="end_disable" width="55" height="55"/>
+        <image name="end_normal" width="55" height="55"/>
+        <image name="flash_close" width="30" height="30"/>
+        <image name="flash_open" width="30" height="30"/>
+        <image name="icon_trim" width="32" height="32"/>
+        <image name="music_no_selected" width="45" height="45"/>
+        <image name="music_selected" width="45" height="45"/>
+        <image name="toggle_camera" width="30" height="30"/>
+    </resources>
+</document>
