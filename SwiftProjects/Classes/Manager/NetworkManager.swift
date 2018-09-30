@@ -14,6 +14,13 @@ import Toast
 struct NetworkManager {
     
     static let errorMessage = "网络异常,请检查网络"
+    static let ESCAPE = "\u{001b}["
+    
+    static let RESET_FG = ESCAPE + "fg;" // Clear any foreground color
+    static let RESET_BG = ESCAPE + "bg;" // Clear any background color
+    static let RESET = ESCAPE + ";"   // Clear any foreground or background color
+    static let codeColor = "fg255,0,0"
+    typealias StatusCode = Int
     
     static func GET(URLString: String, parameters: [String:Any]?, showHUD: Bool = true, success:((AnyObject?) -> Void)?, failure: ((NSError) -> Void)?) {
         let manager = AFHTTPSessionManager()
@@ -30,6 +37,9 @@ struct NetworkManager {
             SVProgressHUD.dismiss()
 //            Logger.info(responseObject)
 //            print(responseObject ?? "")
+            let statusCode = 200
+            log.debug("\(ESCAPE)\(codeColor);\(statusCode)\(RESET) \(ESCAPE)fg53,255,206;\("GET")\(RESET) \(ESCAPE)fg69,69,69;\(URLString)\("target.path") \(parameters ?? [:])\(RESET) \n\(ESCAPE)fg29,29,29;\(String(describing: responseObject))\(RESET)")
+            
             success?(responseObject as? NSObject)
         }) { (task, error) in
             SVProgressHUD.dismiss()
@@ -51,7 +61,8 @@ struct NetworkManager {
             print(progress)
         }, success: { (task, responseObject) in
             SVProgressHUD.dismiss()
-            print(responseObject ?? "")
+            let statusCode = 200
+            log.debug("\(ESCAPE)\(codeColor);\(statusCode)\(RESET) \(ESCAPE)fg53,255,206;\("GET")\(RESET) \(ESCAPE)fg69,69,69;\(URLString)\("target.path") \(parameters ?? [:])\(RESET) \n\(ESCAPE)fg29,29,29;\(String(describing: responseObject))\(RESET)")
             success?(responseObject as? NSObject)
         }) { (task, error) in
             SVProgressHUD.dismiss()

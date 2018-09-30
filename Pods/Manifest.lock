@@ -21,6 +21,9 @@ PODS:
   - HandyJSON (4.2.0)
   - HappyDNS (0.3.14)
   - Kingfisher (4.9.0)
+  - ObjcExceptionBridging (1.0.1):
+    - ObjcExceptionBridging/ObjcExceptionBridging (= 1.0.1)
+  - ObjcExceptionBridging/ObjcExceptionBridging (1.0.1)
   - PLPlayerKit (3.3.3):
     - PLPlayerKit/iphoneos (= 3.3.3)
   - PLPlayerKit/iphoneos (3.3.3)
@@ -41,6 +44,10 @@ PODS:
   - SnapKit (4.0.1)
   - SVProgressHUD (2.2.5)
   - Toast (4.0.0)
+  - XCGLogger (6.1.0):
+    - XCGLogger/Core (= 6.1.0)
+  - XCGLogger/Core (6.1.0):
+    - ObjcExceptionBridging
 
 DEPENDENCIES:
   - AFNetworking
@@ -57,6 +64,7 @@ DEPENDENCIES:
   - SnapKit (~> 4.0.0)
   - SVProgressHUD
   - Toast
+  - XCGLogger (~> 6.1.0)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -65,6 +73,7 @@ SPEC REPOS:
     - HandyJSON
     - HappyDNS
     - Kingfisher
+    - ObjcExceptionBridging
     - PLPlayerKit
     - PLShortVideoKit
     - Qiniu
@@ -74,6 +83,7 @@ SPEC REPOS:
     - SnapKit
     - SVProgressHUD
     - Toast
+    - XCGLogger
 
 EXTERNAL SOURCES:
   ChameleonFramework:
@@ -91,6 +101,7 @@ SPEC CHECKSUMS:
   HandyJSON: 9dfc026c7d7adc1f0f8ba8b181495f0e0763b0f4
   HappyDNS: dc6a164ee81979093123c241c6353bcf0218add6
   Kingfisher: 64539b51826b778206daa6ed815d12653caa69dd
+  ObjcExceptionBridging: c30e00eb3700467e695faeea30e26e18bd445001
   PLPlayerKit: 8089fa9ae8e2169cd5b3f1deb60041c676dc55e5
   PLShortVideoKit: 8185233a269b9233be6565dac8a8c5412894871e
   Qiniu: 909b408ee489ea54827e9717be90b94bc9dfbc48
@@ -100,7 +111,8 @@ SPEC CHECKSUMS:
   SnapKit: 0de968a9fec17499afa29683b05d0c775b6d1c29
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
   Toast: 91b396c56ee72a5790816f40d3a94dd357abc196
+  XCGLogger: 7f7f43f15dfe3a305fa1342b7dc29af656289abd
 
-PODFILE CHECKSUM: 9471109d77f51fb5cb36b66365d1ef13da634f69
+PODFILE CHECKSUM: a8b26a3a2a2daaead317c2445450211d05ce84e9
 
 COCOAPODS: 1.5.3

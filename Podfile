@@ -32,7 +32,9 @@ target 'SwiftProjects' do
     pod 'PLShortVideoKit'
     pod 'Qiniu'
     pod 'PLPlayerKit'
-
+    
+    pod 'XCGLogger', '~> 6.1.0'
+    
   target 'SwiftProjectsTests' do
     inherit! :search_paths
     # Pods for testing

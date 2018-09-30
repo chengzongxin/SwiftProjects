@@ -45,6 +45,7 @@
 		966628F8213FECA700820701 /* Define.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966628F7213FECA700820701 /* Define.swift */; };
 		966628FD213FF00400820701 /* Position.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966628FC213FF00400820701 /* Position.swift */; };
 		966628FF213FF03200820701 /* RandomColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966628FE213FF03200820701 /* RandomColor.swift */; };
+		966BE3AE216085870080E2D5 /* LoggerConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966BE3AD216085870080E2D5 /* LoggerConfig.swift */; };
 		9677B8D52149190800000E4C /* Animation2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9677B8D42149190800000E4C /* Animation2ViewController.swift */; };
 		967E1C11214A4535004C7EB3 /* Animation3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967E1C10214A4535004C7EB3 /* Animation3ViewController.swift */; };
 		967E1C15214A73F3004C7EB3 /* MTRefreshFooterAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967E1C13214A73F3004C7EB3 /* MTRefreshFooterAnimator.swift */; };
@@ -152,6 +153,7 @@
 		966628F7213FECA700820701 /* Define.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Define.swift; sourceTree = "<group>"; };
 		966628FC213FF00400820701 /* Position.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Position.swift; sourceTree = "<group>"; };
 		966628FE213FF03200820701 /* RandomColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomColor.swift; sourceTree = "<group>"; };
+		966BE3AD216085870080E2D5 /* LoggerConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggerConfig.swift; sourceTree = "<group>"; };
 		9677B8D42149190800000E4C /* Animation2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animation2ViewController.swift; sourceTree = "<group>"; };
 		967E1C10214A4535004C7EB3 /* Animation3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animation3ViewController.swift; sourceTree = "<group>"; };
 		967E1C13214A73F3004C7EB3 /* MTRefreshFooterAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTRefreshFooterAnimator.swift; sourceTree = "<group>"; };
@@ -415,6 +417,14 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		966BE3AC216085520080E2D5 /* Logger */ = {
+			isa = PBXGroup;
+			children = (
+				966BE3AD216085870080E2D5 /* LoggerConfig.swift */,
+			);
+			path = Logger;
+			sourceTree = "<group>";
+		};
 		967E1C12214A7305004C7EB3 /* Refresh */ = {
 			isa = PBXGroup;
 			children = (
@@ -469,6 +479,7 @@
 			isa = PBXGroup;
 			children = (
 				966628F9213FEF5E00820701 /* Extensions */,
+				966BE3AC216085520080E2D5 /* Logger */,
 				96A5B903210870000039E81B /* LogChinease */,
 				967E1C12214A7305004C7EB3 /* Refresh */,
 				969C46A221537382002818FD /* ProgressHub */,
@@ -696,6 +707,7 @@
 				"${BUILT_PRODUCTS_DIR}/HandyJSON/HandyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/HappyDNS/HappyDNS.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjcExceptionBridging/ObjcExceptionBridging.framework",
 				"${PODS_ROOT}/PLPlayerKit/Pod/Library/PLPlayerKit.framework",
 				"${BUILT_PRODUCTS_DIR}/Qiniu/Qiniu.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
@@ -704,6 +716,7 @@
 				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 				"${BUILT_PRODUCTS_DIR}/Toast/Toast.framework",
+				"${BUILT_PRODUCTS_DIR}/XCGLogger/XCGLogger.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -713,6 +726,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HandyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HappyDNS.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjcExceptionBridging.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PLPlayerKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Qiniu.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
@@ -721,6 +735,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Toast.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XCGLogger.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -780,6 +795,7 @@
 				96044ED1214267B900F29398 /* Movie.swift in Sources */,
 				966628F4213FEA9200820701 /* Animation1ViewController.swift in Sources */,
 				96A5B90A210870250039E81B /* Logger.swift in Sources */,
+				966BE3AE216085870080E2D5 /* LoggerConfig.swift in Sources */,
 				96887E1E2152707D0019B39D /* ViewControllerExtention.swift in Sources */,
 				96C400A42154AAAD00255225 /* BaseAnimator.swift in Sources */,
 				96463A3D2151018D000726B2 /* ChartMarker.swift in Sources */,
