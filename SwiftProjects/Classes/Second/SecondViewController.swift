@@ -37,7 +37,7 @@ class SecondViewController: UIViewController, UICollectionViewDelegate, UICollec
         
         layout.scrollDirection = UICollectionViewScrollDirection.vertical // 设置水平显示
         
-        layout.itemSize = CGSize(width: (view.frame.size.width - 40) / 3, height: (view.frame.size.width - 40) / 3)
+        layout.itemSize = CGSize(width: (view.frame.size.width - 44) / 3.0, height: (view.frame.size.width - 44) / 3.0)
         
         layout.sectionInset = UIEdgeInsetsMake(10, 10, 10, 10)
         

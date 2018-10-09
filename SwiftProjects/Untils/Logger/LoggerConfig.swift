@@ -9,42 +9,50 @@
 import Foundation
 import XCGLogger
 
-public let log: XCGLogger = {
-    let log = XCGLogger.default
-    let logPath : NSURL = cacheDirectory.appendingPathComponent("XCGLogger.Log")! as NSURL
-    // By using Swift build flags, different log levels can be used in debugging versus staging/production. Go to Build settings -> Swift Compiler - Custom Flags -> Other Swift Flags and add -DDEBUG to the Debug entry.
-    #if DEBUG
-    log.setup(level: .debug, showThreadName: true, showLevel: true, showFileNames: true, showLineNumbers: true, writeToFile: logPath)
-    #else
-    log.setup(level: severe, showThreadName: true, showLevel: true, showFileNames: true, showLineNumbers: true, writeToFile: logPath)
-    #endif
-    
-    if let fileDestination: FileDestination = log.destination(withIdentifier: XCGLogger.Constants.fileDestinationIdentifier) as? FileDestination {
-        let ansiColorLogFormatter: ANSIColorLogFormatter = ANSIColorLogFormatter()
-        ansiColorLogFormatter.colorize(level: .verbose, with: .colorIndex(number: 244), options: [.faint])
-        ansiColorLogFormatter.colorize(level: .debug, with: .black)
-        ansiColorLogFormatter.colorize(level: .info, with: .blue, options: [.underline])
-        ansiColorLogFormatter.colorize(level: .warning, with: .red, options: [.faint])
-        ansiColorLogFormatter.colorize(level: .error, with: .red, options: [.bold])
-        ansiColorLogFormatter.colorize(level: .severe, with: .white, on: .red)
-        fileDestination.formatters = [ansiColorLogFormatter]
-        
-        log.add(destination: fileDestination)
-        
-    }
-    
-    
-//    log.xcodeColorsEnabled = true
-//    log.xcodeColors = [
-//        .Verbose: .lightGrey,
-//        .Debug: .darkGrey,
-//        .Info: .darkGreen,
-//        .Warning: .orange,
-//        .Error: .red,
-//        .Severe: .whiteOnRed
-//    ]
-    return log
-}()
+//public func print(_ items: Any..., separator: String = " Function: \(#function), line: \(#line) ", terminator: String = "Function: \(#function), line: \(#line) \n") {
+//    let time = Date()
+//    let timeString = time.description
+//    let output = items.map { "\(timeString) \($0) " }.joined(separator: separator)
+////    Swift.print(output, terminator: terminator)
+//    Swift.print(output, separator: separator, terminator: terminator)
+//}
+
+//public let log: XCGLogger = {
+//    let log = XCGLogger.default
+//    let logPath : NSURL = cacheDirectory.appendingPathComponent("XCGLogger.Log")! as NSURL
+//    // By using Swift build flags, different log levels can be used in debugging versus staging/production. Go to Build settings -> Swift Compiler - Custom Flags -> Other Swift Flags and add -DDEBUG to the Debug entry.
+//    #if DEBUG
+//    log.setup(level: .debug, showThreadName: true, showLevel: true, showFileNames: true, showLineNumbers: true, writeToFile: logPath)
+//    #else
+//    log.setup(level: severe, showThreadName: true, showLevel: true, showFileNames: true, showLineNumbers: true, writeToFile: logPath)
+//    #endif
+//
+//    if let fileDestination: FileDestination = log.destination(withIdentifier: XCGLogger.Constants.fileDestinationIdentifier) as? FileDestination {
+//        let ansiColorLogFormatter: ANSIColorLogFormatter = ANSIColorLogFormatter()
+//        ansiColorLogFormatter.colorize(level: .verbose, with: .colorIndex(number: 244), options: [.faint])
+//        ansiColorLogFormatter.colorize(level: .debug, with: .black)
+//        ansiColorLogFormatter.colorize(level: .info, with: .blue, options: [.underline])
+//        ansiColorLogFormatter.colorize(level: .warning, with: .red, options: [.faint])
+//        ansiColorLogFormatter.colorize(level: .error, with: .red, options: [.bold])
+//        ansiColorLogFormatter.colorize(level: .severe, with: .white, on: .red)
+//        fileDestination.formatters = [ansiColorLogFormatter]
+//
+//        log.add(destination: fileDestination)
+//
+//    }
+//
+//
+////    log.xcodeColorsEnabled = true
+////    log.xcodeColors = [
+////        .Verbose: .lightGrey,
+////        .Debug: .darkGrey,
+////        .Info: .darkGreen,
+////        .Warning: .orange,
+////        .Error: .red,
+////        .Severe: .whiteOnRed
+////    ]
+//    return log
+//}()
 
 
 
@@ -73,5 +81,9 @@ public struct NetworkLog {
             codeColor = "fg0,255,0"
         }
         print("\(ESCAPE)\(codeColor);\(statusCode)\(RESET) \(ESCAPE)fg53,255,206;\(target.method)\(RESET) \(ESCAPE)fg69,69,69;\(target.baseURL)\(target.path) \(target.parameters ?? [:])\(RESET) \n\(ESCAPE)fg29,29,29;\(json)\(RESET)")
+//        print("\(statusCode)\(target.method)\(target.baseURL)\(target.path) \(target.parameters ?? [:])\n\(json)")
     }
 }
+
+
+

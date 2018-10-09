@@ -34,6 +34,7 @@ target 'SwiftProjects' do
     pod 'PLPlayerKit'
     
     pod 'XCGLogger', '~> 6.1.0'
+    pod 'SwiftyBeaver'
     
   target 'SwiftProjectsTests' do
     inherit! :search_paths

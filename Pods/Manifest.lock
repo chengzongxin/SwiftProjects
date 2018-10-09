@@ -43,6 +43,7 @@ PODS:
   - SCLAlertView (0.8)
   - SnapKit (4.0.1)
   - SVProgressHUD (2.2.5)
+  - SwiftyBeaver (1.6.1)
   - Toast (4.0.0)
   - XCGLogger (6.1.0):
     - XCGLogger/Core (= 6.1.0)
@@ -63,6 +64,7 @@ DEPENDENCIES:
   - SCLAlertView
   - SnapKit (~> 4.0.0)
   - SVProgressHUD
+  - SwiftyBeaver
   - Toast
   - XCGLogger (~> 6.1.0)
 
@@ -82,6 +84,7 @@ SPEC REPOS:
     - SCLAlertView
     - SnapKit
     - SVProgressHUD
+    - SwiftyBeaver
     - Toast
     - XCGLogger
 
@@ -110,9 +113,10 @@ SPEC CHECKSUMS:
   SCLAlertView: 6a77bb2edfc65e04dbe57725546cb4107a506b85
   SnapKit: 0de968a9fec17499afa29683b05d0c775b6d1c29
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
+  SwiftyBeaver: ccfcdf85a04d429f1633f668650b0ce8020bda3a
   Toast: 91b396c56ee72a5790816f40d3a94dd357abc196
   XCGLogger: 7f7f43f15dfe3a305fa1342b7dc29af656289abd
 
-PODFILE CHECKSUM: a8b26a3a2a2daaead317c2445450211d05ce84e9
+PODFILE CHECKSUM: f1fa764b6ac08287c93dcc8cb37408503e0cf714
 
 COCOAPODS: 1.5.3

@@ -8,6 +8,8 @@
 
 import UIKit
 
+import SwiftyBeaver
+
 class CenterViewController: UIViewController {
 
     override func viewDidLoad() {
@@ -15,12 +17,36 @@ class CenterViewController: UIViewController {
 
         view.backgroundColor = UIColor(gradientStyle: .topToBottom, withFrame: view.bounds, andColors: [UIColor.randomFlat,UIColor.randomFlat])
         
-        log.verbose("一条verbose级别消息：程序执行时最详细的信息。")
-        log.debug("一条debug级别消息：用于代码调试。")
-        log.info("一条info级别消息：常用与用户在console.app中查看。")
-        log.warning("一条warning级别消息：警告消息，表示一个可能的错误。")
-        log.error("一条error级别消息：表示产生了一个可恢复的错误，用于告知发生了什么事情。")
-        log.severe("一条severe error级别消息：表示产生了一个严重错误。程序可能很快会奔溃。")
+        // Xcode控制台日志
+        let console = ConsoleDestination()
+        // 默认swiftybeaver.log文件日志
+        let file = FileDestination()
+        // cloud平台配置
+        let cloud = SBPlatformDestination(appID: "foo", appSecret: "bar", encryptionKey: "123")
+        
+        
+        // 使用自定义格式输出短时间、日志级别、信息
+        // console.format = "$DHH:mm:ss$d $L $M"
+        // 或者使用 console.format = "$J" 输出JSON格式
+        
+        //添加配置到SwiftyBeaver
+        log.addDestination(console)
+        log.addDestination(file)
+        log.addDestination(cloud)
+        
+        //日志具有不同重要性
+        log.verbose("not so important")                 // 优先级 1, VERBOSE   紫色
+        log.debug("something to debug")                 // 优先级 2, DEBUG     绿色
+        log.info("a nice information")                  // 优先级 3, INFO      蓝色
+        log.warning("oh no, that won’t be good")        // 优先级 4, WARNING   黄色
+        log.error("ouch, an error did occur!")          // 优先级 5, ERROR     红色
+        
+        //支持类型: 字符串,数字,日期,等等
+        log.verbose(123)
+        log.info(-123.45678)
+        log.warning(Date())
+        log.error(["I", "like", "logs!"])
+        log.error(["name": "Mr Beaver", "address": "7 Beaver Lodge"])
         
         NetworkLog.out(statusCode: 200, target: (baseURL: NSURL(string: "http://swift.gg")!, path: "/v5", method: "GET", parameters: ["article": 1 as AnyObject]), json: ["title":"结构体中的 Lazy 属性探究", "author":"Ole Begemann", "translator":"pmst","content":"666666"] as AnyObject)
         NetworkLog.out(statusCode: 404, target: (baseURL: NSURL(string: "http://swift.gg")!, path: "/v5", method: "GET", parameters: ["article": 0 as AnyObject]), json: ["error":"nonexistence"] as AnyObject)
