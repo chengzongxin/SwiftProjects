@@ -27,7 +27,8 @@ class HomeViewController: UIViewController {
         dataSource.append((title: "图表框架Charts", viewController:"ChartsViewController", isXib:true))
         dataSource.append((title: "协议练习", viewController:"ProtocolPracticeViewController", isXib:false))
         dataSource.append((title: "短视频(七牛)", viewController:"ShortVideoViewController", isXib:true))
-
+        dataSource.append((title: "RxSwift Demo", viewController:"RxSwiftDemoViewController", isXib:false))
+        
         view.backgroundColor      = UIColor(gradientStyle: .topToBottom, withFrame: view.bounds, andColors: [UIColor.randomFlat,UIColor.randomFlat])
 
         tableView.backgroundColor = UIColor(gradientStyle: .topToBottom, withFrame: view.bounds, andColors: [UIColor.randomFlat,UIColor.randomFlat])

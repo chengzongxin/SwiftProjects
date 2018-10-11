@@ -74,6 +74,7 @@
 		96C400A82154ABFA00255225 /* EaseInAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C400A72154ABFA00255225 /* EaseInAnimator.swift */; };
 		96C400AA2154CED300255225 /* Animator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C400A92154CED300255225 /* Animator.swift */; };
 		96C51058214FAAD80033AF0F /* ChartsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C51057214FAAD80033AF0F /* ChartsViewController.swift */; };
+		96EF7B90216DA64400CE3856 /* RxSwiftDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96EF7B8F216DA64400CE3856 /* RxSwiftDemoViewController.swift */; };
 		96F97B96215B3BE7009E25B7 /* FilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F97B95215B3BE7009E25B7 /* FilterView.swift */; };
 		96F97B98215B3C81009E25B7 /* FilterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96F97B97215B3C81009E25B7 /* FilterView.xib */; };
 		96F97B9B215B3D4B009E25B7 /* FilterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F97B99215B3D4B009E25B7 /* FilterCell.swift */; };
@@ -185,6 +186,7 @@
 		96C400A72154ABFA00255225 /* EaseInAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EaseInAnimator.swift; sourceTree = "<group>"; };
 		96C400A92154CED300255225 /* Animator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animator.swift; sourceTree = "<group>"; };
 		96C51057214FAAD80033AF0F /* ChartsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsViewController.swift; sourceTree = "<group>"; };
+		96EF7B8F216DA64400CE3856 /* RxSwiftDemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxSwiftDemoViewController.swift; sourceTree = "<group>"; };
 		96F97B95215B3BE7009E25B7 /* FilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterView.swift; sourceTree = "<group>"; };
 		96F97B97215B3C81009E25B7 /* FilterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilterView.xib; sourceTree = "<group>"; };
 		96F97B99215B3D4B009E25B7 /* FilterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterCell.swift; sourceTree = "<group>"; };
@@ -332,6 +334,7 @@
 				96C51056214FAAB90033AF0F /* Charts */,
 				96887E142152555C0019B39D /* ProtocolPractice */,
 				960500702159EB3D004A32A1 /* ShortVideo */,
+				96EF7B8E216DA60500CE3856 /* RxSwiftDemo */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -534,6 +537,14 @@
 				96463A3C2151018D000726B2 /* ChartMarker.swift */,
 			);
 			path = Charts;
+			sourceTree = "<group>";
+		};
+		96EF7B8E216DA60500CE3856 /* RxSwiftDemo */ = {
+			isa = PBXGroup;
+			children = (
+				96EF7B8F216DA64400CE3856 /* RxSwiftDemoViewController.swift */,
+			);
+			path = RxSwiftDemo;
 			sourceTree = "<group>";
 		};
 		9D587CD6ABBAB7AD0B821D58 /* Frameworks */ = {
@@ -780,6 +791,7 @@
 				9605C60E2101F67C004BD566 /* TabBar.swift in Sources */,
 				969C46A421537530002818FD /* ProgressHub.swift in Sources */,
 				96C400A82154ABFA00255225 /* EaseInAnimator.swift in Sources */,
+				96EF7B90216DA64400CE3856 /* RxSwiftDemoViewController.swift in Sources */,
 				9677B8D52149190800000E4C /* Animation2ViewController.swift in Sources */,
 				96044ECE2142623D00F29398 /* MovieCell.swift in Sources */,
 				96A5B90F21087D2A0039E81B /* BookCell.swift in Sources */,
