@@ -22,11 +22,11 @@
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="huoying1.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="e2A-6p-92d">
                         <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dHg-vR-vHV">
-                        <rect key="frame" x="20" y="11" width="42" height="21"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dHg-vR-vHV">
+                        <rect key="frame" x="0.0" y="20" width="200" height="19.5"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
@@ -36,13 +36,16 @@
                 <constraint firstItem="e2A-6p-92d" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="8i5-Mj-Qs9"/>
                 <constraint firstAttribute="bottom" secondItem="e2A-6p-92d" secondAttribute="bottom" id="Crz-iM-WLG"/>
                 <constraint firstItem="e2A-6p-92d" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="ZoT-Zc-P23"/>
+                <constraint firstItem="dHg-vR-vHV" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="b4N-Bg-YK5"/>
+                <constraint firstItem="dHg-vR-vHV" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="20" id="dW7-3N-z5N"/>
+                <constraint firstAttribute="trailing" secondItem="dHg-vR-vHV" secondAttribute="trailing" id="kWQ-IP-bM1"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <connections>
                 <outlet property="iconImageView" destination="e2A-6p-92d" id="xmj-vM-rJ4"/>
                 <outlet property="titleLabel" destination="dHg-vR-vHV" id="IVf-MA-CKV"/>
             </connections>
-            <point key="canvasLocation" x="-131.19999999999999" y="135.832083958021"/>
+            <point key="canvasLocation" x="-213" y="138"/>
         </collectionViewCell>
     </objects>
     <resources>

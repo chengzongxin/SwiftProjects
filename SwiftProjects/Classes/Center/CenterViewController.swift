@@ -10,23 +10,36 @@ import UIKit
 
 
 class CenterViewController: UIViewController, WaterFlowLayoutDelegate, UICollectionViewDataSource, UICollectionViewDelegate {
+    // MARK: 设置转场代理器
+    var animator: Any?
     
-    var animator = Animator()
     
-    
-    lazy var dataSouces: [UIImage] = {
-        var dataSouces: [UIImage] = []
+    lazy var dataSouces: [(title:String, image:UIImage)] = {
+        var dataSouces: [(title:String, image:UIImage)] = []
         
         for i in 1...17 {
+            var title: String!
+            switch i {
+            case 1:
+                title = "EaseInAnimator 从上往下转场,类似淘宝"
+            case 2:
+                title = "GradientAnimator alpha 渐变"
+            case 3:
+                title = "尚未实现,类似EaseInAnimator"
+            default:
+                title = "BaseAnimator 基类渐变"
+            }
+            
             let name = (i == 8 || i == 13 ? "huoying\(i).png" : "huoying\(i).jpg")
             let path = Bundle.main.path(forResource: name, ofType: nil)!
             let image = UIImage(contentsOfFile: path)!
-            dataSouces.append(image)
+            
+            dataSouces.append((title, image))
         }
         
         return dataSouces
     }()
-    
+
     lazy var collectionView: UICollectionView = {
         // Layout
         let layout = WaterFlowLayout()
@@ -48,15 +61,11 @@ class CenterViewController: UIViewController, WaterFlowLayoutDelegate, UICollect
         // refresh
         collectionView.addPullToRefresh {
             [unowned self] in
-            
+
             self.dataSouces.removeAll()
-            
-            for i in 1...17 {
-                let name = (i == 8 || i == 13 ? "huoying\(i).png" : "huoying\(i).jpg")
-                let path = Bundle.main.path(forResource: name, ofType: nil)!
-                let image = UIImage(contentsOfFile: path)!
-                self.dataSouces.append(image)
-            }
+
+            self.loadDatas()
+
             self.collectionView.reloadData()
             self.collectionView.es.stopPullToRefresh()
         }
@@ -72,12 +81,37 @@ class CenterViewController: UIViewController, WaterFlowLayoutDelegate, UICollect
         return collectionView
     }()
 
+    private func loadDatas() {
+        for i in 1...17 {
+            var title: String!
+            switch i {
+            case 1:
+                title = "EaseInAnimator 从上往下转场,类似淘宝"
+            case 2:
+                title = "GradientAnimator alpha 渐变"
+            case 3:
+                title = "尚未实现,类似EaseInAnimator"
+            default:
+                title = "BaseAnimator 基类渐变"
+            }
+            
+            let name = (i == 8 || i == 13 ? "huoying\(i).png" : "huoying\(i).jpg")
+            let path = Bundle.main.path(forResource: name, ofType: nil)!
+            let image = UIImage(contentsOfFile: path)!
+            
+            dataSouces.append((title, image))
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // hidden navigationBar
+        let navigationBar = self.navigationController?.navigationBar
+        navigationBar?.setBackgroundImage(UIImage(), for: .default)
+        navigationBar?.shadowImage = UIImage()
+        
         view.addSubview(self.collectionView)
-        // transition animator
-        navigationController?.delegate = animator
     }
 }
 
@@ -90,16 +124,16 @@ extension CenterViewController {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CenterCell", for: indexPath) as! CenterCell
         
-        cell.iconImageView.image = dataSouces[indexPath.item]
+        cell.iconImageView.image = dataSouces[indexPath.item].image
         
-        cell.titleLabel.text = String(indexPath.item)
+        cell.titleLabel.text = dataSouces[indexPath.item].title
         
         return cell;
     }
     
     func itemHeight(at indexPath: IndexPath) -> CGFloat {
-        let imgH = dataSouces[indexPath.item].size.height
-        let imgW = dataSouces[indexPath.item].size.width
+        let imgH = dataSouces[indexPath.item].image.size.height
+        let imgW = dataSouces[indexPath.item].image.size.width
         
         let itemW = (view.bounds.size.width - 30)/2
         // itemW/imgW = itemH/imgH
@@ -110,6 +144,18 @@ extension CenterViewController {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print(indexPath.description)
+    
+        switch indexPath.item {
+        case 0:
+            animator = EaseInAnimator()
+        case 1:
+            animator = GradientAnimator()
+        case 2:
+            animator = MagicMoveAnimator()
+        default:
+            animator = BaseAnimator()
+        }
+        navigationController?.delegate = animator as? UINavigationControllerDelegate
         navigationController?.pushViewController(TestViewController(), animated: true)
     }
 }

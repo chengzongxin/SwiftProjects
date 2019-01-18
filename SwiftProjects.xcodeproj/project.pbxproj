@@ -92,7 +92,7 @@
 		96C400A221548F0900255225 /* MagicMoveAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C400A121548F0900255225 /* MagicMoveAnimator.swift */; };
 		96C400A42154AAAD00255225 /* BaseAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C400A32154AAAD00255225 /* BaseAnimator.swift */; };
 		96C400A82154ABFA00255225 /* EaseInAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C400A72154ABFA00255225 /* EaseInAnimator.swift */; };
-		96C400AA2154CED300255225 /* Animator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C400A92154CED300255225 /* Animator.swift */; };
+		96C400AA2154CED300255225 /* GradientAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C400A92154CED300255225 /* GradientAnimator.swift */; };
 		96C51058214FAAD80033AF0F /* ChartsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C51057214FAAD80033AF0F /* ChartsViewController.swift */; };
 		96E75F3621D35B86009C52CF /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96E75F3521D35B86009C52CF /* TestViewController.swift */; };
 		96EF7B90216DA64400CE3856 /* RxSwiftDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96EF7B8F216DA64400CE3856 /* RxSwiftDemoViewController.swift */; };
@@ -223,7 +223,7 @@
 		96C400A121548F0900255225 /* MagicMoveAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagicMoveAnimator.swift; sourceTree = "<group>"; };
 		96C400A32154AAAD00255225 /* BaseAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseAnimator.swift; sourceTree = "<group>"; };
 		96C400A72154ABFA00255225 /* EaseInAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EaseInAnimator.swift; sourceTree = "<group>"; };
-		96C400A92154CED300255225 /* Animator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animator.swift; sourceTree = "<group>"; };
+		96C400A92154CED300255225 /* GradientAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientAnimator.swift; sourceTree = "<group>"; };
 		96C51057214FAAD80033AF0F /* ChartsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsViewController.swift; sourceTree = "<group>"; };
 		96E75F3521D35B86009C52CF /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		96EF7B8F216DA64400CE3856 /* RxSwiftDemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxSwiftDemoViewController.swift; sourceTree = "<group>"; };
@@ -522,9 +522,9 @@
 			isa = PBXGroup;
 			children = (
 				96C400A32154AAAD00255225 /* BaseAnimator.swift */,
-				96C400A121548F0900255225 /* MagicMoveAnimator.swift */,
 				96C400A72154ABFA00255225 /* EaseInAnimator.swift */,
-				96C400A92154CED300255225 /* Animator.swift */,
+				96C400A92154CED300255225 /* GradientAnimator.swift */,
+				96C400A121548F0900255225 /* MagicMoveAnimator.swift */,
 			);
 			path = Transition;
 			sourceTree = "<group>";
@@ -898,7 +898,7 @@
 				96C3F3C521421BF500F5212B /* CustomViewController.swift in Sources */,
 				96463A392150E966000726B2 /* DateValueFormatter.swift in Sources */,
 				967E1C18214A77FA004C7EB3 /* Refresh.swift in Sources */,
-				96C400AA2154CED300255225 /* Animator.swift in Sources */,
+				96C400AA2154CED300255225 /* GradientAnimator.swift in Sources */,
 				96044ED1214267B900F29398 /* Movie.swift in Sources */,
 				966628F4213FEA9200820701 /* Animation1ViewController.swift in Sources */,
 				96A5B90A210870250039E81B /* Logger.swift in Sources */,

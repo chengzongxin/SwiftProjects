@@ -8,7 +8,8 @@
 
 import UIKit
 
-class Animator: BaseAnimator {
+// MARk: 渐变 视图从0到1渐变
+class GradientAnimator: BaseAnimator {
     var cell:SecondCell!
     
     

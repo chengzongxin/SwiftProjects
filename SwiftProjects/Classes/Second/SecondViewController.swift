@@ -13,7 +13,7 @@ let secondCellID = "seconCellID"
 
 class SecondViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
-    var animator = Animator()
+    var animator = GradientAnimator()
     
     
     lazy var dataSouces: [(title:String, viewController:String)] = {
