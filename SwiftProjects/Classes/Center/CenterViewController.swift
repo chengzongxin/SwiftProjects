@@ -8,60 +8,98 @@
 
 import UIKit
 
-import SwiftyBeaver
 
-class CenterViewController: UIViewController {
+class CenterViewController: UIViewController, WaterFlowLayoutDelegate, UICollectionViewDataSource, UICollectionViewDelegate {
+    
+    lazy var dataSouces: [UIImage] = {
+        var dataSouces: [UIImage] = []
+        
+        for i in 1...17 {
+            let name = (i == 8 || i == 13 ? "huoying\(i).png" : "huoying\(i).jpg")
+            let path = Bundle.main.path(forResource: name, ofType: nil)!
+            let image = UIImage(contentsOfFile: path)!
+            dataSouces.append(image)
+        }
+        
+        return dataSouces
+    }()
+    
+    lazy var collectionView: UICollectionView = {
+        // Layout
+        let layout = WaterFlowLayout()
+        
+        layout.delegate = self
+        
+        // CollectionView
+        let collectionView = UICollectionView(frame: self.view.frame, collectionViewLayout: layout)
+        
+        collectionView.backgroundColor = UIColor.flatWhite
+        
+        collectionView.register(UINib.init(nibName: "CenterCell", bundle: nil), forCellWithReuseIdentifier: "CenterCell")
+        
+        collectionView.delaysContentTouches = false
+        
+        collectionView.delegate = self
+        
+        collectionView.dataSource = self
+        // refresh
+        collectionView.addPullToRefresh {
+            [unowned self] in
+            
+            self.dataSouces.removeAll()
+            
+            for i in 1...17 {
+                let name = (i == 8 || i == 13 ? "huoying\(i).png" : "huoying\(i).jpg")
+                let path = Bundle.main.path(forResource: name, ofType: nil)!
+                let image = UIImage(contentsOfFile: path)!
+                self.dataSouces.append(image)
+            }
+            self.collectionView.reloadData()
+            self.collectionView.es.stopPullToRefresh()
+        }
+        
+        collectionView.addInfiniteScrolling {
+            [unowned self] in
+            
+            self.dataSouces += self.dataSouces
+            self.collectionView.reloadData()
+            self.collectionView.es.stopLoadingMore()
+        }
+        
+        return collectionView
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        view.backgroundColor = UIColor(gradientStyle: .topToBottom, withFrame: view.bounds, andColors: [UIColor.randomFlat,UIColor.randomFlat])
         
-        // Xcode控制台日志
-        let console = ConsoleDestination()
-        // 默认swiftybeaver.log文件日志
-        let file = FileDestination()
-        // cloud平台配置
-        let cloud = SBPlatformDestination(appID: "foo", appSecret: "bar", encryptionKey: "123")
-        
-        
-        // 使用自定义格式输出短时间、日志级别、信息
-        // console.format = "$DHH:mm:ss$d $L $M"
-        // 或者使用 console.format = "$J" 输出JSON格式
-        
-        //添加配置到SwiftyBeaver
-        log.addDestination(console)
-        log.addDestination(file)
-        log.addDestination(cloud)
-        
-        //日志具有不同重要性
-        log.verbose("not so important")                 // 优先级 1, VERBOSE   紫色
-        log.debug("something to debug")                 // 优先级 2, DEBUG     绿色
-        log.info("a nice information")                  // 优先级 3, INFO      蓝色
-        log.warning("oh no, that won’t be good")        // 优先级 4, WARNING   黄色
-        log.error("ouch, an error did occur!")          // 优先级 5, ERROR     红色
-        
-        //支持类型: 字符串,数字,日期,等等
-        log.verbose(123)
-        log.info(-123.45678)
-        log.warning(Date())
-        log.error(["I", "like", "logs!"])
-        log.error(["name": "Mr Beaver", "address": "7 Beaver Lodge"])
-        
-        NetworkLog.out(statusCode: 200, target: (baseURL: NSURL(string: "http://swift.gg")!, path: "/v5", method: "GET", parameters: ["article": 1 as AnyObject]), json: ["title":"结构体中的 Lazy 属性探究", "author":"Ole Begemann", "translator":"pmst","content":"666666"] as AnyObject)
-        NetworkLog.out(statusCode: 404, target: (baseURL: NSURL(string: "http://swift.gg")!, path: "/v5", method: "GET", parameters: ["article": 0 as AnyObject]), json: ["error":"nonexistence"] as AnyObject)
-        
-        
-        let label = UILabel()
-        label.text = "Touch me push to text VC"
-        view.addSubview(label)
-        label.snp.makeConstraints { (make) in
-            make.center.equalToSuperview()
-        }
+        view.addSubview(self.collectionView)
     }
+}
 
+// MARK: CollectionView Delegate
+extension CenterViewController {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return dataSouces.count
+    }
     
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        navigationController?.pushViewController(TestViewController(), animated: true)
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CenterCell", for: indexPath) as! CenterCell
+        
+        cell.iconImageView.image = dataSouces[indexPath.item]
+        
+        cell.titleLabel.text = String(indexPath.item)
+        
+        return cell;
+    }
+    
+    func itemHeight(at indexPath: IndexPath) -> CGFloat {
+        let imgH = dataSouces[indexPath.item].size.height
+        let imgW = dataSouces[indexPath.item].size.width
+        
+        let itemW = (view.bounds.size.width - 30)/2
+        // itemW/imgW = itemH/imgH
+        let itemH = itemW / imgW * imgH
+        
+        return itemH
     }
 }

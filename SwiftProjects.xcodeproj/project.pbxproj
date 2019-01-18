@@ -38,6 +38,26 @@
 		96463A392150E966000726B2 /* DateValueFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96463A382150E966000726B2 /* DateValueFormatter.swift */; };
 		96463A3B2150EEC6000726B2 /* LargeValueFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96463A3A2150EEC6000726B2 /* LargeValueFormatter.swift */; };
 		96463A3D2151018D000726B2 /* ChartMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96463A3C2151018D000726B2 /* ChartMarker.swift */; };
+		9647AEEA21F1A3CF005AF84E /* WaterFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9647AEE921F1A3CF005AF84E /* WaterFlowLayout.swift */; };
+		9647AEFD21F1AAD0005AF84E /* huoying9.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9647AEEC21F1AAD0005AF84E /* huoying9.jpg */; };
+		9647AEFE21F1AAD0005AF84E /* huoying8.png in Resources */ = {isa = PBXBuildFile; fileRef = 9647AEED21F1AAD0005AF84E /* huoying8.png */; };
+		9647AEFF21F1AAD0005AF84E /* huoying17.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9647AEEE21F1AAD0005AF84E /* huoying17.jpg */; };
+		9647AF0021F1AAD0005AF84E /* huoying3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9647AEEF21F1AAD0005AF84E /* huoying3.jpg */; };
+		9647AF0121F1AAD0005AF84E /* huoying2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9647AEF021F1AAD0005AF84E /* huoying2.jpg */; };
+		9647AF0221F1AAD0005AF84E /* huoying16.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9647AEF121F1AAD0005AF84E /* huoying16.jpg */; };
+		9647AF0321F1AAD0005AF84E /* huoying14.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9647AEF221F1AAD0005AF84E /* huoying14.jpg */; };
+		9647AF0421F1AAD0005AF84E /* huoying1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9647AEF321F1AAD0005AF84E /* huoying1.jpg */; };
+		9647AF0521F1AAD0005AF84E /* huoying15.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9647AEF421F1AAD0005AF84E /* huoying15.jpg */; };
+		9647AF0621F1AAD0005AF84E /* huoying11.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9647AEF521F1AAD0005AF84E /* huoying11.jpg */; };
+		9647AF0721F1AAD0005AF84E /* huoying5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9647AEF621F1AAD0005AF84E /* huoying5.jpg */; };
+		9647AF0821F1AAD0005AF84E /* huoying4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9647AEF721F1AAD0005AF84E /* huoying4.jpg */; };
+		9647AF0921F1AAD0005AF84E /* huoying10.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9647AEF821F1AAD0005AF84E /* huoying10.jpg */; };
+		9647AF0A21F1AAD0005AF84E /* huoying12.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9647AEF921F1AAD0005AF84E /* huoying12.jpg */; };
+		9647AF0B21F1AAD0005AF84E /* huoying6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9647AEFA21F1AAD0005AF84E /* huoying6.jpg */; };
+		9647AF0C21F1AAD1005AF84E /* huoying13.png in Resources */ = {isa = PBXBuildFile; fileRef = 9647AEFB21F1AAD0005AF84E /* huoying13.png */; };
+		9647AF0D21F1AAD1005AF84E /* huoying7.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9647AEFC21F1AAD0005AF84E /* huoying7.jpg */; };
+		9647AF1221F1ABFD005AF84E /* CenterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9647AF1021F1ABFD005AF84E /* CenterCell.swift */; };
+		9647AF1321F1ABFD005AF84E /* CenterCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9647AF1121F1ABFD005AF84E /* CenterCell.xib */; };
 		966628F0213FD34100820701 /* SecondCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966628EE213FD34100820701 /* SecondCell.swift */; };
 		966628F1213FD34100820701 /* SecondCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 966628EF213FD34100820701 /* SecondCell.xib */; };
 		966628F4213FEA9200820701 /* Animation1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966628F3213FEA9200820701 /* Animation1ViewController.swift */; };
@@ -146,6 +166,26 @@
 		96463A3A2150EEC6000726B2 /* LargeValueFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeValueFormatter.swift; sourceTree = "<group>"; };
 		96463A3C2151018D000726B2 /* ChartMarker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartMarker.swift; sourceTree = "<group>"; };
 		9647AEE621F1742F005AF84E /* Charts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Charts.framework; path = "../../../../../Library/Developer/Xcode/DerivedData/SwiftProjects-craffkkftyeoyyfekbofxtfeocix/Build/Products/Debug-iphoneos/Charts.framework"; sourceTree = "<group>"; };
+		9647AEE921F1A3CF005AF84E /* WaterFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaterFlowLayout.swift; sourceTree = "<group>"; };
+		9647AEEC21F1AAD0005AF84E /* huoying9.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = huoying9.jpg; sourceTree = "<group>"; };
+		9647AEED21F1AAD0005AF84E /* huoying8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = huoying8.png; sourceTree = "<group>"; };
+		9647AEEE21F1AAD0005AF84E /* huoying17.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = huoying17.jpg; sourceTree = "<group>"; };
+		9647AEEF21F1AAD0005AF84E /* huoying3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = huoying3.jpg; sourceTree = "<group>"; };
+		9647AEF021F1AAD0005AF84E /* huoying2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = huoying2.jpg; sourceTree = "<group>"; };
+		9647AEF121F1AAD0005AF84E /* huoying16.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = huoying16.jpg; sourceTree = "<group>"; };
+		9647AEF221F1AAD0005AF84E /* huoying14.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = huoying14.jpg; sourceTree = "<group>"; };
+		9647AEF321F1AAD0005AF84E /* huoying1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = huoying1.jpg; sourceTree = "<group>"; };
+		9647AEF421F1AAD0005AF84E /* huoying15.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = huoying15.jpg; sourceTree = "<group>"; };
+		9647AEF521F1AAD0005AF84E /* huoying11.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = huoying11.jpg; sourceTree = "<group>"; };
+		9647AEF621F1AAD0005AF84E /* huoying5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = huoying5.jpg; sourceTree = "<group>"; };
+		9647AEF721F1AAD0005AF84E /* huoying4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = huoying4.jpg; sourceTree = "<group>"; };
+		9647AEF821F1AAD0005AF84E /* huoying10.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = huoying10.jpg; sourceTree = "<group>"; };
+		9647AEF921F1AAD0005AF84E /* huoying12.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = huoying12.jpg; sourceTree = "<group>"; };
+		9647AEFA21F1AAD0005AF84E /* huoying6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = huoying6.jpg; sourceTree = "<group>"; };
+		9647AEFB21F1AAD0005AF84E /* huoying13.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = huoying13.png; sourceTree = "<group>"; };
+		9647AEFC21F1AAD0005AF84E /* huoying7.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = huoying7.jpg; sourceTree = "<group>"; };
+		9647AF1021F1ABFD005AF84E /* CenterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterCell.swift; sourceTree = "<group>"; };
+		9647AF1121F1ABFD005AF84E /* CenterCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CenterCell.xib; sourceTree = "<group>"; };
 		966628EE213FD34100820701 /* SecondCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondCell.swift; sourceTree = "<group>"; };
 		966628EF213FD34100820701 /* SecondCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SecondCell.xib; sourceTree = "<group>"; };
 		966628F3213FEA9200820701 /* Animation1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animation1ViewController.swift; sourceTree = "<group>"; };
@@ -395,6 +435,30 @@
 			path = AppDelegate;
 			sourceTree = "<group>";
 		};
+		9647AEEB21F1AAD0005AF84E /* huoying */ = {
+			isa = PBXGroup;
+			children = (
+				9647AEEC21F1AAD0005AF84E /* huoying9.jpg */,
+				9647AEED21F1AAD0005AF84E /* huoying8.png */,
+				9647AEEE21F1AAD0005AF84E /* huoying17.jpg */,
+				9647AEEF21F1AAD0005AF84E /* huoying3.jpg */,
+				9647AEF021F1AAD0005AF84E /* huoying2.jpg */,
+				9647AEF121F1AAD0005AF84E /* huoying16.jpg */,
+				9647AEF221F1AAD0005AF84E /* huoying14.jpg */,
+				9647AEF321F1AAD0005AF84E /* huoying1.jpg */,
+				9647AEF421F1AAD0005AF84E /* huoying15.jpg */,
+				9647AEF521F1AAD0005AF84E /* huoying11.jpg */,
+				9647AEF621F1AAD0005AF84E /* huoying5.jpg */,
+				9647AEF721F1AAD0005AF84E /* huoying4.jpg */,
+				9647AEF821F1AAD0005AF84E /* huoying10.jpg */,
+				9647AEF921F1AAD0005AF84E /* huoying12.jpg */,
+				9647AEFA21F1AAD0005AF84E /* huoying6.jpg */,
+				9647AEFB21F1AAD0005AF84E /* huoying13.png */,
+				9647AEFC21F1AAD0005AF84E /* huoying7.jpg */,
+			);
+			path = huoying;
+			sourceTree = "<group>";
+		};
 		966628F2213FEA7B00820701 /* ChildVC */ = {
 			isa = PBXGroup;
 			children = (
@@ -506,7 +570,11 @@
 			children = (
 				96BE4A122106FD6C001AED2C /* Center.storyboard */,
 				96BE4A142106FD7C001AED2C /* CenterViewController.swift */,
+				9647AEE921F1A3CF005AF84E /* WaterFlowLayout.swift */,
+				9647AF1021F1ABFD005AF84E /* CenterCell.swift */,
+				9647AF1121F1ABFD005AF84E /* CenterCell.xib */,
 				96E75F3521D35B86009C52CF /* TestViewController.swift */,
+				9647AEEB21F1AAD0005AF84E /* huoying */,
 			);
 			path = Center;
 			sourceTree = "<group>";
@@ -645,20 +713,38 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9647AF1321F1ABFD005AF84E /* CenterCell.xib in Resources */,
 				9605C5CB2101BF68004BD566 /* LaunchScreen.storyboard in Resources */,
+				9647AF0121F1AAD0005AF84E /* huoying2.jpg in Resources */,
+				9647AF0221F1AAD0005AF84E /* huoying16.jpg in Resources */,
+				9647AF0C21F1AAD1005AF84E /* huoying13.png in Resources */,
+				9647AF0421F1AAD0005AF84E /* huoying1.jpg in Resources */,
 				96BE4A132106FD6C001AED2C /* Center.storyboard in Resources */,
 				96A5B91021087D2A0039E81B /* BookCell.xib in Resources */,
 				969E23F0215CBC1300F86409 /* ShortVideo.storyboard in Resources */,
+				9647AEFD21F1AAD0005AF84E /* huoying9.jpg in Resources */,
+				9647AEFF21F1AAD0005AF84E /* huoying17.jpg in Resources */,
+				9647AF0621F1AAD0005AF84E /* huoying11.jpg in Resources */,
 				9605C5C82101BF68004BD566 /* Assets.xcassets in Resources */,
+				9647AF0021F1AAD0005AF84E /* huoying3.jpg in Resources */,
+				9647AF0921F1AAD0005AF84E /* huoying10.jpg in Resources */,
 				960DE798215A4E63007F7A5E /* PLShortVideoKit.bundle in Resources */,
+				9647AF0A21F1AAD0005AF84E /* huoying12.jpg in Resources */,
 				966628F1213FD34100820701 /* SecondCell.xib in Resources */,
+				9647AF0521F1AAD0005AF84E /* huoying15.jpg in Resources */,
+				9647AF0321F1AAD0005AF84E /* huoying14.jpg in Resources */,
 				96044ECF2142623D00F29398 /* MovieCell.xib in Resources */,
 				9605C6062101F01C004BD566 /* Second.storyboard in Resources */,
+				9647AEFE21F1AAD0005AF84E /* huoying8.png in Resources */,
+				9647AF0721F1AAD0005AF84E /* huoying5.jpg in Resources */,
 				96F97B98215B3C81009E25B7 /* FilterView.xib in Resources */,
 				9605C60A2101F055004BD566 /* Four.storyboard in Resources */,
+				9647AF0821F1AAD0005AF84E /* huoying4.jpg in Resources */,
 				96F97B9C215B3D4B009E25B7 /* FilterCell.xib in Resources */,
+				9647AF0B21F1AAD0005AF84E /* huoying6.jpg in Resources */,
 				9605C6082101F042004BD566 /* Third.storyboard in Resources */,
 				9605C60C2101F381004BD566 /* Home.storyboard in Resources */,
+				9647AF0D21F1AAD1005AF84E /* huoying7.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -778,6 +864,7 @@
 				966628F6213FEB2C00820701 /* BaseViewController.swift in Sources */,
 				9605C5FD2101E19D004BD566 /* FourViewController.swift in Sources */,
 				96F97B96215B3BE7009E25B7 /* FilterView.swift in Sources */,
+				9647AEEA21F1A3CF005AF84E /* WaterFlowLayout.swift in Sources */,
 				9617D771214119E300FD1060 /* ShadowButton.swift in Sources */,
 				960DE793215A4D69007F7A5E /* AppDelegate.swift in Sources */,
 				96887E1A215256880019B39D /* ProtocolInstance.swift in Sources */,
@@ -821,6 +908,7 @@
 				966628F8213FECA700820701 /* Define.swift in Sources */,
 				966628FD213FF00400820701 /* Position.swift in Sources */,
 				96887E16215255780019B39D /* ProtocolPractice.swift in Sources */,
+				9647AF1221F1ABFD005AF84E /* CenterCell.swift in Sources */,
 				9605C5F72101E189004BD566 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
