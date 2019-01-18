@@ -11,6 +11,9 @@ import UIKit
 
 class CenterViewController: UIViewController, WaterFlowLayoutDelegate, UICollectionViewDataSource, UICollectionViewDelegate {
     
+    var animator = Animator()
+    
+    
     lazy var dataSouces: [UIImage] = {
         var dataSouces: [UIImage] = []
         
@@ -73,6 +76,8 @@ class CenterViewController: UIViewController, WaterFlowLayoutDelegate, UICollect
         super.viewDidLoad()
         
         view.addSubview(self.collectionView)
+        // transition animator
+        navigationController?.delegate = animator
     }
 }
 
@@ -101,5 +106,10 @@ extension CenterViewController {
         let itemH = itemW / imgW * imgH
         
         return itemH
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print(indexPath.description)
+        navigationController?.pushViewController(TestViewController(), animated: true)
     }
 }

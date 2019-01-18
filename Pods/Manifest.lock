@@ -17,6 +17,9 @@ PODS:
   - ChameleonFramework/Default (2.1.0)
   - ChameleonFramework/Swift (2.1.0):
     - ChameleonFramework/Default
+  - Charts (3.2.1):
+    - Charts/Core (= 3.2.1)
+  - Charts/Core (3.2.1)
   - ESPullToRefresh (2.7)
   - HandyJSON (4.2.0)
   - HappyDNS (0.3.14)
@@ -53,6 +56,7 @@ PODS:
 DEPENDENCIES:
   - AFNetworking
   - ChameleonFramework/Swift (from `https://github.com/ViccAlexander/Chameleon.git`)
+  - Charts
   - ESPullToRefresh
   - HandyJSON (~> 4.2.0)
   - Kingfisher (~> 4.0)
@@ -71,6 +75,7 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - AFNetworking
+    - Charts
     - ESPullToRefresh
     - HandyJSON
     - HappyDNS
@@ -100,6 +105,7 @@ CHECKOUT OPTIONS:
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
   ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
+  Charts: f122fb70b19847fa5817d018b77d6c5a2296ab25
   ESPullToRefresh: 119e2710b82b75536aab2bbe4883ba119fca35c8
   HandyJSON: 9dfc026c7d7adc1f0f8ba8b181495f0e0763b0f4
   HappyDNS: dc6a164ee81979093123c241c6353bcf0218add6
@@ -117,6 +123,6 @@ SPEC CHECKSUMS:
   Toast: 91b396c56ee72a5790816f40d3a94dd357abc196
   XCGLogger: 7f7f43f15dfe3a305fa1342b7dc29af656289abd
 
-PODFILE CHECKSUM: f1fa764b6ac08287c93dcc8cb37408503e0cf714
+PODFILE CHECKSUM: ef1d003114961de9bad73f36440c1ffa4a1cd42a
 
 COCOAPODS: 1.5.3

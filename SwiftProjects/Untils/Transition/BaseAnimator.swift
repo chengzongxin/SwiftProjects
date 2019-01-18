@@ -16,6 +16,7 @@ class BaseAnimator: NSObject, UIViewControllerAnimatedTransitioning, UINavigatio
         return 0.4
     }
     
+    // MARK: - overload method implementation animation 重写此方法即可实现特定动画
     func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
         
         let fromVC = transitionContext.viewController(forKey: .from)

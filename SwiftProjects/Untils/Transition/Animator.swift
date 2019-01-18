@@ -26,12 +26,12 @@ class Animator: BaseAnimator {
         let toView = toVC?.view
         
         let containerView = transitionContext.containerView
-        containerView.addSubview(fromView!)
         containerView.addSubview(toView!)
+        containerView.addSubview(fromView!)
         
         // 转场动画
-        toView?.alpha = 0
-        UIView.animate(withDuration: 0.2, animations: {
+        toView?.alpha = 1
+        UIView.animate(withDuration: 0.4, animations: {
             fromView?.alpha = 0
             
             

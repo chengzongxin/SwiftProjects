@@ -26,7 +26,7 @@ target 'SwiftProjects' do
     # Refresh
     pod 'ESPullToRefresh'
     
-#    pod 'Charts'
+    pod 'Charts'
 
     # Short Video Kit (qiniu)
     pod 'PLShortVideoKit'
