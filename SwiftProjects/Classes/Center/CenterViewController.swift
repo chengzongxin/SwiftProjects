@@ -50,6 +50,18 @@ class CenterViewController: UIViewController {
         
         NetworkLog.out(statusCode: 200, target: (baseURL: NSURL(string: "http://swift.gg")!, path: "/v5", method: "GET", parameters: ["article": 1 as AnyObject]), json: ["title":"结构体中的 Lazy 属性探究", "author":"Ole Begemann", "translator":"pmst","content":"666666"] as AnyObject)
         NetworkLog.out(statusCode: 404, target: (baseURL: NSURL(string: "http://swift.gg")!, path: "/v5", method: "GET", parameters: ["article": 0 as AnyObject]), json: ["error":"nonexistence"] as AnyObject)
+        
+        
+        let label = UILabel()
+        label.text = "Touch me push to text VC"
+        view.addSubview(label)
+        label.snp.makeConstraints { (make) in
+            make.center.equalToSuperview()
+        }
     }
 
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        navigationController?.pushViewController(TestViewController(), animated: true)
+    }
 }

@@ -74,6 +74,7 @@
 		96C400A82154ABFA00255225 /* EaseInAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C400A72154ABFA00255225 /* EaseInAnimator.swift */; };
 		96C400AA2154CED300255225 /* Animator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C400A92154CED300255225 /* Animator.swift */; };
 		96C51058214FAAD80033AF0F /* ChartsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C51057214FAAD80033AF0F /* ChartsViewController.swift */; };
+		96E75F3621D35B86009C52CF /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96E75F3521D35B86009C52CF /* TestViewController.swift */; };
 		96EF7B90216DA64400CE3856 /* RxSwiftDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96EF7B8F216DA64400CE3856 /* RxSwiftDemoViewController.swift */; };
 		96F97B96215B3BE7009E25B7 /* FilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F97B95215B3BE7009E25B7 /* FilterView.swift */; };
 		96F97B98215B3C81009E25B7 /* FilterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96F97B97215B3C81009E25B7 /* FilterView.xib */; };
@@ -186,6 +187,7 @@
 		96C400A72154ABFA00255225 /* EaseInAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EaseInAnimator.swift; sourceTree = "<group>"; };
 		96C400A92154CED300255225 /* Animator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animator.swift; sourceTree = "<group>"; };
 		96C51057214FAAD80033AF0F /* ChartsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsViewController.swift; sourceTree = "<group>"; };
+		96E75F3521D35B86009C52CF /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		96EF7B8F216DA64400CE3856 /* RxSwiftDemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxSwiftDemoViewController.swift; sourceTree = "<group>"; };
 		96F97B95215B3BE7009E25B7 /* FilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterView.swift; sourceTree = "<group>"; };
 		96F97B97215B3C81009E25B7 /* FilterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilterView.xib; sourceTree = "<group>"; };
@@ -508,6 +510,7 @@
 			children = (
 				96BE4A122106FD6C001AED2C /* Center.storyboard */,
 				96BE4A142106FD7C001AED2C /* CenterViewController.swift */,
+				96E75F3521D35B86009C52CF /* TestViewController.swift */,
 			);
 			path = Center;
 			sourceTree = "<group>";
@@ -610,10 +613,14 @@
 				TargetAttributes = {
 					9605C5BC2101BF67004BD566 = {
 						CreatedOnToolsVersion = 9.4.1;
+						DevelopmentTeam = ARGK844GXV;
 						LastSwiftMigration = 0940;
+						ProvisioningStyle = Automatic;
 					};
 					9605C5D02101BF68004BD566 = {
 						CreatedOnToolsVersion = 9.4.1;
+						DevelopmentTeam = ARGK844GXV;
+						ProvisioningStyle = Automatic;
 						TestTargetID = 9605C5BC2101BF67004BD566;
 					};
 				};
@@ -763,6 +770,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9605C5F92101E18F004BD566 /* SecondViewController.swift in Sources */,
+				96E75F3621D35B86009C52CF /* TestViewController.swift in Sources */,
 				96A5B908210870120039E81B /* LogCategory.m in Sources */,
 				967E1C15214A73F3004C7EB3 /* MTRefreshFooterAnimator.swift in Sources */,
 				960DE79C215A5B81007F7A5E /* PLSFilterGroup.swift in Sources */,
@@ -973,13 +981,14 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ARGK844GXV;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = SwiftProjects/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.qbox.PLShortVideoKitDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.silknets.SwiftProjects;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "SwiftProjects/Untils/LogChinease/SwiftProjects-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -996,13 +1005,14 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ARGK844GXV;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = SwiftProjects/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.qbox.PLShortVideoKitDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.silknets.SwiftProjects;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "SwiftProjects/Untils/LogChinease/SwiftProjects-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
@@ -1017,6 +1027,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ARGK844GXV;
 				INFOPLIST_FILE = SwiftProjectsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1038,6 +1049,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ARGK844GXV;
 				INFOPLIST_FILE = SwiftProjectsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

@@ -1,0 +1,8 @@
+app_identifier("com.silknets.SwiftProjects") # The bundle identifier of your app
+apple_id("lingfeng.wen@silknets.com") # Your Apple email address
+
+itc_team_id("105803805") # App Store Connect Team ID
+team_id("ARGK844GXV") # Developer Portal Team ID
+
+# For more information about the Appfile, see:
+#     https://docs.fastlane.tools/advanced/#appfile
