@@ -52,6 +52,7 @@ class WaterFlowLayout: UICollectionViewLayout {
                 max = num
             }
         }
+        max += sectionInsets.bottom
         //collectionView的contentSize.height就等于最长列的最大y值+下内边距
         return CGSize(width: 0, height: max)
     }
