@@ -9,6 +9,7 @@
 import UIKit
 import SwiftyBeaver
 
+@objcMembers
 class TestViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
     
     var tableView:UITableView!
@@ -16,6 +17,9 @@ class TestViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     var count:Int!
     
     var myView:UIView!
+    
+    var titleLabel:UILabel!
+    
     
     deinit {
         print(self.description + " had deinit")
@@ -41,8 +45,19 @@ class TestViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "UITableViewCell")
         tableView.tableFooterView = UIView()
+        let imgView = UIImageView(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: view.bounds.width))
+        imgView.image = UIImage(named: "goddess")
+//        imgView.contentMode = .scaleAspectFill
         
-        tableView.tableHeaderView = UIImageView(image: UIImage(named: "goddess"))
+        titleLabel = UILabel(frame: CGRect(x: 15, y: 20, width: SCREEN_WIDTH - 30, height: 30))
+//        titleLabel.textColor = cell.titleLabel.textColor
+//        titleLabel.backgroundColor = cell.titleLabel.backgroundColor
+//        titleLabel.textAlignment = cell.titleLabel.textAlignment
+//        titleLabel.font = cell.titleLabel.font
+//        titleLabel.text = cell.titleLabel.text
+        imgView.addSubview(titleLabel)
+        
+        tableView.tableHeaderView = imgView
         
 //        printTest()
     }

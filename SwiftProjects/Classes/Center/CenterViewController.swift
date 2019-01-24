@@ -8,7 +8,7 @@
 
 import UIKit
 
-
+@objcMembers  // support kvc
 class CenterViewController: UIViewController, WaterFlowLayoutDelegate, UICollectionViewDataSource, UICollectionViewDelegate {
     // MARK: 设置转场代理器
     var animator: Any?
@@ -21,13 +21,15 @@ class CenterViewController: UIViewController, WaterFlowLayoutDelegate, UICollect
             var title: String!
             switch i {
             case 1:
-                title = "EaseInAnimator 从上往下转场,类似淘宝"
-            case 2:
-                title = "GradientAnimator alpha 渐变"
-            case 3:
-                title = "尚未实现,类似EaseInAnimator"
-            default:
                 title = "BaseAnimator 基类渐变"
+            case 2:
+                title = "EaseInAnimator 从上往下转场,类似淘宝"
+            case 3:
+                title = "GradientAnimator alpha 渐变"
+            case 4:
+                title = "MagicMoveAnimator 类似App Store"
+            default:
+                title = "MagicMoveAnimator 类似App Store"
             }
             
             let name = (i == 8 || i == 13 ? "huoying\(i).png" : "huoying\(i).jpg")
@@ -86,13 +88,15 @@ class CenterViewController: UIViewController, WaterFlowLayoutDelegate, UICollect
             var title: String!
             switch i {
             case 1:
-                title = "EaseInAnimator 从上往下转场,类似淘宝"
-            case 2:
-                title = "GradientAnimator alpha 渐变"
-            case 3:
-                title = "尚未实现,类似EaseInAnimator"
-            default:
                 title = "BaseAnimator 基类渐变"
+            case 2:
+                title = "EaseInAnimator 从上往下转场,类似淘宝"
+            case 3:
+                title = "GradientAnimator alpha 渐变"
+            case 4:
+                title = "MagicMoveAnimator 类似App Store"
+            default:
+                title = "MagicMoveAnimator 类似App Store"
             }
             
             let name = (i == 8 || i == 13 ? "huoying\(i).png" : "huoying\(i).jpg")
@@ -142,18 +146,35 @@ extension CenterViewController {
         return itemH
     }
     
+    func collectionView(_ collectionView: UICollectionView, shouldHighlightItemAt indexPath: IndexPath) -> Bool {
+        let cell = collectionView.cellForItem(at: indexPath)
+        UIView.animate(withDuration: 0.2) {
+            cell?.transform = CGAffineTransform(scaleX: 0.9, y: 0.9)
+        }
+        return true
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didUnhighlightItemAt indexPath: IndexPath) {
+        let cell = collectionView.cellForItem(at: indexPath)
+        UIView.animate(withDuration: 0.2) {
+            cell?.transform = CGAffineTransform(scaleX: 1, y: 1)
+        }
+    }
+    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print(indexPath.description)
     
         switch indexPath.item {
         case 0:
-            animator = EaseInAnimator()
+            animator = BaseAnimator()
         case 1:
-            animator = GradientAnimator()
+            animator = EaseInAnimator()
         case 2:
+            animator = GradientAnimator()
+        case 3:
             animator = MagicMoveAnimator()
         default:
-            animator = BaseAnimator()
+            animator = MagicMoveAnimator()
         }
         navigationController?.delegate = animator as? UINavigationControllerDelegate
         navigationController?.pushViewController(TestViewController(), animated: true)
